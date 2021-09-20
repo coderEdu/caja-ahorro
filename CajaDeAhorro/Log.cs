@@ -268,6 +268,7 @@ namespace CajaDeAhorro
 
         private void btn_buscar_trans_Click(object sender, EventArgs e)
         {
+            this.lbl_concepto.Visible = false;
             FiltrarResultadosBusqueda();
         }
 

@@ -3741,9 +3741,8 @@ SELECT id, fecha, tipo, monto, id_log FROM movi WHERE (id = @id)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        mensaje.id, mensaje.mensaje\r\nFROM            mensaje INNER JOIN\r\n  " +
-                "                       movi ON mensaje.id = movi.id\r\nWHERE        (mensaje.id = " +
-                "@movi_id)";
+            this._commandCollection[1].CommandText = "SELECT        mensaje.mensaje\r\nFROM            mensaje INNER JOIN\r\n              " +
+                "           movi ON mensaje.id = movi.id\r\nWHERE        (mensaje.id = @movi_id)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@movi_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

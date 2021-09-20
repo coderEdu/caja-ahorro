@@ -31,6 +31,7 @@ namespace CajaDeAhorro
             this.lbl_desde.Enabled = false;
             this.lbl_hasta.Enabled = false;
             this.lbl_total.Visible = false;
+            this.lbl_concepto.Visible = false;
             DisOrEnablingPickers(false);
             this.grp_busqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(255))))); // 217, 230, 255 // 241, 246, 255
             try
@@ -48,17 +49,19 @@ namespace CajaDeAhorro
 
         public void AjustarCamposDGV()
         {
+            this.dgv.Columns[0].Width = 35;
+
             if (this.c_AHORRO_NEW_DS1.movi.Rows.Count > 9)
             {
-                this.dgv.Columns[0].Width = 282;      // 3 -
-                this.dgv.Columns[1].Width = 99-5;     // 6 4 1
-                this.dgv.Columns[2].Width = 97-10;    // 6 8 2
+                this.dgv.Columns[1].Width = 278;      // 3 -    282
+                this.dgv.Columns[2].Width = 99-10;     // 6 4 1  99-5
+                this.dgv.Columns[3].Width = 97-10;    // 6 8 2  97-10
             }
             else
             {
-                this.dgv.Columns[0].Width = 282;
-                this.dgv.Columns[1].Width = 99;
-                this.dgv.Columns[2].Width = 97;
+                this.dgv.Columns[1].Width = 282;    //282
+                this.dgv.Columns[2].Width = 99-10;     //99
+                this.dgv.Columns[3].Width = 97;     //97
             }
         }
 
@@ -326,6 +329,20 @@ namespace CajaDeAhorro
             this.dtp_desde.Enabled = state;
             this.dtp_hasta.Enabled = state;
             this.dtp_exacta.Enabled = state;
+        }
+
+        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int movi_id = Convert.ToInt32(this.dgv.CurrentRow.Cells["id"].Value);
+            if (this.mensajeTableAdapter1.FillByMessage(this.c_AHORRO_NEW_DS1.mensaje, movi_id)==1)
+            {
+                this.lbl_concepto.Visible = true;
+                this.lbl_concepto.Text = this.c_AHORRO_NEW_DS1.mensaje.Rows[0].Field<string>("mensaje").ToString();
+            }
+            else
+            {
+                this.lbl_concepto.Visible = false;
+            }
         }
 
         //private void fillByMontoToolStripButton_Click_1(object sender, EventArgs e)

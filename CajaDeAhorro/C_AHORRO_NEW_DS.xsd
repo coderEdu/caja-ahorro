@@ -465,7 +465,7 @@ SELECT id, mensaje FROM mensaje WHERE (id = @id)</CommandText>
               <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectName="CAJA_AHORRO.dbo.mensaje" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByMessage" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMessage" GeneratorSourceName="FillByMessage" GetMethodModifier="Public" GetMethodName="GetDataByMessage" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByMessage" UserSourceName="FillByMessage">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        mensaje.id, mensaje.mensaje
+                    <CommandText>SELECT        mensaje.mensaje
 FROM            mensaje INNER JOIN
                          movi ON mensaje.id = movi.id
 WHERE        (mensaje.id = @movi_id)</CommandText>

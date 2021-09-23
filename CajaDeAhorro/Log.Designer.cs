@@ -353,7 +353,7 @@ namespace CajaDeAhorro
             // 
             // lbl_concepto
             // 
-            this.lbl_concepto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(247)))), ((int)(((byte)(220)))));
+            this.lbl_concepto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(252)))), ((int)(((byte)(234)))));
             this.lbl_concepto.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_concepto.Location = new System.Drawing.Point(508, 251);
             this.lbl_concepto.Name = "lbl_concepto";

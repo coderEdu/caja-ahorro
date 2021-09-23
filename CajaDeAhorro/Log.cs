@@ -33,7 +33,7 @@ namespace CajaDeAhorro
             this.lbl_total.Visible = false;
             this.lbl_concepto.Visible = false;
             DisOrEnablingPickers(false);
-            this.grp_busqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(255))))); // 217, 230, 255 // 241, 246, 255
+            this.grp_busqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245))))); // 217, 230, 255 // 241, 246, 255 // 245, 245, 245
             try
             {
                 this.moviTableAdapter1.FillByLoggedAmbos(this.c_AHORRO_NEW_DS1.movi, Auxiliar.id_logged);
@@ -290,7 +290,7 @@ namespace CajaDeAhorro
                     this.lbl_hasta.Enabled = true;
                     this.lbl_exacta.Enabled = false;
                     this.lbl_total.Visible = false;
-                    grp_fechas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+                    grp_fechas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
                     check_fecha.CheckState = CheckState.Unchecked; // 217, 230, 255 // 241, 246, 255
                     this.dtp_exacta.Enabled = false;
                     grp_fecha.BackColor = Color.White;
@@ -305,7 +305,7 @@ namespace CajaDeAhorro
                     this.lbl_desde.Enabled = false;
                     this.lbl_hasta.Enabled = false;
                     this.lbl_total.Visible = false;
-                    grp_fecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+                    grp_fecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
                     check_fechas.CheckState = CheckState.Unchecked;
                     this.dtp_desde.Enabled = false;
                     this.dtp_hasta.Enabled = false;

@@ -107,7 +107,10 @@ namespace CajaDeAhorro
             //this.cajaTableAdapter1.UpdateQuery(dineroEnCaja, 1, 1);
             this.loginTableAdapter1.UpdateQuery(dineroEnCaja, Auxiliar.id_logged, Auxiliar.id_logged);
             // working here
-            this.mensajeTableAdapter1.MessageInsertQuery(id, this.txt_concepto.Text);
+            if (this.txt_concepto.TextLength > 0)
+            {
+                this.mensajeTableAdapter1.MessageInsertQuery(id, this.txt_concepto.Text); 
+            }
             this.Close();
         }
 

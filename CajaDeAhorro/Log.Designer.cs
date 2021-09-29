@@ -417,7 +417,7 @@ namespace CajaDeAhorro
             this.btn_cancelar.Size = new System.Drawing.Size(106, 28);
             this.btn_cancelar.TabIndex = 13;
             this.btn_cancelar.TabStop = false;
-            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.Text = "Cerrar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 

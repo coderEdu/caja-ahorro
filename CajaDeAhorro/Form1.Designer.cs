@@ -112,7 +112,7 @@ namespace CajaDeAhorro
             this.btn_registro.Name = "btn_registro";
             this.btn_registro.Size = new System.Drawing.Size(171, 46);
             this.btn_registro.TabIndex = 11;
-            this.btn_registro.Text = "Consultar registro";
+            this.btn_registro.Text = "Consultar Registro";
             this.btn_registro.UseVisualStyleBackColor = false;
             this.btn_registro.Click += new System.EventHandler(this.btn_registro_Click);
             // 
@@ -156,7 +156,7 @@ namespace CajaDeAhorro
             this.btn_sesion.Name = "btn_sesion";
             this.btn_sesion.Size = new System.Drawing.Size(171, 46);
             this.btn_sesion.TabIndex = 14;
-            this.btn_sesion.Text = "Cerrar sesión";
+            this.btn_sesion.Text = "Cerrar Sesión";
             this.btn_sesion.UseVisualStyleBackColor = false;
             this.btn_sesion.Click += new System.EventHandler(this.btn_sesion_Click);
             // 

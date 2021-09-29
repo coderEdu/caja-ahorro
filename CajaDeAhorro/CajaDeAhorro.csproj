@@ -160,5 +160,17 @@
   <ItemGroup>
     <None Include="Resources\bank-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atm-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atm-background_blur.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-1-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

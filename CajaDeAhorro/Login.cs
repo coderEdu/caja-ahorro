@@ -30,14 +30,16 @@ namespace CajaDeAhorro
             Auxiliar.admin = new Administrador();
             Auxiliar.login = this;
             //this.btn_check_admin.Visible = false;
-            this.tmr_exp_contr.Interval = 1;
-            this.Size = new Size(509, 364);
-            EstadoPanelNuevoUsuario(false);
+            //this.tmr_exp_contr.Interval = 1;
+            //this.Size = new Size(509, 364);
+            //EstadoPanelNuevoUsuario(false);
             scrDimH = Screen.PrimaryScreen.Bounds.Width;
             scrDimV = Screen.PrimaryScreen.Bounds.Height;
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(scrDimH / 2 - this.ClientRectangle.Width / 2, scrDimV / 2 - this.ClientRectangle.Height / 2);
             //MessageBox.Show(scrDimH.ToString() + " " + scrDimV.ToString());
+            this.btn_crea_usuario.Visible = false;
+            this.pbx_add.Visible = false;
         }
 
         private void TextBoxes_GotFocus(object sender, EventArgs e)
@@ -76,7 +78,7 @@ namespace CajaDeAhorro
 
         private void EstadoPanelNuevoUsuario(bool estado)
         {
-            this.lbl_crea_nvo_usuario.Visible = estado;
+            //this.lbl_crea_nvo_usuario.Visible = estado;
             this.lbl_nuevo_usuario.Visible = estado;
             this.lbl_pass_nuevo_usuario.Visible = estado;
             this.txt_nombre_nuevo_usuario.Visible = estado;
@@ -96,7 +98,8 @@ namespace CajaDeAhorro
                     return;
                 if (this.loginTableAdapter1.CheckUserScalarQuery(this.txt_nombre_nuevo_usuario.Text) == 1)
                 {
-                    MessageBox.Show("Error: el usuario ingresado ya existe.", "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error: ya existe un usuario con el mismo nombre.\nPor favor, ingrese un nombre diferente.",
+                        "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     this.txt_nombre_nuevo_usuario.Focus();
                     this.txt_nombre_nuevo_usuario.SelectAll();
                 }
@@ -108,7 +111,7 @@ namespace CajaDeAhorro
                         this.loginTableAdapter1.InsertQuery(biggestId + 1, this.txt_nombre_nuevo_usuario.Text, this.txt_pass_nuevo_usuario.Text, 0);
                         MessageBox.Show("Nuevo usuario creado.", "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.ExpOrContr = Estados.mov2;
-                        this.tmr_exp_contr.Start();
+                        //this.tmr_exp_contr.Start();
                     }
                     catch (Exception) { }
                 }
@@ -118,7 +121,12 @@ namespace CajaDeAhorro
         private void btn_cancelar_nvo_usuario_Click(object sender, EventArgs e)
         {
             this.ExpOrContr = Estados.mov2;
-            this.tmr_exp_contr.Start();
+            this.txt_nombre_nuevo_usuario.Clear();
+            this.txt_pass_nuevo_usuario.Clear();
+            MessageBox.Show("Alta de nuevo usuario cancelada.",
+                        "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            this.txt_usuario.Focus();
+            //this.tmr_exp_contr.Start();
         }
 
         private void PrepContraerForm()
@@ -197,7 +205,7 @@ namespace CajaDeAhorro
 
         private void EstadoLblsAndTxtsNvoUser(bool estado)
         {
-            this.lbl_crea_nvo_usuario.Visible = estado;
+            //this.lbl_crea_nvo_usuario.Visible = estado;
             this.btn_guardar_nvo_usuario.Visible = estado;
             this.btn_cancelar_nvo_usuario.Visible = estado;
         }
@@ -253,6 +261,18 @@ namespace CajaDeAhorro
                 case Estados.mov2:
                     EstadoMov2();
                     break;
+            }
+        }
+
+        private void tab_sesion_Selected(object sender, TabControlEventArgs e)
+        {
+            if (this.tab_sesion.SelectedTab==tabP_nuevo)
+            {
+                this.pbx_add.Visible = true;
+            }
+            else
+            {
+                this.pbx_add.Visible = false;
             }
         }
     }

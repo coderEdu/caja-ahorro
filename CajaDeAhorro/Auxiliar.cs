@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 
 namespace CajaDeAhorro
 {
+    enum WayToLog
+    {
+        BY_PASS,
+        BY_LOGIN
+    }
     class Auxiliar
     {
         public static int dineroEnCaja;

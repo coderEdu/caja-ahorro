@@ -47,13 +47,16 @@ namespace CajaDeAhorro
         {
             int count = this.sesionTableAdapter1.Fill(this.c_AHORRO_NEW_DS1.sesion);
             DataGridView dataGrid = new DataGridView();
-            this.loginTableAdapter1.Fill(this.c_AHORRO_NEW_DS1.login);
+            this.loginTableAdapter1.Fill(this.c_AHORRO_NEW_DS1.login);  // ay q llenar el ds p/poder obt los datos
+            this.sesionTableAdapter1.Fill(this.c_AHORRO_NEW_DS1.sesion); // acá igual ...
             for (int i = 0; i < count; i++)
             {
-                Session session = new Session();
-                string loggName = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[i].Field<string>(1).Replace(" ", "");
-                this.flp_sess.Controls.Add(session.CreateNewEnemyWAttribs(loggName));
-
+                if (this.c_AHORRO_NEW_DS1.Tables["sesion"].Rows[i].Field<int>(1)==1)
+                {
+                    Session session = new Session();
+                    string loggName = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[i].Field<string>(1).Replace(" ", "");
+                    this.flp_sess.Controls.Add(session.CreateNewEnemyWAttribs(loggName));
+                }
             }
         }
         private void TextBoxes_GotFocus(object sender, EventArgs e)
@@ -67,7 +70,7 @@ namespace CajaDeAhorro
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            if (this.txt_usuario.Text=="admin" && this.txt_contrasegna.Text=="gtm-775rf")
+            if (this.txt_usuario.Text=="admin" && this.txt_contrasegna.Text=="12345")
             {
                 Auxiliar.admin.Show();
                 Auxiliar.login.Hide();

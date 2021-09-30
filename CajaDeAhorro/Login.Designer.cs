@@ -44,7 +44,6 @@ namespace CajaDeAhorro
             this.btn_cancelar_nvo_usuario = new System.Windows.Forms.Button();
             this.tmr_exp_contr = new System.Windows.Forms.Timer(this.components);
             this.flp_sess = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,12 +54,8 @@ namespace CajaDeAhorro
             this.tabP_inicio = new System.Windows.Forms.TabPage();
             this.tabP_nuevo = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.sesionTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.sesionTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).BeginInit();
-            this.flp_sess.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_login)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_add)).BeginInit();
             this.tab_sesion.SuspendLayout();
@@ -226,29 +221,10 @@ namespace CajaDeAhorro
             // flp_sess
             // 
             this.flp_sess.BackColor = System.Drawing.Color.White;
-            this.flp_sess.Controls.Add(this.btn1);
-            this.flp_sess.Controls.Add(this.button1);
-            this.flp_sess.Controls.Add(this.button2);
-            this.flp_sess.Controls.Add(this.button3);
-            this.flp_sess.Controls.Add(this.button4);
             this.flp_sess.Location = new System.Drawing.Point(404, 77);
             this.flp_sess.Name = "flp_sess";
             this.flp_sess.Size = new System.Drawing.Size(441, 480);
             this.flp_sess.TabIndex = 14;
-            // 
-            // btn1
-            // 
-            this.btn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1.Image = global::CajaDeAhorro.Properties.Resources.User_icon_64;
-            this.btn1.Location = new System.Drawing.Point(3, 3);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(141, 90);
-            this.btn1.TabIndex = 24;
-            this.btn1.Text = "gotech";
-            this.btn1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -373,61 +349,9 @@ namespace CajaDeAhorro
             this.label5.Text = "SESIONES ACTIVAS";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button1
+            // sesionTableAdapter1
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::CajaDeAhorro.Properties.Resources.User_icon_64;
-            this.button1.Location = new System.Drawing.Point(150, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 90);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "edu";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::CajaDeAhorro.Properties.Resources.User_icon_64;
-            this.button2.Location = new System.Drawing.Point(297, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 90);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "alovero";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::CajaDeAhorro.Properties.Resources.User_icon_64;
-            this.button3.Location = new System.Drawing.Point(3, 99);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 90);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "marce";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::CajaDeAhorro.Properties.Resources.User_icon_64;
-            this.button4.Location = new System.Drawing.Point(150, 99);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(141, 90);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "desbloqueos";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.sesionTableAdapter1.ClearBeforeFill = true;
             // 
             // Login
             // 
@@ -450,7 +374,6 @@ namespace CajaDeAhorro
             this.Text = "CAJA DE AHORRO - LOGIN";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).EndInit();
-            this.flp_sess.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_login)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_add)).EndInit();
             this.tab_sesion.ResumeLayout(false);
@@ -488,10 +411,6 @@ namespace CajaDeAhorro
         private System.Windows.Forms.TabPage tabP_inicio;
         private System.Windows.Forms.TabPage tabP_nuevo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private C_AHORRO_NEW_DSTableAdapters.sesionTableAdapter sesionTableAdapter1;
     }
 }

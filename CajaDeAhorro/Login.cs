@@ -40,8 +40,22 @@ namespace CajaDeAhorro
             //MessageBox.Show(scrDimH.ToString() + " " + scrDimV.ToString());
             this.btn_crea_usuario.Visible = false;
             this.pbx_add.Visible = false;
+            GetActiveSessions();           
         }
 
+        public void GetActiveSessions()
+        {
+            int count = this.sesionTableAdapter1.Fill(this.c_AHORRO_NEW_DS1.sesion);
+            DataGridView dataGrid = new DataGridView();
+            this.loginTableAdapter1.Fill(this.c_AHORRO_NEW_DS1.login);
+            for (int i = 0; i < count; i++)
+            {
+                Session session = new Session();
+                string loggName = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[i].Field<string>(1).Replace(" ", "");
+                this.flp_sess.Controls.Add(session.CreateNewEnemyWAttribs(loggName));
+
+            }
+        }
         private void TextBoxes_GotFocus(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;

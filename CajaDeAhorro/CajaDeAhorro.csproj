@@ -73,6 +73,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Session.cs" />
     <Compile Include="Transaccion.cs">
       <SubType>Form</SubType>
     </Compile>

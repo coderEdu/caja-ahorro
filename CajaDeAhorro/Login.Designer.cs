@@ -65,7 +65,7 @@ namespace CajaDeAhorro
             // 
             // txt_usuario
             // 
-            this.txt_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txt_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(202)))));
             this.txt_usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_usuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_usuario.ForeColor = System.Drawing.Color.Black;
@@ -74,13 +74,13 @@ namespace CajaDeAhorro
             this.txt_usuario.Multiline = true;
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(256, 26);
-            this.txt_usuario.TabIndex = 1;
+            this.txt_usuario.TabIndex = 0;
             this.txt_usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_usuario.GotFocus += new System.EventHandler(this.TextBoxes_GotFocus);
             // 
             // txt_contrasegna
             // 
-            this.txt_contrasegna.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txt_contrasegna.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(202)))));
             this.txt_contrasegna.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_contrasegna.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_contrasegna.ForeColor = System.Drawing.Color.Black;
@@ -90,7 +90,7 @@ namespace CajaDeAhorro
             this.txt_contrasegna.Name = "txt_contrasegna";
             this.txt_contrasegna.PasswordChar = '#';
             this.txt_contrasegna.Size = new System.Drawing.Size(256, 26);
-            this.txt_contrasegna.TabIndex = 3;
+            this.txt_contrasegna.TabIndex = 1;
             this.txt_contrasegna.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_contrasegna.GotFocus += new System.EventHandler(this.TextBoxes_GotFocus);
             // 
@@ -134,7 +134,7 @@ namespace CajaDeAhorro
             // 
             // txt_nombre_nuevo_usuario
             // 
-            this.txt_nombre_nuevo_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txt_nombre_nuevo_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(202)))));
             this.txt_nombre_nuevo_usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_nombre_nuevo_usuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombre_nuevo_usuario.ForeColor = System.Drawing.SystemColors.Desktop;
@@ -172,7 +172,7 @@ namespace CajaDeAhorro
             // 
             // txt_pass_nuevo_usuario
             // 
-            this.txt_pass_nuevo_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txt_pass_nuevo_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(202)))));
             this.txt_pass_nuevo_usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_pass_nuevo_usuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_pass_nuevo_usuario.ForeColor = System.Drawing.SystemColors.Desktop;
@@ -186,11 +186,11 @@ namespace CajaDeAhorro
             // 
             // btn_guardar_nvo_usuario
             // 
-            this.btn_guardar_nvo_usuario.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_guardar_nvo_usuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_guardar_nvo_usuario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(131)))), ((int)(((byte)(176)))));
             this.btn_guardar_nvo_usuario.FlatAppearance.BorderSize = 2;
             this.btn_guardar_nvo_usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_guardar_nvo_usuario.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btn_guardar_nvo_usuario.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_guardar_nvo_usuario.Location = new System.Drawing.Point(226, 213);
             this.btn_guardar_nvo_usuario.Name = "btn_guardar_nvo_usuario";
             this.btn_guardar_nvo_usuario.Size = new System.Drawing.Size(70, 23);
@@ -201,11 +201,11 @@ namespace CajaDeAhorro
             // 
             // btn_cancelar_nvo_usuario
             // 
-            this.btn_cancelar_nvo_usuario.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_cancelar_nvo_usuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_cancelar_nvo_usuario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(131)))), ((int)(((byte)(176)))));
             this.btn_cancelar_nvo_usuario.FlatAppearance.BorderSize = 2;
             this.btn_cancelar_nvo_usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancelar_nvo_usuario.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btn_cancelar_nvo_usuario.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_cancelar_nvo_usuario.Location = new System.Drawing.Point(302, 213);
             this.btn_cancelar_nvo_usuario.Name = "btn_cancelar_nvo_usuario";
             this.btn_cancelar_nvo_usuario.Size = new System.Drawing.Size(70, 23);
@@ -265,9 +265,9 @@ namespace CajaDeAhorro
             // pbx_login
             // 
             this.pbx_login.Image = global::CajaDeAhorro.Properties.Resources.login;
-            this.pbx_login.Location = new System.Drawing.Point(88, 60);
+            this.pbx_login.Location = new System.Drawing.Point(81, 47);
             this.pbx_login.Name = "pbx_login";
-            this.pbx_login.Size = new System.Drawing.Size(220, 195);
+            this.pbx_login.Size = new System.Drawing.Size(240, 220);
             this.pbx_login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_login.TabIndex = 18;
             this.pbx_login.TabStop = false;
@@ -275,7 +275,7 @@ namespace CajaDeAhorro
             // pbx_add
             // 
             this.pbx_add.Image = global::CajaDeAhorro.Properties.Resources.add_1_icon;
-            this.pbx_add.Location = new System.Drawing.Point(273, 63);
+            this.pbx_add.Location = new System.Drawing.Point(280, 56);
             this.pbx_add.Name = "pbx_add";
             this.pbx_add.Size = new System.Drawing.Size(32, 32);
             this.pbx_add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -342,11 +342,11 @@ namespace CajaDeAhorro
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label5.Location = new System.Drawing.Point(399, 33);
+            this.label5.Location = new System.Drawing.Point(399, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(448, 41);
             this.label5.TabIndex = 21;
-            this.label5.Text = "SESIONES ACTIVAS";
+            this.label5.Text = "USUARIOS CON SESIONES ACTIVAS";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // sesionTableAdapter1

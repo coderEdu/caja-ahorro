@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CajaDeAhorro
 {
-    enum WayToLog
+    enum WaysToLog
     {
         BY_PASS,
         BY_LOGIN

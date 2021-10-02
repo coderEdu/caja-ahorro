@@ -18,6 +18,7 @@ namespace CajaDeAhorro
         private int height=364;
         private int scrDimH;
         private int scrDimV;
+        
         public Login()
         {
             InitializeComponent();
@@ -41,6 +42,7 @@ namespace CajaDeAhorro
             this.btn_crea_usuario.Visible = false;
             this.pbx_add.Visible = false;
             GetActiveSessions();           
+            
         }
 
         public void GetActiveSessions()

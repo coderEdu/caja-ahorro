@@ -100,7 +100,7 @@ namespace CajaDeAhorro
             // 
             this.txt_concepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_concepto.Location = new System.Drawing.Point(31, 136);
-            this.txt_concepto.MaxLength = 145;
+            this.txt_concepto.MaxLength = 148;
             this.txt_concepto.Multiline = true;
             this.txt_concepto.Name = "txt_concepto";
             this.txt_concepto.Size = new System.Drawing.Size(221, 28);

@@ -179,5 +179,11 @@
   <ItemGroup>
     <None Include="Resources\User-icon-64.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock-unlock-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock-unlock-icon-48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

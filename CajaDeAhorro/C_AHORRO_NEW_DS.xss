@@ -9,7 +9,7 @@
     <Shape ID="DesignTable:login" ZOrder="7" X="67" Y="60" Height="229" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="102" />
     <Shape ID="DesignTable:movi" ZOrder="5" X="430" Y="151" Height="248" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:mensaje" ZOrder="3" X="795" Y="61" Height="153" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="64" />
-    <Shape ID="DesignTable:sesion" ZOrder="2" X="445" Y="-25" Height="153" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="64" />
+    <Shape ID="DesignTable:sesion" ZOrder="2" X="430" Y="-26" Height="153" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="64" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK_movi_login" ZOrder="6" LineWidth="11">
@@ -44,11 +44,11 @@
         </Point>
         <Point>
           <X>350</X>
-          <Y>8</Y>
+          <Y>7</Y>
         </Point>
         <Point>
-          <X>445</X>
-          <Y>8</Y>
+          <X>430</X>
+          <Y>7</Y>
         </Point>
       </RoutePoints>
     </Connector>

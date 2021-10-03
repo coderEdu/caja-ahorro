@@ -70,7 +70,7 @@ SELECT id, usuario, contra, caja FROM login WHERE (id = @id)</CommandText>
               <Mapping SourceColumn="caja" DataSetColumn="caja" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ActiveSessScalarQuery" Modifier="Public" Name="ActiveSessScalarQuery" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="ActiveSessScalarQuery">
+              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ActiveSessScalarQuery" Modifier="Public" Name="ActiveSessScalarQuery" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ActiveSessScalarQuery">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT(*) AS Res
@@ -82,7 +82,7 @@ WHERE        (usuario = @usuario)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="BiggestIdScalarQuery" Modifier="Public" Name="BiggestIdScalarQuery" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="BiggestIdScalarQuery">
+              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="BiggestIdScalarQuery" Modifier="Public" Name="BiggestIdScalarQuery" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="BiggestIdScalarQuery">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        MAX(id) AS BiggestId
@@ -91,7 +91,7 @@ FROM            login</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="CheckUserScalarQuery" Modifier="Public" Name="CheckUserScalarQuery" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="CheckUserScalarQuery">
+              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="CheckUserScalarQuery" Modifier="Public" Name="CheckUserScalarQuery" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="CheckUserScalarQuery">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT(*) AS Res
@@ -140,7 +140,7 @@ WHERE        (usuario = @usuario) AND (contra = @contra)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertQuery">
+              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="InsertQuery">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO login
@@ -156,7 +156,7 @@ SELECT id, usuario, contra, caja FROM login WHERE (id = @id)</CommandText>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="LogScalarQuery" Modifier="Public" Name="LogScalarQuery" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="LogScalarQuery">
+              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="LogScalarQuery" Modifier="Public" Name="LogScalarQuery" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="LogScalarQuery">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT(*) AS Res
@@ -169,7 +169,7 @@ WHERE        (usuario = @usuario) AND (contra = @contra)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="UpdateQuery">
+              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="UpdateQuery">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE       login
@@ -562,7 +562,7 @@ SELECT id, estado FROM sesion WHERE (id = @id)</CommandText>
               <Mapping SourceColumn="estado" DataSetColumn="estado" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ChangeSessStateUpQuery" Modifier="Public" Name="ChangeSessStateUpQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ChangeSessStateUpQuery">
+              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ChangeSessStateUpQuery" Modifier="Public" Name="ChangeSessStateUpQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ChangeSessStateUpQuery">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE       sesion
@@ -577,7 +577,7 @@ SELECT id, estado FROM sesion WHERE (id = @id)</CommandText>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ChangeState_UpQuery" Modifier="Public" Name="ChangeState_UpQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ChangeState_UpQuery">
+              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ChangeState_UpQuery" Modifier="Public" Name="ChangeState_UpQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ChangeState_UpQuery">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE       sesion
@@ -605,6 +605,18 @@ WHERE        (login.id = @sesion_id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
+              <DbSource ConnectionRef="CAJA_AHORROConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="NewSessInsertQuery" Modifier="Public" Name="NewSessInsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="NewSessInsertQuery">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [dbo].[sesion] ([id], [estado]) VALUES (@id, @estado);
+SELECT id, estado FROM sesion WHERE (id = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="id" DataSourceName="CAJA_AHORRO.dbo.sesion" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="estado" ColumnName="estado" DataSourceName="CAJA_AHORRO.dbo.sesion" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@estado" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="estado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
             </Sources>
           </TableAdapter>
         </Tables>
@@ -615,7 +627,7 @@ WHERE        (login.id = @sesion_id)</CommandText>
   <xs:element name="C_AHORRO_NEW_DS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="C_AHORRO_NEW_DS" msprop:Generator_UserDSName="C_AHORRO_NEW_DS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="login" msprop:Generator_TableClassName="loginDataTable" msprop:Generator_TableVarName="tablelogin" msprop:Generator_RowChangedName="loginRowChanged" msprop:Generator_TablePropName="login" msprop:Generator_RowDeletingName="loginRowDeleting" msprop:Generator_RowChangingName="loginRowChanging" msprop:Generator_RowEvHandlerName="loginRowChangeEventHandler" msprop:Generator_RowDeletedName="loginRowDeleted" msprop:Generator_RowClassName="loginRow" msprop:Generator_UserTableName="login" msprop:Generator_RowEvArgName="loginRowChangeEvent">
+        <xs:element name="login" msprop:Generator_TableClassName="loginDataTable" msprop:Generator_TableVarName="tablelogin" msprop:Generator_TablePropName="login" msprop:Generator_RowDeletingName="loginRowDeleting" msprop:Generator_RowChangingName="loginRowChanging" msprop:Generator_RowEvHandlerName="loginRowChangeEventHandler" msprop:Generator_RowDeletedName="loginRowDeleted" msprop:Generator_UserTableName="login" msprop:Generator_RowChangedName="loginRowChanged" msprop:Generator_RowEvArgName="loginRowChangeEvent" msprop:Generator_RowClassName="loginRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -637,7 +649,7 @@ WHERE        (login.id = @sesion_id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="movi" msprop:Generator_TableClassName="moviDataTable" msprop:Generator_TableVarName="tablemovi" msprop:Generator_RowChangedName="moviRowChanged" msprop:Generator_TablePropName="movi" msprop:Generator_RowDeletingName="moviRowDeleting" msprop:Generator_RowChangingName="moviRowChanging" msprop:Generator_RowEvHandlerName="moviRowChangeEventHandler" msprop:Generator_RowDeletedName="moviRowDeleted" msprop:Generator_RowClassName="moviRow" msprop:Generator_UserTableName="movi" msprop:Generator_RowEvArgName="moviRowChangeEvent">
+        <xs:element name="movi" msprop:Generator_TableClassName="moviDataTable" msprop:Generator_TableVarName="tablemovi" msprop:Generator_TablePropName="movi" msprop:Generator_RowDeletingName="moviRowDeleting" msprop:Generator_RowChangingName="moviRowChanging" msprop:Generator_RowEvHandlerName="moviRowChangeEventHandler" msprop:Generator_RowDeletedName="moviRowDeleted" msprop:Generator_UserTableName="movi" msprop:Generator_RowChangedName="moviRowChanged" msprop:Generator_RowEvArgName="moviRowChangeEvent" msprop:Generator_RowClassName="moviRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -654,7 +666,7 @@ WHERE        (login.id = @sesion_id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="mensaje" msprop:Generator_TableClassName="mensajeDataTable" msprop:Generator_TableVarName="tablemensaje" msprop:Generator_RowChangedName="mensajeRowChanged" msprop:Generator_TablePropName="mensaje" msprop:Generator_RowDeletingName="mensajeRowDeleting" msprop:Generator_RowChangingName="mensajeRowChanging" msprop:Generator_RowEvHandlerName="mensajeRowChangeEventHandler" msprop:Generator_RowDeletedName="mensajeRowDeleted" msprop:Generator_RowClassName="mensajeRow" msprop:Generator_UserTableName="mensaje" msprop:Generator_RowEvArgName="mensajeRowChangeEvent">
+        <xs:element name="mensaje" msprop:Generator_TableClassName="mensajeDataTable" msprop:Generator_TableVarName="tablemensaje" msprop:Generator_TablePropName="mensaje" msprop:Generator_RowDeletingName="mensajeRowDeleting" msprop:Generator_RowChangingName="mensajeRowChanging" msprop:Generator_RowEvHandlerName="mensajeRowChangeEventHandler" msprop:Generator_RowDeletedName="mensajeRowDeleted" msprop:Generator_UserTableName="mensaje" msprop:Generator_RowChangedName="mensajeRowChanged" msprop:Generator_RowEvArgName="mensajeRowChangeEvent" msprop:Generator_RowClassName="mensajeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -668,7 +680,7 @@ WHERE        (login.id = @sesion_id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="sesion" msprop:Generator_TableClassName="sesionDataTable" msprop:Generator_TableVarName="tablesesion" msprop:Generator_TablePropName="sesion" msprop:Generator_RowDeletingName="sesionRowDeleting" msprop:Generator_RowChangingName="sesionRowChanging" msprop:Generator_RowEvHandlerName="sesionRowChangeEventHandler" msprop:Generator_RowDeletedName="sesionRowDeleted" msprop:Generator_UserTableName="sesion" msprop:Generator_RowChangedName="sesionRowChanged" msprop:Generator_RowEvArgName="sesionRowChangeEvent" msprop:Generator_RowClassName="sesionRow">
+        <xs:element name="sesion" msprop:Generator_TableClassName="sesionDataTable" msprop:Generator_TableVarName="tablesesion" msprop:Generator_RowChangedName="sesionRowChanged" msprop:Generator_TablePropName="sesion" msprop:Generator_RowDeletingName="sesionRowDeleting" msprop:Generator_RowChangingName="sesionRowChanging" msprop:Generator_RowEvHandlerName="sesionRowChangeEventHandler" msprop:Generator_RowDeletedName="sesionRowDeleted" msprop:Generator_RowClassName="sesionRow" msprop:Generator_UserTableName="sesion" msprop:Generator_RowEvArgName="sesionRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -694,15 +706,15 @@ WHERE        (login.id = @sesion_id)</CommandText>
       <xs:selector xpath=".//mstns:sesion" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
-    <xs:keyref name="FK_movi_login" refer="Constraint1" msprop:rel_Generator_UserChildTable="movi" msprop:rel_Generator_ChildPropName="GetmoviRows" msprop:rel_Generator_UserRelationName="FK_movi_login" msprop:rel_Generator_RelationVarName="relationFK_movi_login" msprop:rel_Generator_UserParentTable="login" msprop:rel_Generator_ParentPropName="loginRow" msdata:AcceptRejectRule="Cascade">
+    <xs:keyref name="FK_movi_login" refer="Constraint1" msprop:rel_Generator_UserChildTable="movi" msprop:rel_Generator_ChildPropName="GetmoviRows" msprop:rel_Generator_UserRelationName="FK_movi_login" msprop:rel_Generator_ParentPropName="loginRow" msprop:rel_Generator_RelationVarName="relationFK_movi_login" msprop:rel_Generator_UserParentTable="login" msdata:AcceptRejectRule="Cascade">
       <xs:selector xpath=".//mstns:movi" />
       <xs:field xpath="mstns:id_log" />
     </xs:keyref>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_mensaje_movi" msdata:parent="movi" msdata:child="mensaje" msdata:parentkey="id" msdata:childkey="id" msprop:Generator_UserChildTable="mensaje" msprop:Generator_ChildPropName="GetmensajeRows" msprop:Generator_UserRelationName="FK_mensaje_movi" msprop:Generator_RelationVarName="relationFK_mensaje_movi" msprop:Generator_UserParentTable="movi" msprop:Generator_ParentPropName="moviRow" />
-      <msdata:Relationship name="FK_sesion_login" msdata:parent="login" msdata:child="sesion" msdata:parentkey="id" msdata:childkey="id" msprop:Generator_UserChildTable="sesion" msprop:Generator_ChildPropName="GetsesionRows" msprop:Generator_UserRelationName="FK_sesion_login" msprop:Generator_RelationVarName="relationFK_sesion_login" msprop:Generator_UserParentTable="login" msprop:Generator_ParentPropName="loginRow" />
+      <msdata:Relationship name="FK_mensaje_movi" msdata:parent="movi" msdata:child="mensaje" msdata:parentkey="id" msdata:childkey="id" msprop:Generator_UserChildTable="mensaje" msprop:Generator_ChildPropName="GetmensajeRows" msprop:Generator_UserRelationName="FK_mensaje_movi" msprop:Generator_ParentPropName="moviRow" msprop:Generator_RelationVarName="relationFK_mensaje_movi" msprop:Generator_UserParentTable="movi" />
+      <msdata:Relationship name="FK_sesion_login" msdata:parent="login" msdata:child="sesion" msdata:parentkey="id" msdata:childkey="id" msprop:Generator_UserChildTable="sesion" msprop:Generator_ChildPropName="GetsesionRows" msprop:Generator_UserRelationName="FK_sesion_login" msprop:Generator_ParentPropName="loginRow" msprop:Generator_RelationVarName="relationFK_sesion_login" msprop:Generator_UserParentTable="login" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

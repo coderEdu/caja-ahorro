@@ -138,10 +138,12 @@ namespace CajaDeAhorro
                     try
                     {
                         int biggestId = Convert.ToInt32(this.loginTableAdapter1.BiggestIdScalarQuery());
-                        this.loginTableAdapter1.InsertQuery(biggestId + 1, this.txt_nombre_nuevo_usuario.Text, this.txt_pass_nuevo_usuario.Text, 0);
+                        int newUserId = biggestId + 1;
+                        this.loginTableAdapter1.InsertQuery(newUserId, this.txt_nombre_nuevo_usuario.Text, this.txt_pass_nuevo_usuario.Text, 0);
                         MessageBox.Show("Nuevo usuario creado.", "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.ExpOrContr = Estados.mov2;
+                        //this.ExpOrContr = Estados.mov2;
                         //this.tmr_exp_contr.Start();
+                        this.sesionTableAdapter1.NewSessInsertQuery(newUserId, 0);
                     }
                     catch (Exception) { }
                 }

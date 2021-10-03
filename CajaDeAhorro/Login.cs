@@ -18,6 +18,8 @@ namespace CajaDeAhorro
         private int height=364;
         private int scrDimH;
         private int scrDimV;
+        // static vars
+        static int increase;
         
         public Login()
         {
@@ -27,6 +29,12 @@ namespace CajaDeAhorro
         private void Login_Load(object sender, EventArgs e)
         {
             // ...
+            //LoadingModules();     
+            
+        }
+
+        public void LoadingModules()
+        {
             Auxiliar.form1 = new Form1();
             Auxiliar.admin = new Administrador();
             Auxiliar.login = this;
@@ -41,8 +49,9 @@ namespace CajaDeAhorro
             //MessageBox.Show(scrDimH.ToString() + " " + scrDimV.ToString());
             this.btn_crea_usuario.Visible = false;
             this.pbx_add.Visible = false;
-            GetActiveSessions();           
-            
+            increase = 0;
+            this.flp_sess.Controls.Clear();
+            GetActiveSessions();
         }
 
         public void GetActiveSessions()
@@ -58,9 +67,10 @@ namespace CajaDeAhorro
                     Session session = new Session();
                     string loggName = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[i].Field<string>(1).Replace(" ", "");
                     this.flp_sess.Controls.Add(session.CreateNewEnemyWAttribs(loggName));
-                }
+                }                
             }
         }
+
         private void TextBoxes_GotFocus(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
@@ -82,6 +92,7 @@ namespace CajaDeAhorro
                 // obtener el valor del id del usuario logueado y guardarlo en Auxiliar
                 this.loginTableAdapter1.FillByWhoIsLogged(c_AHORRO_NEW_DS1.login, this.txt_usuario.Text, this.txt_contrasegna.Text);
                 Auxiliar.id_logged = c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<int>(0);
+                this.sesionTableAdapter1.ChangeSessStateUpQuery(1, Auxiliar.id_logged, Auxiliar.id_logged);
 
                 Auxiliar.form1.Show();
                 Auxiliar.login.Hide();
@@ -266,21 +277,34 @@ namespace CajaDeAhorro
 
         private void tmr_exp_contr_Tick(object sender, EventArgs e)     // timer's tick
         {
-            switch (ExpOrContr)
+            if (this.progress.Value<100)
             {
-                case Estados.exp:
-                    EstadoExp();
-                    break;
-                case Estados.con:
-                    EstadoCon();
-                    break;
-                case Estados.mov1:
-                    EstadoMov1();
-                    break;
-                case Estados.mov2:
-                    EstadoMov2();
-                    break;
+                this.progress.Value += 1;
             }
+            
+            if (this.progress.Value == 100)
+            {
+                tmr_exp_contr.Stop();
+                this.progress.Value = 0;
+                Auxiliar.form1.Show();
+                Auxiliar.login.Hide();
+            }
+
+            //switch (ExpOrContr)
+            //{
+            //    case Estados.exp:
+            //        EstadoExp();
+            //        break;
+            //    case Estados.con:
+            //        EstadoCon();
+            //        break;
+            //    case Estados.mov1:
+            //        EstadoMov1();
+            //        break;
+            //    case Estados.mov2:
+            //        EstadoMov2();
+            //        break;
+            //}
         }
 
         private void tab_sesion_Selected(object sender, TabControlEventArgs e)
@@ -293,6 +317,33 @@ namespace CajaDeAhorro
             {
                 this.pbx_add.Visible = false;
             }
+        }
+
+        private void flp_sess_ControlAdded(object sender, ControlEventArgs e)
+        {
+            Button btn = (Button)this.flp_sess.Controls[increase];
+            btn.Click += Btn_session_click;
+            ++increase;
+ 
+        }
+
+        private void Btn_session_click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            //MessageBox.Show("Hiciste click en la sesión " + button.Text);
+
+            // obtengo el id del usuario logueado según su nombre y lo guardo en Auxiliar
+            this.loginTableAdapter1.FillByWhoIsActiveByName(c_AHORRO_NEW_DS1.login, button.Text);
+            Auxiliar.id_logged = c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<int>(0);
+
+            this.tmr_exp_contr.Interval = 1;
+            this.tmr_exp_contr.Start();
+
+        }
+
+        private void Login_Activated(object sender, EventArgs e)
+        {
+            LoadingModules();
         }
     }
 }

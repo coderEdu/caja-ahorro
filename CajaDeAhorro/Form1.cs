@@ -41,7 +41,7 @@ namespace CajaDeAhorro
             // capturo el nombre del usuario logueado y lo adjunto al texto del lbl_dios_desmolde
             Auxiliar.LoggUserName = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<string>(1).ToString();
             Auxiliar.LoggUserName = Auxiliar.LoggUserName.Replace(" ", "");   // quito los espacios en blanco del final
-            lbl_dios_desmolde.Text = "usuario activo = [ " + Auxiliar.LoggUserName + " ]";
+            lbl_dios_desmolde.Text = "usuario activo [ " + Auxiliar.LoggUserName + " ]";
 
             // capturo el valor caja del row del usuario logueado
             this.lbl_caja_valor.Text = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<int>(3).ToString();
@@ -95,8 +95,23 @@ namespace CajaDeAhorro
 
         private void btn_sesion_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Auxiliar.login.Show();
+            //working here
+            DialogResult result;
+            result = MessageBox.Show("Está seguro de querer cerrar la sesión?", "Caja-ahorro - Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result==DialogResult.Yes)
+            {
+                try
+                {
+                    this.sesionTableAdapter1.ChangeSessStateUpQuery(0, Auxiliar.id_logged, Auxiliar.id_logged);
+                    MessageBox.Show("Ha cerrado la sesión.", "Caja-ahorro - Sesión Cerrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    Auxiliar.login.Show();
+                }
+                catch (Exception)
+                { }
+            
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

@@ -55,6 +55,7 @@ namespace CajaDeAhorro
             this.tabP_nuevo = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.sesionTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.sesionTableAdapter();
+            this.progress = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_login)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_add)).BeginInit();
@@ -187,7 +188,7 @@ namespace CajaDeAhorro
             // btn_guardar_nvo_usuario
             // 
             this.btn_guardar_nvo_usuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_guardar_nvo_usuario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(131)))), ((int)(((byte)(176)))));
+            this.btn_guardar_nvo_usuario.FlatAppearance.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.btn_guardar_nvo_usuario.FlatAppearance.BorderSize = 2;
             this.btn_guardar_nvo_usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar_nvo_usuario.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -202,7 +203,7 @@ namespace CajaDeAhorro
             // btn_cancelar_nvo_usuario
             // 
             this.btn_cancelar_nvo_usuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_cancelar_nvo_usuario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(131)))), ((int)(((byte)(176)))));
+            this.btn_cancelar_nvo_usuario.FlatAppearance.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.btn_cancelar_nvo_usuario.FlatAppearance.BorderSize = 2;
             this.btn_cancelar_nvo_usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar_nvo_usuario.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -225,6 +226,7 @@ namespace CajaDeAhorro
             this.flp_sess.Name = "flp_sess";
             this.flp_sess.Size = new System.Drawing.Size(441, 480);
             this.flp_sess.TabIndex = 14;
+            this.flp_sess.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.flp_sess_ControlAdded);
             // 
             // label1
             // 
@@ -353,6 +355,13 @@ namespace CajaDeAhorro
             // 
             this.sesionTableAdapter1.ClearBeforeFill = true;
             // 
+            // progress
+            // 
+            this.progress.Location = new System.Drawing.Point(0, 564);
+            this.progress.Name = "progress";
+            this.progress.Size = new System.Drawing.Size(859, 5);
+            this.progress.TabIndex = 22;
+            // 
             // Login
             // 
             this.AcceptButton = this.btn_login;
@@ -361,6 +370,7 @@ namespace CajaDeAhorro
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(859, 624);
+            this.Controls.Add(this.progress);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tab_sesion);
             this.Controls.Add(this.pbx_add);
@@ -372,6 +382,7 @@ namespace CajaDeAhorro
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "CAJA DE AHORRO - LOGIN";
+            this.Activated += new System.EventHandler(this.Login_Activated);
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_login)).EndInit();
@@ -412,5 +423,6 @@ namespace CajaDeAhorro
         private System.Windows.Forms.TabPage tabP_nuevo;
         private System.Windows.Forms.Label label5;
         private C_AHORRO_NEW_DSTableAdapters.sesionTableAdapter sesionTableAdapter1;
+        private System.Windows.Forms.ProgressBar progress;
     }
 }

@@ -40,6 +40,7 @@ namespace CajaDeAhorro
             this.loginTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.loginTableAdapter();
             this.btn_sesion = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.sesionTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.sesionTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -173,6 +174,10 @@ namespace CajaDeAhorro
             this.panel1.Size = new System.Drawing.Size(239, 265);
             this.panel1.TabIndex = 15;
             // 
+            // sesionTableAdapter1
+            // 
+            this.sesionTableAdapter1.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +214,7 @@ namespace CajaDeAhorro
         private C_AHORRO_NEW_DSTableAdapters.loginTableAdapter loginTableAdapter1;
         private System.Windows.Forms.Button btn_sesion;
         private System.Windows.Forms.Panel panel1;
+        private C_AHORRO_NEW_DSTableAdapters.sesionTableAdapter sesionTableAdapter1;
     }
 }
 

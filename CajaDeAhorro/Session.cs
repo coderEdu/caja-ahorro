@@ -13,7 +13,7 @@ namespace CajaDeAhorro
         static int c = 0; // increase name in one
         //static int counter = 0;
 
-        public Button CreateNewEnemyWAttribs(string userName)
+        public Button CreateNewSessionWithAttribs(string userName)
         {
             return new Button
             {

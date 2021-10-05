@@ -149,9 +149,9 @@ namespace CajaDeAhorro
             // 
             // lbl_nuevo_usuario
             // 
-            this.lbl_nuevo_usuario.BackColor = System.Drawing.Color.Chocolate;
+            this.lbl_nuevo_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lbl_nuevo_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nuevo_usuario.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lbl_nuevo_usuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_nuevo_usuario.Location = new System.Drawing.Point(58, 81);
             this.lbl_nuevo_usuario.Name = "lbl_nuevo_usuario";
             this.lbl_nuevo_usuario.Size = new System.Drawing.Size(256, 16);
@@ -161,9 +161,9 @@ namespace CajaDeAhorro
             // 
             // lbl_pass_nuevo_usuario
             // 
-            this.lbl_pass_nuevo_usuario.BackColor = System.Drawing.Color.Chocolate;
+            this.lbl_pass_nuevo_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lbl_pass_nuevo_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_pass_nuevo_usuario.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lbl_pass_nuevo_usuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_pass_nuevo_usuario.Location = new System.Drawing.Point(58, 147);
             this.lbl_pass_nuevo_usuario.Name = "lbl_pass_nuevo_usuario";
             this.lbl_pass_nuevo_usuario.Size = new System.Drawing.Size(256, 16);
@@ -242,9 +242,9 @@ namespace CajaDeAhorro
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.Chocolate;
+            this.label2.BackColor = System.Drawing.Color.Silver;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(58, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(256, 16);
@@ -254,9 +254,9 @@ namespace CajaDeAhorro
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.Chocolate;
+            this.label3.BackColor = System.Drawing.Color.Silver;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(58, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(256, 16);
@@ -343,7 +343,7 @@ namespace CajaDeAhorro
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label5.ForeColor = System.Drawing.Color.SteelBlue;
             this.label5.Location = new System.Drawing.Point(399, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(448, 41);
@@ -359,7 +359,7 @@ namespace CajaDeAhorro
             // 
             this.progress.Location = new System.Drawing.Point(0, 564);
             this.progress.Name = "progress";
-            this.progress.Size = new System.Drawing.Size(859, 5);
+            this.progress.Size = new System.Drawing.Size(859, 4);
             this.progress.TabIndex = 22;
             // 
             // Login

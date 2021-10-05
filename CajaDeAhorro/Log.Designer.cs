@@ -387,11 +387,11 @@ namespace CajaDeAhorro
             // 
             // lbl_total
             // 
-            this.lbl_total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lbl_total.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_total.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_total.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_total.Location = new System.Drawing.Point(795, 258);
             this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(220, 48);
+            this.lbl_total.Size = new System.Drawing.Size(220, 51);
             this.lbl_total.TabIndex = 13;
             this.lbl_total.Text = "Total:  $";
             this.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

@@ -18,6 +18,7 @@ namespace CajaDeAhorro
         private int height=364;
         private int scrDimH;
         private int scrDimV;
+        private int barProgCounter;
         // static vars
         static int increase;
         
@@ -28,9 +29,7 @@ namespace CajaDeAhorro
 
         private void Login_Load(object sender, EventArgs e)
         {
-            // ...
-            //LoadingModules();     
-            
+            // ...            
         }
 
         public void LoadingModules()
@@ -38,15 +37,10 @@ namespace CajaDeAhorro
             Auxiliar.form1 = new Form1();
             Auxiliar.admin = new Administrador();
             Auxiliar.login = this;
-            //this.btn_check_admin.Visible = false;
-            //this.tmr_exp_contr.Interval = 1;
-            //this.Size = new Size(509, 364);
-            //EstadoPanelNuevoUsuario(false);
             scrDimH = Screen.PrimaryScreen.Bounds.Width;
             scrDimV = Screen.PrimaryScreen.Bounds.Height;
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(scrDimH / 2 - this.ClientRectangle.Width / 2, scrDimV / 2 - this.ClientRectangle.Height / 2);
-            //MessageBox.Show(scrDimH.ToString() + " " + scrDimV.ToString());
             this.btn_crea_usuario.Visible = false;
             this.pbx_add.Visible = false;
             increase = 0;
@@ -64,9 +58,12 @@ namespace CajaDeAhorro
             {
                 if (this.c_AHORRO_NEW_DS1.Tables["sesion"].Rows[i].Field<int>(1)==1)
                 {
-                    Session session = new Session();
-                    string loggName = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[i].Field<string>(1).Replace(" ", "");
-                    this.flp_sess.Controls.Add(session.CreateNewEnemyWAttribs(loggName));
+                    if (this.flp_sess.Controls.Count < 12)
+                    {
+                        Session session = new Session();
+                        string loggName = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[i].Field<string>(1).Replace(" ", "");
+                        this.flp_sess.Controls.Add(session.CreateNewSessionWithAttribs(loggName));
+                    }
                 }                
             }
         }
@@ -94,8 +91,8 @@ namespace CajaDeAhorro
                 Auxiliar.id_logged = c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<int>(0);
                 this.sesionTableAdapter1.ChangeSessStateUpQuery(1, Auxiliar.id_logged, Auxiliar.id_logged);
 
-                Auxiliar.form1.Show();
-                Auxiliar.login.Hide();
+                this.tmr_exp_contr.Interval = 1;
+                this.tmr_exp_contr.Start();
             }
         }
 
@@ -286,27 +283,19 @@ namespace CajaDeAhorro
             
             if (this.progress.Value == 100)
             {
-                tmr_exp_contr.Stop();
-                this.progress.Value = 0;
-                Auxiliar.form1.Show();
-                Auxiliar.login.Hide();
-            }
-
-            //switch (ExpOrContr)
-            //{
-            //    case Estados.exp:
-            //        EstadoExp();
-            //        break;
-            //    case Estados.con:
-            //        EstadoCon();
-            //        break;
-            //    case Estados.mov1:
-            //        EstadoMov1();
-            //        break;
-            //    case Estados.mov2:
-            //        EstadoMov2();
-            //        break;
-            //}
+                if (this.barProgCounter == 90)
+                {
+                    tmr_exp_contr.Stop();
+                    this.barProgCounter = 0;
+                    this.progress.Value = 0;
+                    Auxiliar.form1.Show();
+                    Auxiliar.login.Hide();
+                }
+                else
+                {
+                    barProgCounter++;
+                }        
+            } 
         }
 
         private void tab_sesion_Selected(object sender, TabControlEventArgs e)
@@ -332,7 +321,6 @@ namespace CajaDeAhorro
         private void Btn_session_click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            //MessageBox.Show("Hiciste click en la sesión " + button.Text);
 
             // obtengo el id del usuario logueado según su nombre y lo guardo en Auxiliar
             this.loginTableAdapter1.FillByWhoIsActiveByName(c_AHORRO_NEW_DS1.login, button.Text);

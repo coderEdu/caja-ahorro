@@ -41,6 +41,7 @@ namespace CajaDeAhorro
             this.btn_sesion = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.sesionTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.sesionTableAdapter();
+            this.lbl_saldo_disponible = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,12 +50,12 @@ namespace CajaDeAhorro
             // 
             this.lbl_caja_titulo.BackColor = System.Drawing.Color.White;
             this.lbl_caja_titulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_caja_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_caja_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_caja_titulo.ForeColor = System.Drawing.Color.Green;
             this.lbl_caja_titulo.Location = new System.Drawing.Point(239, 47);
             this.lbl_caja_titulo.Name = "lbl_caja_titulo";
             this.lbl_caja_titulo.Size = new System.Drawing.Size(497, 265);
             this.lbl_caja_titulo.TabIndex = 0;
-            this.lbl_caja_titulo.Text = "\r\n  Saldo disponible";
             this.lbl_caja_titulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbl_caja_valor
@@ -178,12 +179,24 @@ namespace CajaDeAhorro
             // 
             this.sesionTableAdapter1.ClearBeforeFill = true;
             // 
+            // lbl_saldo_disponible
+            // 
+            this.lbl_saldo_disponible.AutoSize = true;
+            this.lbl_saldo_disponible.BackColor = System.Drawing.Color.White;
+            this.lbl_saldo_disponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_saldo_disponible.Location = new System.Drawing.Point(374, 83);
+            this.lbl_saldo_disponible.Name = "lbl_saldo_disponible";
+            this.lbl_saldo_disponible.Size = new System.Drawing.Size(252, 37);
+            this.lbl_saldo_disponible.TabIndex = 16;
+            this.lbl_saldo_disponible.Text = "Saldo disponible";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(736, 312);
+            this.Controls.Add(this.lbl_saldo_disponible);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lbl_caja_valor);
             this.Controls.Add(this.lbl_caja_titulo);
@@ -198,6 +211,7 @@ namespace CajaDeAhorro
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -215,6 +229,7 @@ namespace CajaDeAhorro
         private System.Windows.Forms.Button btn_sesion;
         private System.Windows.Forms.Panel panel1;
         private C_AHORRO_NEW_DSTableAdapters.sesionTableAdapter sesionTableAdapter1;
+        private System.Windows.Forms.Label lbl_saldo_disponible;
     }
 }
 

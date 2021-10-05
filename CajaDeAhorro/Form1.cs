@@ -51,6 +51,15 @@ namespace CajaDeAhorro
             this.lbl_caja_valor.Text = "$" + IfItHasAPointWithParam(this.c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<int>(3).ToString());
             // capturo el valor de caja del usuario activo y lo guardo en Auxiliar
             Auxiliar.dineroEnCaja = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<int>(3);
+            // cambio el color de "Saldo diponible" según el saldo
+            if (Auxiliar.dineroEnCaja > 0)
+            {
+                this.lbl_saldo_disponible.ForeColor = Color.DarkGreen;
+            }
+            else
+            {
+                this.lbl_saldo_disponible.ForeColor = Color.Red;
+            }
         }
 
         public static String IfItHasAPointWithParam(String caja)

@@ -30,6 +30,7 @@ namespace CajaDeAhorro
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.txt_contrasegna = new System.Windows.Forms.TextBox();
             this.btn_login = new System.Windows.Forms.Button();
@@ -101,7 +102,7 @@ namespace CajaDeAhorro
             this.btn_login.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn_login.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_login.Image = global::CajaDeAhorro.Properties.Resources.enter_icon_icons_com_71207;
+            this.btn_login.Image = ((System.Drawing.Image)(resources.GetObject("btn_login.Image")));
             this.btn_login.Location = new System.Drawing.Point(0, 571);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(859, 53);
@@ -266,7 +267,7 @@ namespace CajaDeAhorro
             // 
             // pbx_login
             // 
-            this.pbx_login.Image = global::CajaDeAhorro.Properties.Resources.login;
+            this.pbx_login.Image = ((System.Drawing.Image)(resources.GetObject("pbx_login.Image")));
             this.pbx_login.Location = new System.Drawing.Point(81, 47);
             this.pbx_login.Name = "pbx_login";
             this.pbx_login.Size = new System.Drawing.Size(240, 220);
@@ -276,7 +277,7 @@ namespace CajaDeAhorro
             // 
             // pbx_add
             // 
-            this.pbx_add.Image = global::CajaDeAhorro.Properties.Resources.add_1_icon;
+            this.pbx_add.Image = ((System.Drawing.Image)(resources.GetObject("pbx_add.Image")));
             this.pbx_add.Location = new System.Drawing.Point(280, 56);
             this.pbx_add.Name = "pbx_add";
             this.pbx_add.Size = new System.Drawing.Size(32, 32);

@@ -184,11 +184,12 @@ namespace CajaDeAhorro
             this.lbl_saldo_disponible.AutoSize = true;
             this.lbl_saldo_disponible.BackColor = System.Drawing.Color.White;
             this.lbl_saldo_disponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_saldo_disponible.ForeColor = System.Drawing.Color.Black;
             this.lbl_saldo_disponible.Location = new System.Drawing.Point(374, 83);
             this.lbl_saldo_disponible.Name = "lbl_saldo_disponible";
-            this.lbl_saldo_disponible.Size = new System.Drawing.Size(252, 37);
+            this.lbl_saldo_disponible.Size = new System.Drawing.Size(257, 37);
             this.lbl_saldo_disponible.TabIndex = 16;
-            this.lbl_saldo_disponible.Text = "Saldo disponible";
+            this.lbl_saldo_disponible.Text = "Saldo Disponible";
             // 
             // Form1
             // 

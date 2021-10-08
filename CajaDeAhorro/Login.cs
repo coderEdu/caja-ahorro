@@ -239,41 +239,6 @@ namespace CajaDeAhorro
             this.btn_cancelar_nvo_usuario.Visible = estado;
         }
 
-        private void EstadoMov1()   // de izq al centro
-        {
-            if (ExpOrContr == Estados.mov1)
-            {
-                this.tmr_exp_contr.Interval = 1;
-                this.tmr_exp_contr.Start();
-                if (this.lbl_nuevo_usuario.Location.X <= 118)
-                {
-                    SetElemLocation(8);
-                }
-                else
-                {
-                    this.tmr_exp_contr.Stop();
-                    EstadoLblsAndTxtsNvoUser(true);
-                }
-            }
-        }
-
-        private void EstadoMov2()   // del centro hacia la der
-        {
-            if (ExpOrContr == Estados.mov2)
-            {
-                EstadoLblsAndTxtsNvoUser(false);
-                if (this.lbl_nuevo_usuario.Location.X <= 500)
-                {
-                    SetElemLocation(8);
-                }
-                else
-                {
-                    ExpOrContr = Estados.con;
-                    tmr_exp_contr.Interval = 1;
-                }
-            }
-        }
-
         private void tmr_exp_contr_Tick(object sender, EventArgs e)     // timer's tick
         {
             if (this.progress.Value<100)

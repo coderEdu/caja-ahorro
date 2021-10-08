@@ -39,9 +39,7 @@ namespace CajaDeAhorro
                 this.moviTableAdapter1.FillByLoggedAmbos(this.c_AHORRO_NEW_DS1.movi, Auxiliar.id_logged);
             }
             catch (Exception)
-            {
-
-            }
+            { }
 
             this.lbl_trans_finds.Visible = false;
             AjustarCamposDGV();
@@ -85,9 +83,9 @@ namespace CajaDeAhorro
             return "Total:  $" + String.Format("{0:N2}",suma);
         }
 
-        public bool NoVacioYMayorQueCero()
+        public bool CheckedNoVacioYMayorQueCero()  // modificado
         {
-            return this.txt_monto.TextLength > 0 && Convert.ToInt32(Monto()) > 0;
+            return this.check_monto.Checked && this.txt_monto.TextLength > 0 && Convert.ToInt32(Monto()) > 0;
         }
 
         public int Monto()
@@ -101,11 +99,12 @@ namespace CajaDeAhorro
             this.lbl_total.Text = SumarMonto();
         }
 
+        // logica para la búsqueda por fechas
         private void LogicCheckFechas(DateTime dtDesde, DateTime dtHasta)   // busca en un período
         {
             if (this.cbx_tipo.SelectedItem.Equals("-- AMBOS --"))
             {
-                if (NoVacioYMayorQueCero())
+                if (CheckedNoVacioYMayorQueCero())
                 {
                     this.moviTableAdapter1.FillByFechaMontoAmbos(this.c_AHORRO_NEW_DS1.movi, Auxiliar.id_logged, dtDesde, dtHasta, Monto());
                     AjustarCamposDGV();
@@ -123,7 +122,7 @@ namespace CajaDeAhorro
             }
             else if (this.cbx_tipo.SelectedItem.Equals("-- DEPOSITOS --")) // working here
             {
-                if (NoVacioYMayorQueCero())
+                if (CheckedNoVacioYMayorQueCero())
                 {
                     this.moviTableAdapter1.FillByFechaMonto(this.c_AHORRO_NEW_DS1.movi, "deposito", dtDesde, dtHasta, Auxiliar.id_logged, Monto());
                     AjustarCamposDGV();
@@ -142,7 +141,7 @@ namespace CajaDeAhorro
             }
             else
             {
-                if (NoVacioYMayorQueCero())
+                if (CheckedNoVacioYMayorQueCero())
                 {
                     this.moviTableAdapter1.FillByFechaMonto(this.c_AHORRO_NEW_DS1.movi, "extracción", dtDesde, dtHasta, Auxiliar.id_logged, Monto());
                     AjustarCamposDGV();
@@ -170,7 +169,7 @@ namespace CajaDeAhorro
 
             if (this.cbx_tipo.SelectedItem.Equals("-- AMBOS --"))
             {
-                if (NoVacioYMayorQueCero())
+                if (CheckedNoVacioYMayorQueCero())
                 {
                     this.moviTableAdapter1.FillByFechaExactaMontoAmbos(this.c_AHORRO_NEW_DS1.movi, Auxiliar.id_logged, fecha_time1, fecha_time2, Monto());
                     AjustarCamposDGV();
@@ -187,7 +186,7 @@ namespace CajaDeAhorro
             }
             else if (this.cbx_tipo.SelectedItem.Equals("-- DEPOSITOS --"))             // working here
             {
-                if (NoVacioYMayorQueCero())
+                if (CheckedNoVacioYMayorQueCero())
                 {
                     this.moviTableAdapter1.FillByFechaExactaMonto(this.c_AHORRO_NEW_DS1.movi, "deposito", fecha_time1, fecha_time2, Auxiliar.id_logged, Monto());
                     AjustarCamposDGV();
@@ -207,7 +206,7 @@ namespace CajaDeAhorro
             }
             else
             {
-                if (NoVacioYMayorQueCero())
+                if (CheckedNoVacioYMayorQueCero())
                 {
                     this.moviTableAdapter1.FillByFechaExactaMonto(this.c_AHORRO_NEW_DS1.movi, "extracción", fecha_time1, fecha_time2, Auxiliar.id_logged, Monto());
                     AjustarCamposDGV();
@@ -230,24 +229,60 @@ namespace CajaDeAhorro
         {
             if (this.cbx_tipo.SelectedItem.Equals("-- AMBOS --"))
             {
-                this.moviTableAdapter1.FillByLoggedAmbos(this.c_AHORRO_NEW_DS1.movi, Auxiliar.id_logged);
-                AjustarCamposDGV();
-                this.dgv.DataSource = this.c_AHORRO_NEW_DS1.movi;
-                this.lbl_trans_finds.Text = this.TransEncontr(this.moviTableAdapter1.FillByLoggedAmbos(this.c_AHORRO_NEW_DS1.movi, Auxiliar.id_logged));
+                if (CheckedNoVacioYMayorQueCero())
+                {
+                    this.moviTableAdapter1.FillByMontoAmbos(c_AHORRO_NEW_DS1.movi, Auxiliar.id_logged, Monto());
+                    AjustarCamposDGV();
+                    this.dgv.DataSource = this.c_AHORRO_NEW_DS1.movi;
+                    this.lbl_trans_finds.Text = this.TransEncontr(this.moviTableAdapter1.FillByMontoAmbos(c_AHORRO_NEW_DS1.movi, Auxiliar.id_logged, Monto()));
+                    MostrarSumatoriaMonto();
+                }
+                else
+                {
+                    this.moviTableAdapter1.FillByLoggedAmbos(this.c_AHORRO_NEW_DS1.movi, Auxiliar.id_logged);
+                    AjustarCamposDGV();
+                    this.dgv.DataSource = this.c_AHORRO_NEW_DS1.movi;
+                    this.lbl_trans_finds.Text = this.TransEncontr(this.moviTableAdapter1.FillByLoggedAmbos(this.c_AHORRO_NEW_DS1.movi, Auxiliar.id_logged));
+                    MostrarSumatoriaMonto();
+                }
             }
-            else if (this.cbx_tipo.SelectedItem.Equals("-- DEPOSITOS --"))
+            else if (this.cbx_tipo.SelectedItem.Equals("-- DEPOSITOS --")) // en esta parte tengo que agregar la búsqueda por monto
             {
-                this.moviTableAdapter1.FillByLogged(this.c_AHORRO_NEW_DS1.movi, "deposito", Auxiliar.id_logged);
-                AjustarCamposDGV();
-                this.dgv.DataSource = this.c_AHORRO_NEW_DS1.movi;
-                this.lbl_trans_finds.Text = this.TransEncontr(this.moviTableAdapter1.FillByLogged(this.c_AHORRO_NEW_DS1.movi, "deposito", Auxiliar.id_logged));
+
+                if (CheckedNoVacioYMayorQueCero())
+                {
+                    this.moviTableAdapter1.FillByMontoTrans(c_AHORRO_NEW_DS1.movi, Monto(), "deposito", Auxiliar.id_logged);
+                    AjustarCamposDGV();
+                    this.dgv.DataSource = this.c_AHORRO_NEW_DS1.movi;
+                    this.lbl_trans_finds.Text = this.TransEncontr(this.moviTableAdapter1.FillByMontoTrans(c_AHORRO_NEW_DS1.movi, Monto(), "deposito", Auxiliar.id_logged));
+                    MostrarSumatoriaMonto();
+                }
+                else
+                {
+                    this.moviTableAdapter1.FillByLogged(this.c_AHORRO_NEW_DS1.movi, "deposito", Auxiliar.id_logged);
+                    AjustarCamposDGV();
+                    this.dgv.DataSource = this.c_AHORRO_NEW_DS1.movi;
+                    this.lbl_trans_finds.Text = this.TransEncontr(this.moviTableAdapter1.FillByLogged(this.c_AHORRO_NEW_DS1.movi, "deposito", Auxiliar.id_logged));
+                    MostrarSumatoriaMonto();
+                }
             }
             else
             {
-                this.moviTableAdapter1.FillByLogged(this.c_AHORRO_NEW_DS1.movi, "extracción", Auxiliar.id_logged);
-                AjustarCamposDGV();
-                this.dgv.DataSource = this.c_AHORRO_NEW_DS1.movi;
-                this.lbl_trans_finds.Text = this.TransEncontr(this.moviTableAdapter1.FillByLogged(this.c_AHORRO_NEW_DS1.movi, "extracción", Auxiliar.id_logged));
+                if (CheckedNoVacioYMayorQueCero())
+                {
+                    this.moviTableAdapter1.FillByMontoTrans(c_AHORRO_NEW_DS1.movi, Monto(), "extracción", Auxiliar.id_logged);
+                    AjustarCamposDGV();
+                    this.dgv.DataSource = this.c_AHORRO_NEW_DS1.movi;
+                    this.lbl_trans_finds.Text = this.TransEncontr(this.moviTableAdapter1.FillByMontoTrans(c_AHORRO_NEW_DS1.movi, Monto(), "extracción", Auxiliar.id_logged));
+                    MostrarSumatoriaMonto();
+                }
+                else
+                {
+                    this.moviTableAdapter1.FillByLogged(this.c_AHORRO_NEW_DS1.movi, "extracción", Auxiliar.id_logged);
+                    AjustarCamposDGV();
+                    this.dgv.DataSource = this.c_AHORRO_NEW_DS1.movi;
+                    this.lbl_trans_finds.Text = this.TransEncontr(this.moviTableAdapter1.FillByLogged(this.c_AHORRO_NEW_DS1.movi, "extracción", Auxiliar.id_logged));
+                }
             }
         }
 
@@ -312,16 +347,34 @@ namespace CajaDeAhorro
                     grp_fechas.BackColor = Color.White;
                 }
             }
+            else if (check.Name == "check_monto")
+            {
+                if (check.CheckState == CheckState.Checked)
+                {
+                    grp_monto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+                    txt_monto.BackColor = Color.White;
+                    txt_monto.Focus();
+                }
+                else
+                {
+                    grp_monto.BackColor = Color.White;
+                    txt_monto.BackColor = System.Drawing.SystemColors.Control;
+                }
+            }
 
             if (!check_fechas.Checked && !check_fecha.Checked)
             {
-                cbx_tipo.SelectedIndex = 0;
                 grp_fechas.BackColor = Color.White;
                 grp_fecha.BackColor = Color.White;
                 this.lbl_exacta.Enabled = false;
                 this.lbl_desde.Enabled = false;
                 this.lbl_hasta.Enabled = false;
                 DisOrEnablingPickers(false);
+
+                if (!check_monto.Checked)
+                {
+                    cbx_tipo.SelectedIndex = 0;
+                }
             }
         }
 

@@ -7,9 +7,9 @@
 <DiagramLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ex:showrelationlabel="False" ViewPortX="-10" ViewPortY="-37" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:login" ZOrder="7" X="67" Y="60" Height="229" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="102" />
-    <Shape ID="DesignTable:movi" ZOrder="5" X="431" Y="196" Height="248" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:mensaje" ZOrder="3" X="795" Y="61" Height="153" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="64" />
-    <Shape ID="DesignTable:sesion" ZOrder="1" X="429" Y="-27" Height="191" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="64" />
+    <Shape ID="DesignTable:movi" ZOrder="1" X="431" Y="196" Height="248" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="121" />
+    <Shape ID="DesignTable:mensaje" ZOrder="4" X="795" Y="61" Height="153" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="64" />
+    <Shape ID="DesignTable:sesion" ZOrder="2" X="429" Y="-27" Height="191" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="64" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK_movi_login" ZOrder="6" LineWidth="11">
@@ -24,7 +24,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_mensaje_movi" ZOrder="4" LineWidth="11">
+    <Connector ID="DesignRelation:FK_mensaje_movi" ZOrder="5" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>731</X>
@@ -36,7 +36,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_sesion_login" ZOrder="2" LineWidth="11">
+    <Connector ID="DesignRelation:FK_sesion_login" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>350</X>

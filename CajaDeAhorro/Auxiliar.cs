@@ -26,5 +26,10 @@ namespace CajaDeAhorro
             return dineroEnCaja;
         }
 
+        public static string getAppName()
+        {
+            return "CAJA DE AHORRO -";
+        }
+
     }
 }

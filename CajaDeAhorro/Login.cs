@@ -42,8 +42,12 @@ namespace CajaDeAhorro
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(scrDimH / 2 - this.ClientRectangle.Width / 2, scrDimV / 2 - this.ClientRectangle.Height / 2);
             this.btn_crea_usuario.Visible = false;
-            this.pbx_add.Visible = false;
+            this.pbx_action.Visible = true;
+            this.pbx_action.Image = global::CajaDeAhorro.Properties.Resources.Lock_Lock_icon;
             increase = 0;
+            this.txt_usuario.Clear();
+            this.txt_contrasegna.Clear();
+            this.txt_usuario.Focus();
             this.flp_sess.Controls.Clear();
             GetActiveSessions();
         }
@@ -62,7 +66,12 @@ namespace CajaDeAhorro
                     {
                         Session session = new Session();
                         string loggName = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[i].Field<string>(1).Replace(" ", "");
-                        this.flp_sess.Controls.Add(session.CreateNewSessionWithAttribs(loggName));
+                        Button button = new Button();
+                        button = session.CreateNewSessionWithAttribs(loggName);
+                        button.BackColor = Color.WhiteSmoke;
+                        button.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+                        button.FlatAppearance.BorderSize = 3;
+                        this.flp_sess.Controls.Add(button);
                     }
                 }                
             }
@@ -101,17 +110,6 @@ namespace CajaDeAhorro
             this.ExpOrContr = Estados.exp;
             this.tmr_exp_contr.Start(); // timer start
             // código movido a tick 
-        }
-
-        private void EstadoPanelNuevoUsuario(bool estado)
-        {
-            //this.lbl_crea_nvo_usuario.Visible = estado;
-            this.lbl_nuevo_usuario.Visible = estado;
-            this.lbl_pass_nuevo_usuario.Visible = estado;
-            this.txt_nombre_nuevo_usuario.Visible = estado;
-            this.txt_pass_nuevo_usuario.Visible = estado;
-            this.btn_guardar_nvo_usuario.Visible = estado;
-            this.btn_cancelar_nvo_usuario.Visible = estado;
         }
 
         private void btn_guardar_nvo_usuario_Click(object sender, EventArgs e)
@@ -158,87 +156,6 @@ namespace CajaDeAhorro
             //this.tmr_exp_contr.Start();
         }
 
-        private void PrepContraerForm()
-        {
-            this.txt_nombre_nuevo_usuario.Text = "";
-            this.txt_pass_nuevo_usuario.Text = "";
-            EstadoPanelNuevoUsuario(false);
-        }
-
-        private void EstadoExp()
-        {
-            if (ExpOrContr == Estados.exp)
-            {
-                if (this.height <= 617)
-                {
-                    this.Size = new Size(this.Size.Width, this.height);
-                    this.Location = new Point(scrDimH / 2 - this.ClientRectangle.Width / 2, scrDimV / 2 - this.height / 2);
-                    this.height += 4;
-                }
-                else
-                {
-                    this.tmr_exp_contr.Stop();
-                    // begin - codigo para setear location x 
-                    this.lbl_nuevo_usuario.Location = new Point(-256, this.lbl_nuevo_usuario.Location.Y);
-                    this.lbl_pass_nuevo_usuario.Location = new Point(-256, this.lbl_pass_nuevo_usuario.Location.Y);
-                    this.txt_nombre_nuevo_usuario.Location = new Point(-256, this.txt_nombre_nuevo_usuario.Location.Y);
-                    this.txt_pass_nuevo_usuario.Location = new Point(-256, this.txt_pass_nuevo_usuario.Location.Y);
-                    //// finish - codigo para setear location x
-                    EstadoPanelNuevoUsuario(true);
-                    EstadoLblsAndTxtsNvoUser(false);
-                    this.ExpOrContr = Estados.mov1;
-                    this.tmr_exp_contr.Start();
-                    this.txt_usuario.Text = "";
-                    this.txt_usuario.Enabled = false;
-                    this.txt_contrasegna.Text = "";
-                    this.txt_contrasegna.Enabled = false;
-                    this.Size = new Size(509, 617);
-                    this.btn_crea_usuario.Enabled = false;
-                    this.txt_nombre_nuevo_usuario.Focus();
-                }
-            }
-        }
-
-        private void EstadoCon()
-        {
-            tmr_exp_contr.Interval = 1;
-            tmr_exp_contr.Start();
-            if (ExpOrContr == Estados.con)
-            {
-                PrepContraerForm(); // borra cont textBoxes y oculta panel nvo user
-                if (this.height >= 364)
-                {
-                    this.Size = new Size(this.Size.Width, this.height);
-                    this.Location = new Point(scrDimH / 2 - this.ClientRectangle.Width / 2, scrDimV / 2 - this.height / 2);
-                    this.height -= 4;
-                }
-                else
-                {
-                    this.tmr_exp_contr.Stop();
-                    this.Size = new Size(509, 364);
-                    this.txt_usuario.Enabled = true;
-                    this.txt_contrasegna.Enabled = true;
-                    this.btn_crea_usuario.Enabled = true;
-                    this.txt_usuario.Focus();
-                }
-            }
-        }
-
-        private void SetElemLocation(int step)
-        {
-            this.lbl_nuevo_usuario.Location = new Point(this.lbl_nuevo_usuario.Location.X + step, this.lbl_nuevo_usuario.Location.Y);
-            this.lbl_pass_nuevo_usuario.Location = new Point(lbl_pass_nuevo_usuario.Location.X + step, this.lbl_pass_nuevo_usuario.Location.Y);
-            this.txt_nombre_nuevo_usuario.Location = new Point(txt_nombre_nuevo_usuario.Location.X + step, this.txt_nombre_nuevo_usuario.Location.Y);
-            this.txt_pass_nuevo_usuario.Location = new Point(txt_pass_nuevo_usuario.Location.X + step, this.txt_pass_nuevo_usuario.Location.Y);
-        }
-
-        private void EstadoLblsAndTxtsNvoUser(bool estado)
-        {
-            //this.lbl_crea_nvo_usuario.Visible = estado;
-            this.btn_guardar_nvo_usuario.Visible = estado;
-            this.btn_cancelar_nvo_usuario.Visible = estado;
-        }
-
         private void tmr_exp_contr_Tick(object sender, EventArgs e)     // timer's tick
         {
             if (this.progress.Value<100)
@@ -267,11 +184,11 @@ namespace CajaDeAhorro
         {
             if (this.tab_sesion.SelectedTab==tabP_nuevo)
             {
-                this.pbx_add.Visible = true;
+                this.pbx_action.Image = global::CajaDeAhorro.Properties.Resources.add_user_icon;
             }
             else
             {
-                this.pbx_add.Visible = false;
+                this.pbx_action.Image = global::CajaDeAhorro.Properties.Resources.Lock_Lock_icon;
             }
         }
 

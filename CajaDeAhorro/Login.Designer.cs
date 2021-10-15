@@ -49,7 +49,7 @@ namespace CajaDeAhorro
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pbx_login = new System.Windows.Forms.PictureBox();
-            this.pbx_add = new System.Windows.Forms.PictureBox();
+            this.pbx_action = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tab_sesion = new System.Windows.Forms.TabControl();
             this.tabP_inicio = new System.Windows.Forms.TabPage();
@@ -59,7 +59,7 @@ namespace CajaDeAhorro
             this.progress = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_login)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_add)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_action)).BeginInit();
             this.tab_sesion.SuspendLayout();
             this.tabP_inicio.SuspendLayout();
             this.tabP_nuevo.SuspendLayout();
@@ -275,15 +275,15 @@ namespace CajaDeAhorro
             this.pbx_login.TabIndex = 18;
             this.pbx_login.TabStop = false;
             // 
-            // pbx_add
+            // pbx_action
             // 
-            this.pbx_add.Image = ((System.Drawing.Image)(resources.GetObject("pbx_add.Image")));
-            this.pbx_add.Location = new System.Drawing.Point(280, 56);
-            this.pbx_add.Name = "pbx_add";
-            this.pbx_add.Size = new System.Drawing.Size(32, 32);
-            this.pbx_add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbx_add.TabIndex = 19;
-            this.pbx_add.TabStop = false;
+            this.pbx_action.Image = ((System.Drawing.Image)(resources.GetObject("pbx_action.Image")));
+            this.pbx_action.Location = new System.Drawing.Point(280, 56);
+            this.pbx_action.Name = "pbx_action";
+            this.pbx_action.Size = new System.Drawing.Size(32, 32);
+            this.pbx_action.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbx_action.TabIndex = 19;
+            this.pbx_action.TabStop = false;
             // 
             // label4
             // 
@@ -374,7 +374,7 @@ namespace CajaDeAhorro
             this.Controls.Add(this.progress);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tab_sesion);
-            this.Controls.Add(this.pbx_add);
+            this.Controls.Add(this.pbx_action);
             this.Controls.Add(this.pbx_login);
             this.Controls.Add(this.flp_sess);
             this.Controls.Add(this.btn_crea_usuario);
@@ -387,7 +387,7 @@ namespace CajaDeAhorro
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_login)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_action)).EndInit();
             this.tab_sesion.ResumeLayout(false);
             this.tabP_inicio.ResumeLayout(false);
             this.tabP_inicio.PerformLayout();
@@ -417,7 +417,7 @@ namespace CajaDeAhorro
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pbx_login;
-        private System.Windows.Forms.PictureBox pbx_add;
+        private System.Windows.Forms.PictureBox pbx_action;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabControl tab_sesion;
         private System.Windows.Forms.TabPage tabP_inicio;

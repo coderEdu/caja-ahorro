@@ -22,6 +22,7 @@ namespace CajaDeAhorro
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.Text = Auxiliar.getAppName() + " Sesión Activa";      
             this.lbl_dios_desmolde.Visible = true;
             ConnectToDB();
 
@@ -96,9 +97,9 @@ namespace CajaDeAhorro
             Transaccion transaccion = new Transaccion();
             Button button = (Button)sender;
             if (button.Equals(btn_deposito))
-                transaccion.Text = "Realizar un depósito";
+                transaccion.Text = Auxiliar.getAppName() + " Realizar un depósito";
             else
-                transaccion.Text = "Realizar una extracción";
+                transaccion.Text = Auxiliar.getAppName() + " Realizar una extracción";
             transaccion.ShowDialog();
         }
 
@@ -117,7 +118,6 @@ namespace CajaDeAhorro
 
         private void btn_sesion_Click(object sender, EventArgs e)
         {
-            //working here
             DialogResult result;
             result = MessageBox.Show("Está seguro de querer cerrar la sesión?", "Caja-ahorro - Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -126,7 +126,7 @@ namespace CajaDeAhorro
                 try
                 {
                     this.sesionTableAdapter1.ChangeSessStateUpQuery(0, Auxiliar.id_logged, Auxiliar.id_logged);
-                    MessageBox.Show("Ha cerrado la sesión.", "Caja-ahorro - Sesión Cerrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Ha cerrado la sesión.", "Caja-ahorro - Sesión Cerrada", MessageBoxButtons.OK, MessageBoxIcon.Information); // working here
                     this.Hide();
                     Auxiliar.login.Show();
                 }

@@ -83,6 +83,26 @@ namespace CajaDeAhorro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_user_icon {
+            get {
+                object obj = ResourceManager.GetObject("add_user_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap atm {
+            get {
+                object obj = ResourceManager.GetObject("atm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bank_icon {
             get {
                 object obj = ResourceManager.GetObject("bank_icon", resourceCulture);
@@ -116,6 +136,16 @@ namespace CajaDeAhorro.Properties {
         internal static System.Drawing.Bitmap iconfinder_23632_add_add_user_group_new_user_icon_32px {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_23632_add_add_user_group_new_user_icon_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lock_Lock_icon {
+            get {
+                object obj = ResourceManager.GetObject("Lock_Lock_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

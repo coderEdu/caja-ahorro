@@ -72,12 +72,12 @@ namespace CajaDeAhorro
             // 
             // btn_deposito
             // 
-            this.btn_deposito.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_deposito.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_deposito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(202)))));
+            this.btn_deposito.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(51)))));
             this.btn_deposito.FlatAppearance.BorderSize = 2;
             this.btn_deposito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_deposito.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_deposito.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_deposito.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_deposito.Location = new System.Drawing.Point(36, 36);
             this.btn_deposito.Name = "btn_deposito";
             this.btn_deposito.Size = new System.Drawing.Size(171, 46);
@@ -88,12 +88,12 @@ namespace CajaDeAhorro
             // 
             // btn_extraccion
             // 
-            this.btn_extraccion.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_extraccion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_extraccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(202)))));
+            this.btn_extraccion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(51)))));
             this.btn_extraccion.FlatAppearance.BorderSize = 2;
             this.btn_extraccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_extraccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_extraccion.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_extraccion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_extraccion.Location = new System.Drawing.Point(36, 88);
             this.btn_extraccion.Name = "btn_extraccion";
             this.btn_extraccion.Size = new System.Drawing.Size(171, 46);
@@ -104,12 +104,12 @@ namespace CajaDeAhorro
             // 
             // btn_registro
             // 
-            this.btn_registro.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_registro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_registro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(202)))));
+            this.btn_registro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(51)))));
             this.btn_registro.FlatAppearance.BorderSize = 2;
             this.btn_registro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registro.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_registro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_registro.Location = new System.Drawing.Point(35, 140);
             this.btn_registro.Name = "btn_registro";
             this.btn_registro.Size = new System.Drawing.Size(171, 46);
@@ -127,7 +127,7 @@ namespace CajaDeAhorro
             // 
             // lbl_dios_desmolde
             // 
-            this.lbl_dios_desmolde.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.lbl_dios_desmolde.BackColor = System.Drawing.SystemColors.Menu;
             this.lbl_dios_desmolde.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbl_dios_desmolde.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_dios_desmolde.Location = new System.Drawing.Point(0, 0);
@@ -148,12 +148,12 @@ namespace CajaDeAhorro
             // 
             // btn_sesion
             // 
-            this.btn_sesion.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_sesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_sesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(202)))));
+            this.btn_sesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(51)))));
             this.btn_sesion.FlatAppearance.BorderSize = 2;
             this.btn_sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sesion.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_sesion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_sesion.Location = new System.Drawing.Point(36, 192);
             this.btn_sesion.Name = "btn_sesion";
             this.btn_sesion.Size = new System.Drawing.Size(171, 46);

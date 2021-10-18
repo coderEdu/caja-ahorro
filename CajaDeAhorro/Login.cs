@@ -15,7 +15,6 @@ namespace CajaDeAhorro
     public partial class Login : Form
     {
         public Estados ExpOrContr { get; set; }    
-        private int height=364;
         private int scrDimH;
         private int scrDimV;
         private int barProgCounter;

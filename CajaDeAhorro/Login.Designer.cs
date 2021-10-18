@@ -358,9 +358,9 @@ namespace CajaDeAhorro
             // 
             // progress
             // 
-            this.progress.Location = new System.Drawing.Point(0, 564);
+            this.progress.Location = new System.Drawing.Point(0, 565);
             this.progress.Name = "progress";
-            this.progress.Size = new System.Drawing.Size(859, 4);
+            this.progress.Size = new System.Drawing.Size(859, 3);
             this.progress.TabIndex = 22;
             // 
             // Login

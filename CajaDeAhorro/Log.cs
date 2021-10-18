@@ -102,7 +102,7 @@ namespace CajaDeAhorro
         // logica para la búsqueda por fechas
         private void LogicCheckFechas(DateTime dtDesde, DateTime dtHasta)   // busca en un período
         {
-            if (this.cbx_tipo.SelectedItem.Equals("-- AMBOS --"))
+            if (this.cbx_tipo.SelectedItem.Equals("____AMBOS"))
             {
                 if (CheckedNoVacioYMayorQueCero())
                 {
@@ -120,7 +120,7 @@ namespace CajaDeAhorro
                 }
 
             }
-            else if (this.cbx_tipo.SelectedItem.Equals("-- DEPOSITOS --")) // working here
+            else if (this.cbx_tipo.SelectedItem.Equals("____DEPOSITOS")) // working here
             {
                 if (CheckedNoVacioYMayorQueCero())
                 {
@@ -167,7 +167,7 @@ namespace CajaDeAhorro
             DateTime fecha_time1 = DateTime.Parse(sfecha_time1);
             DateTime fecha_time2 = DateTime.Parse(sfecha_time2);
 
-            if (this.cbx_tipo.SelectedItem.Equals("-- AMBOS --"))
+            if (this.cbx_tipo.SelectedItem.Equals("____AMBOS"))
             {
                 if (CheckedNoVacioYMayorQueCero())
                 {
@@ -184,7 +184,7 @@ namespace CajaDeAhorro
                     this.lbl_trans_finds.Text = this.TransEncontr(this.moviTableAdapter1.FillByFechaExactaAmbos(this.c_AHORRO_NEW_DS1.movi, Auxiliar.id_logged, fecha_time1, fecha_time2));
                 }
             }
-            else if (this.cbx_tipo.SelectedItem.Equals("-- DEPOSITOS --"))             // working here
+            else if (this.cbx_tipo.SelectedItem.Equals("____DEPOSITOS"))             // working here
             {
                 if (CheckedNoVacioYMayorQueCero())
                 {
@@ -227,7 +227,7 @@ namespace CajaDeAhorro
 
         private void LogicBuscarSinFechas()     // busca sin fechas
         {
-            if (this.cbx_tipo.SelectedItem.Equals("-- AMBOS --"))
+            if (this.cbx_tipo.SelectedItem.Equals("____AMBOS"))
             {
                 if (CheckedNoVacioYMayorQueCero())
                 {
@@ -235,6 +235,14 @@ namespace CajaDeAhorro
                     AjustarCamposDGV();
                     this.dgv.DataSource = this.c_AHORRO_NEW_DS1.movi;
                     this.lbl_trans_finds.Text = this.TransEncontr(this.moviTableAdapter1.FillByMontoAmbos(c_AHORRO_NEW_DS1.movi, Auxiliar.id_logged, Monto()));
+                    MostrarSumatoriaMonto();
+                }
+                else if (check_busc_msg.Checked)    // working here 17/10/21 4:03 => terminated
+                {
+                    this.moviTableAdapter1.FillByGetTransByMsg(c_AHORRO_NEW_DS1.movi, Auxiliar.id_logged, this.txt_busc_msg.Text);
+                    AjustarCamposDGV();
+                    this.dgv.DataSource = this.c_AHORRO_NEW_DS1.movi;
+                    this.lbl_trans_finds.Text = this.TransEncontr(this.moviTableAdapter1.FillByGetTransByMsg(c_AHORRO_NEW_DS1.movi, Auxiliar.id_logged, this.txt_busc_msg.Text));
                     MostrarSumatoriaMonto();
                 }
                 else
@@ -246,7 +254,7 @@ namespace CajaDeAhorro
                     MostrarSumatoriaMonto();
                 }
             }
-            else if (this.cbx_tipo.SelectedItem.Equals("-- DEPOSITOS --")) // en esta parte tengo que agregar la búsqueda por monto
+            else if (this.cbx_tipo.SelectedItem.Equals("____DEPOSITOS")) // en esta parte tengo que agregar la búsqueda por monto
             {
 
                 if (CheckedNoVacioYMayorQueCero())
@@ -315,7 +323,7 @@ namespace CajaDeAhorro
         private void Checks_CheckStateChanged(object sender, EventArgs e)
         {
             CheckBox check = (CheckBox)sender;
-            if (check.Name== "check_fechas")
+            if (check.Name == "check_fechas")
             {
                 if (check.CheckState==CheckState.Checked)
                 {
@@ -358,9 +366,24 @@ namespace CajaDeAhorro
                 else
                 {
                     grp_monto.BackColor = Color.White;
-                    txt_monto.BackColor = System.Drawing.SystemColors.Control;
+                    txt_monto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
                 }
             }
+            else if (check.Name == "check_busc_msg")
+            {
+                if (check.CheckState == CheckState.Checked)
+                {
+                    grp_busc_msg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+                    txt_busc_msg.BackColor = Color.White;
+                    txt_busc_msg.Focus();
+                }
+                else
+                {
+                    grp_busc_msg.BackColor = Color.White;
+                    txt_busc_msg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+                }
+            }
+
 
             if (!check_fechas.Checked && !check_fecha.Checked)
             {

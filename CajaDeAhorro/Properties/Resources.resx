@@ -139,6 +139,15 @@
   <data name="enter_icon_icons_com_71207" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\enter_icon-icons.com_71207.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="green_light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_light_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_light_dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_light_mix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_light_mix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconfinder_23632_add_add_user_group_new_user_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_23632_add_add user_group_new_user_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,22 +157,19 @@
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="money" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\money.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="money_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\money-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="padlock_unlock_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\padlock-unlock-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="padlock_unlock_icon_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\padlock-unlock-icon-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="User_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\User-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_285645_user_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\285645_user_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="User_icon_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\User-icon-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_5402435_account_profile_user_avatar_man_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5402435_account_profile_user_avatar_man_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_7549043_user_interface_verified_person_account_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7549043_user_interface_verified_person_account_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

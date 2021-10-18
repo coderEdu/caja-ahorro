@@ -42,8 +42,10 @@ namespace CajaDeAhorro
             // capturo el nombre del usuario logueado y lo adjunto al texto del lbl_dios_desmolde
             Auxiliar.LoggUserName = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<string>(1).ToString();
             Auxiliar.LoggUserName = Auxiliar.LoggUserName.Replace(" ", "");   // quito los espacios en blanco del final
-            lbl_dios_desmolde.Text = "usuario activo [ " + Auxiliar.LoggUserName + " ]";
-
+            //lbl_dios_desmolde.Text = "usuario activo [ " + Auxiliar.LoggUserName + " ]";
+            lbl_fecha_portada.Text = dateTimePicker1.Text;
+            lbl_dios_desmolde.Text = "bienvenido a su cuenta - menu principal".ToUpper();
+            lbl_name_logged.Text = Auxiliar.LoggUserName;
             // capturo el valor caja del row del usuario logueado
             this.lbl_caja_valor.Text = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<int>(3).ToString();
             // capturo el nombre del usuario logueado y lo adjunto al texto del form

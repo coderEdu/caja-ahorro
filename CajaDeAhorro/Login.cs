@@ -51,7 +51,7 @@ namespace CajaDeAhorro
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            if (this.txt_usuario.Text=="admin" && this.txt_contrasegna.Text=="gtm-775rf")
+            if (this.txt_usuario.Text=="admin" && this.txt_contrasegna.Text=="12345")
             {
                 Auxiliar.admin.Show();
                 Auxiliar.login.Hide();

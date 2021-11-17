@@ -22,6 +22,7 @@ namespace CajaDeAhorro
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.Text = Auxiliar.getAppName() + " Sesión Activa";      
             this.lbl_dios_desmolde.Visible = true;
             ConnectToDB();
 
@@ -41,8 +42,10 @@ namespace CajaDeAhorro
             // capturo el nombre del usuario logueado y lo adjunto al texto del lbl_dios_desmolde
             Auxiliar.LoggUserName = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<string>(1).ToString();
             Auxiliar.LoggUserName = Auxiliar.LoggUserName.Replace(" ", "");   // quito los espacios en blanco del final
-            lbl_dios_desmolde.Text = "usuario activo = [ " + Auxiliar.LoggUserName + " ]";
-
+            //lbl_dios_desmolde.Text = "usuario activo [ " + Auxiliar.LoggUserName + " ]";
+            lbl_fecha_portada.Text = dateTimePicker1.Text;
+            lbl_dios_desmolde.Text = "bienvenido a su cuenta - menu principal".ToUpper();
+            lbl_name_logged.Text = Auxiliar.LoggUserName;
             // capturo el valor caja del row del usuario logueado
             this.lbl_caja_valor.Text = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<int>(3).ToString();
             // capturo el nombre del usuario logueado y lo adjunto al texto del form
@@ -51,6 +54,28 @@ namespace CajaDeAhorro
             this.lbl_caja_valor.Text = "$" + IfItHasAPointWithParam(this.c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<int>(3).ToString());
             // capturo el valor de caja del usuario activo y lo guardo en Auxiliar
             Auxiliar.dineroEnCaja = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<int>(3);
+            
+            // cambio el color de "Saldo diponible" según el saldo disponible jeje
+            if (Auxiliar.dineroEnCaja > 25000)
+            {
+                this.lbl_saldo_disponible.ForeColor = Color.Blue;
+            }
+            else if (Auxiliar.dineroEnCaja > 5000)
+            {
+                this.lbl_saldo_disponible.ForeColor = Color.Green;
+            }
+            else if (Auxiliar.dineroEnCaja > 1000)
+            {
+                this.lbl_saldo_disponible.ForeColor = Color.Gold;
+            }
+            else if (Auxiliar.dineroEnCaja > 100)
+            {
+                this.lbl_saldo_disponible.ForeColor = Color.Orange;
+            }
+            else
+            {
+                this.lbl_saldo_disponible.ForeColor = Color.Red;
+            }
         }
 
         public static String IfItHasAPointWithParam(String caja)
@@ -74,9 +99,9 @@ namespace CajaDeAhorro
             Transaccion transaccion = new Transaccion();
             Button button = (Button)sender;
             if (button.Equals(btn_deposito))
-                transaccion.Text = "Realizar un depósito";
+                transaccion.Text = Auxiliar.getAppName() + " Realizar un depósito";
             else
-                transaccion.Text = "Realizar una extracción";
+                transaccion.Text = Auxiliar.getAppName() + " Realizar una extracción";
             transaccion.ShowDialog();
         }
 
@@ -95,8 +120,22 @@ namespace CajaDeAhorro
 
         private void btn_sesion_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Auxiliar.login.Show();
+            DialogResult result;
+            result = MessageBox.Show("Está seguro de querer cerrar la sesión?", "Caja-ahorro - Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result==DialogResult.Yes)
+            {
+                try
+                {
+                    this.sesionTableAdapter1.ChangeSessStateUpQuery(0, Auxiliar.id_logged, Auxiliar.id_logged);
+                    MessageBox.Show("Ha cerrado la sesión.", "Caja-ahorro - Sesión Cerrada", MessageBoxButtons.OK, MessageBoxIcon.Information); // working here
+                    this.Hide();
+                    Auxiliar.login.Show();
+                }
+                catch (Exception)
+                { }
+            
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

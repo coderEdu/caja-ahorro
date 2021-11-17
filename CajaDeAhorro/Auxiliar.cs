@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 
 namespace CajaDeAhorro
 {
+    enum WaysToLog
+    {
+        BY_PASS,
+        BY_LOGIN
+    }
     class Auxiliar
     {
         public static int dineroEnCaja;
@@ -19,6 +24,11 @@ namespace CajaDeAhorro
         public static int getDineroEnCaja()
         {
             return dineroEnCaja;
+        }
+
+        public static string getAppName()
+        {
+            return "CAJA DE AHORRO -";
         }
 
     }

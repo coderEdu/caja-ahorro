@@ -39,18 +39,21 @@ namespace CajaDeAhorro
             this.label1 = new System.Windows.Forms.Label();
             this.loginTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.loginTableAdapter();
             this.mensajeTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.mensajeTableAdapter();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnl_container = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_trans
             // 
-            this.btn_trans.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_trans.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_trans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(202)))));
+            this.btn_trans.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(51)))));
             this.btn_trans.FlatAppearance.BorderSize = 2;
             this.btn_trans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_trans.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_trans.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_trans.Location = new System.Drawing.Point(100, 183);
+            this.btn_trans.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_trans.Location = new System.Drawing.Point(372, 246);
             this.btn_trans.Name = "btn_trans";
             this.btn_trans.Size = new System.Drawing.Size(86, 29);
             this.btn_trans.TabIndex = 2;
@@ -60,29 +63,30 @@ namespace CajaDeAhorro
             // 
             // lbl_trans
             // 
+            this.lbl_trans.BackColor = System.Drawing.Color.White;
             this.lbl_trans.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_trans.Location = new System.Drawing.Point(0, 34);
+            this.lbl_trans.Location = new System.Drawing.Point(34, 39);
             this.lbl_trans.Name = "lbl_trans";
-            this.lbl_trans.Size = new System.Drawing.Size(278, 29);
+            this.lbl_trans.Size = new System.Drawing.Size(140, 18);
             this.lbl_trans.TabIndex = 2;
             this.lbl_trans.Text = "Monto:";
-            this.lbl_trans.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_trans.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txt_trans_monto
             // 
             this.txt_trans_monto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_trans_monto.Location = new System.Drawing.Point(77, 66);
+            this.txt_trans_monto.Location = new System.Drawing.Point(34, 61);
             this.txt_trans_monto.MaxLength = 6;
             this.txt_trans_monto.Multiline = true;
             this.txt_trans_monto.Name = "txt_trans_monto";
-            this.txt_trans_monto.Size = new System.Drawing.Size(140, 28);
+            this.txt_trans_monto.Size = new System.Drawing.Size(221, 28);
             this.txt_trans_monto.TabIndex = 0;
             this.txt_trans_monto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_trans_monto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_trans_monto_KeyPress);
             // 
             // dtp
             // 
-            this.dtp.Location = new System.Drawing.Point(78, 4);
+            this.dtp.Location = new System.Drawing.Point(2, 2);
             this.dtp.Name = "dtp";
             this.dtp.Size = new System.Drawing.Size(200, 20);
             this.dtp.TabIndex = 3;
@@ -99,23 +103,23 @@ namespace CajaDeAhorro
             // txt_concepto
             // 
             this.txt_concepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_concepto.Location = new System.Drawing.Point(31, 136);
-            this.txt_concepto.MaxLength = 145;
+            this.txt_concepto.Location = new System.Drawing.Point(34, 134);
+            this.txt_concepto.MaxLength = 148;
             this.txt_concepto.Multiline = true;
             this.txt_concepto.Name = "txt_concepto";
-            this.txt_concepto.Size = new System.Drawing.Size(221, 28);
+            this.txt_concepto.Size = new System.Drawing.Size(221, 77);
             this.txt_concepto.TabIndex = 1;
-            this.txt_concepto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 104);
+            this.label1.Location = new System.Drawing.Point(34, 111);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 29);
+            this.label1.Size = new System.Drawing.Size(221, 18);
             this.label1.TabIndex = 5;
-            this.label1.Text = "En concepto de:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Text = "Concepto:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // loginTableAdapter1
             // 
@@ -125,18 +129,38 @@ namespace CajaDeAhorro
             // 
             this.mensajeTableAdapter1.ClearBeforeFill = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::CajaDeAhorro.Properties.Resources.atm;
+            this.pictureBox1.Location = new System.Drawing.Point(270, 46);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(177, 172);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pnl_container
+            // 
+            this.pnl_container.BackColor = System.Drawing.Color.White;
+            this.pnl_container.Location = new System.Drawing.Point(12, 12);
+            this.pnl_container.Name = "pnl_container";
+            this.pnl_container.Size = new System.Drawing.Size(446, 228);
+            this.pnl_container.TabIndex = 7;
+            // 
             // Transaccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(282, 224);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.ClientSize = new System.Drawing.Size(470, 282);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txt_concepto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtp);
             this.Controls.Add(this.txt_trans_monto);
             this.Controls.Add(this.lbl_trans);
             this.Controls.Add(this.btn_trans);
+            this.Controls.Add(this.pnl_container);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -145,6 +169,7 @@ namespace CajaDeAhorro
             this.Text = "Deposito";
             this.Load += new System.EventHandler(this.Transaccion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,5 +187,7 @@ namespace CajaDeAhorro
         private System.Windows.Forms.TextBox txt_concepto;
         private System.Windows.Forms.Label label1;
         private C_AHORRO_NEW_DSTableAdapters.mensajeTableAdapter mensajeTableAdapter1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnl_container;
     }
 }

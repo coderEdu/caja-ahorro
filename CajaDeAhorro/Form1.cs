@@ -22,6 +22,14 @@ namespace CajaDeAhorro
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'c_AHORRO_NEW_DS1.movi' table. You can move, or remove it, as needed.
+            try
+            {
+                this.moviTableAdapter.Fill(this.c_AHORRO_NEW_DS1.movi);
+            }
+            catch (Exception)
+            { }
+
             this.Text = Auxiliar.getAppName() + " Sesión Activa";      
             this.lbl_dios_desmolde.Visible = true;
             ConnectToDB();
@@ -54,7 +62,14 @@ namespace CajaDeAhorro
             this.lbl_caja_valor.Text = "$" + IfItHasAPointWithParam(this.c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<int>(3).ToString());
             // capturo el valor de caja del usuario activo y lo guardo en Auxiliar
             Auxiliar.dineroEnCaja = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<int>(3);
-            
+
+            try
+            {
+                this.moviTableAdapter.FillByLastFiveMovs(this.c_AHORRO_NEW_DS1.movi, Auxiliar.id_logged);
+            }
+            catch (Exception)
+            { }
+
             // cambio el color de "Saldo diponible" según el saldo disponible jeje
             if (Auxiliar.dineroEnCaja > 25000)
             {
@@ -149,5 +164,6 @@ namespace CajaDeAhorro
         {
             ConnectToDB();
         }
+
     }
 }

@@ -227,5 +227,8 @@
   <ItemGroup>
     <None Include="Resources\green_light_mix.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trafficlight-green-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -230,5 +230,8 @@
   <ItemGroup>
     <None Include="Resources\Trafficlight-green-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6358078_account_avatar_man_people_person_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -22,6 +22,8 @@ namespace CajaDeAhorro
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'c_AHORRO_NEW_DS1.mensaje' table. You can move, or remove it, as needed.
+            this.mensajeTableAdapter.Fill(this.c_AHORRO_NEW_DS1.mensaje);
             // TODO: This line of code loads data into the 'c_AHORRO_NEW_DS1.movi' table. You can move, or remove it, as needed.
             try
             {
@@ -41,6 +43,7 @@ namespace CajaDeAhorro
             dT = DateTime.Now;
             this.dateTimePicker1.Visible = false;
             this.dateTimePicker1.Enabled = true;
+
         }
 
         private void ConnectToDB()      // modificar todo este método

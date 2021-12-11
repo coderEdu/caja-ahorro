@@ -68,6 +68,7 @@ namespace CajaDeAhorro
             }
 
             int id = this.c_AHORRO_NEW_DS1.movi.Rows.Count + 1;
+
             if (this.Text.EndsWith("ito"))
             {
                 dineroEnCaja += montoFromTextbox;
@@ -104,7 +105,6 @@ namespace CajaDeAhorro
                     }
                 }
             }
-            //this.cajaTableAdapter1.UpdateQuery(dineroEnCaja, 1, 1);
             this.loginTableAdapter1.UpdateQuery(dineroEnCaja, Auxiliar.id_logged, Auxiliar.id_logged);
             // working here
             if (this.txt_concepto.TextLength > 0)

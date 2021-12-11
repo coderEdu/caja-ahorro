@@ -80,6 +80,12 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Nota.cs" />
+    <Compile Include="Notas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notas.Designer.cs">
+      <DependentUpon>Notas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Session.cs" />
     <Compile Include="Transaccion.cs">
       <SubType>Form</SubType>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notas.resx">
+      <DependentUpon>Notas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaccion.resx">
       <DependentUpon>Transaccion.cs</DependentUpon>
@@ -239,6 +248,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2620509_employee_job_note_seeker_unemployee_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2620509_employee_job_note_seeker_unemployee_icon %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -119,6 +119,10 @@ namespace CajaDeAhorro
             {
                 this.lbl_saldo_disponible.ForeColor = Color.Red;
             }
+
+            increase = 0;
+            this.flp_note.Controls.Clear();
+            GetLastNotes();
         }
 
         public static String IfItHasAPointWithParam(String caja)
@@ -210,6 +214,12 @@ namespace CajaDeAhorro
 
             // obtengo las notas en función del usuario logueado
             //this.notasTableAdapter.FillByNotasById_log(c_AHORRO_NEW_DS1.notas, Auxiliar.id_logged);
+        }
+
+        private void btn_crear_nota_Click(object sender, EventArgs e)
+        {
+            Notas notas = new Notas();
+            notas.ShowDialog();
         }
     }
 }

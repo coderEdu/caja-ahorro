@@ -19,6 +19,7 @@ namespace CajaDeAhorro
             Application.Run(new Login());
             //Application.Run(new Log());
             //Application.Run(new Administrador());
+            //Application.Run(new Notas());
         }
     }
 }

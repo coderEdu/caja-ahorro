@@ -79,6 +79,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nota.cs" />
     <Compile Include="Session.cs" />
     <Compile Include="Transaccion.cs">
       <SubType>Form</SubType>
@@ -235,6 +236,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2620509_employee_job_note_seeker_unemployee_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

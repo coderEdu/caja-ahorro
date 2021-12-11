@@ -11,7 +11,6 @@ namespace CajaDeAhorro
     class Session
     {
         static int c = 0; // increase name in one
-        //static int counter = 0;
 
         public Button CreateNewSessionWithAttribs(string userName)
         {

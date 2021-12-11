@@ -193,7 +193,7 @@ namespace CajaDeAhorro
 
         private void flp_sess_ControlAdded(object sender, ControlEventArgs e)
         {
-            Button btn = (Button)this.flp_sess.Controls[increase];
+            Button btn = (Button)flp_sess.Controls[increase];
             btn.Click += Btn_session_click;
             ++increase;
  

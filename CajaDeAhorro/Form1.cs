@@ -14,6 +14,7 @@ namespace CajaDeAhorro
 {
     public partial class Form1 : Form
     {
+        static int increase;
         //public bool RefrescarCaja { get; set; }
         public Form1()
         {
@@ -43,7 +44,31 @@ namespace CajaDeAhorro
             dT = DateTime.Now;
             this.dateTimePicker1.Visible = false;
             this.dateTimePicker1.Enabled = true;
+            increase = 0;
+            GetLastNotes();
 
+        }
+
+        public void GetLastNotes()
+        {
+            int count = this.notasTableAdapter.FillByNotasById_log(this.c_AHORRO_NEW_DS1.notas,Auxiliar.id_logged);
+            DataGridView dataGrid = new DataGridView();
+            this.loginTableAdapter1.Fill(this.c_AHORRO_NEW_DS1.login);  // ay q llenar el ds p/poder obt los datos
+            //this.sesionTableAdapter1.Fill(this.c_AHORRO_NEW_DS1.sesion); // acá igual ...
+            for (int i = 0; i < count; i++)
+            {
+                if (this.flp_note.Controls.Count < 6)
+                {
+                    Nota nota = new Nota();
+                    string note_title = this.c_AHORRO_NEW_DS1.Tables["notas"].Rows[i].Field<string>(1).Substring(0,8)+"...";
+                    Button button = new Button();
+                    button = nota.CreateNewNoteWithAttrib(note_title);
+                    button.BackColor = Color.White;
+                    button.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+                    button.FlatAppearance.BorderSize = 3;
+                    this.flp_note.Controls.Add(button);
+                }
+            }
         }
 
         private void ConnectToDB()      // modificar todo este método
@@ -168,5 +193,23 @@ namespace CajaDeAhorro
             ConnectToDB();
         }
 
+        private void flp_note_ControlAdded(object sender, ControlEventArgs e)
+        {
+            Button btn = (Button)this.flp_note.Controls[increase];
+            btn.Click += Btn_note_click;
+            ++increase;
+        }
+
+        private void Btn_note_click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+
+            // obtengo el id del usuario logueado según su nombre y lo guardo en Auxiliar
+            //this.loginTableAdapter1.FillByWhoIsActiveByName(c_AHORRO_NEW_DS1.login, button.Text);
+            //Auxiliar.id_logged = c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<int>(0);
+
+            // obtengo las notas en función del usuario logueado
+            //this.notasTableAdapter.FillByNotasById_log(c_AHORRO_NEW_DS1.notas, Auxiliar.id_logged);
+        }
     }
 }

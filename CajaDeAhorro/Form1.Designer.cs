@@ -46,6 +46,7 @@ namespace CajaDeAhorro
             this.loginTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.loginTableAdapter();
             this.btn_sesion = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_editar_nota = new System.Windows.Forms.Button();
             this.btn_ver_notas = new System.Windows.Forms.Button();
             this.btn_crear_nota = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -195,6 +196,7 @@ namespace CajaDeAhorro
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.panel1.Controls.Add(this.btn_editar_nota);
             this.panel1.Controls.Add(this.btn_ver_notas);
             this.panel1.Controls.Add(this.btn_crear_nota);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -211,6 +213,22 @@ namespace CajaDeAhorro
             this.panel1.Size = new System.Drawing.Size(239, 531);
             this.panel1.TabIndex = 15;
             // 
+            // btn_editar_nota
+            // 
+            this.btn_editar_nota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.btn_editar_nota.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_editar_nota.FlatAppearance.BorderSize = 2;
+            this.btn_editar_nota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editar_nota.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editar_nota.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_editar_nota.Location = new System.Drawing.Point(3, 291);
+            this.btn_editar_nota.Name = "btn_editar_nota";
+            this.btn_editar_nota.Size = new System.Drawing.Size(233, 46);
+            this.btn_editar_nota.TabIndex = 22;
+            this.btn_editar_nota.Text = "Editar Nota";
+            this.btn_editar_nota.UseVisualStyleBackColor = false;
+            this.btn_editar_nota.Click += new System.EventHandler(this.btn_editar_nota_Click);
+            // 
             // btn_ver_notas
             // 
             this.btn_ver_notas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
@@ -219,7 +237,7 @@ namespace CajaDeAhorro
             this.btn_ver_notas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ver_notas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ver_notas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_ver_notas.Location = new System.Drawing.Point(3, 291);
+            this.btn_ver_notas.Location = new System.Drawing.Point(3, 339);
             this.btn_ver_notas.Name = "btn_ver_notas";
             this.btn_ver_notas.Size = new System.Drawing.Size(233, 46);
             this.btn_ver_notas.TabIndex = 21;
@@ -296,11 +314,11 @@ namespace CajaDeAhorro
             // 
             this.lbl_saldo_disponible.AutoSize = true;
             this.lbl_saldo_disponible.BackColor = System.Drawing.Color.White;
-            this.lbl_saldo_disponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_saldo_disponible.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_saldo_disponible.ForeColor = System.Drawing.Color.Black;
-            this.lbl_saldo_disponible.Location = new System.Drawing.Point(706, 442);
+            this.lbl_saldo_disponible.Location = new System.Drawing.Point(713, 442);
             this.lbl_saldo_disponible.Name = "lbl_saldo_disponible";
-            this.lbl_saldo_disponible.Size = new System.Drawing.Size(152, 24);
+            this.lbl_saldo_disponible.Size = new System.Drawing.Size(142, 21);
             this.lbl_saldo_disponible.TabIndex = 16;
             this.lbl_saldo_disponible.Text = "Saldo Disponible";
             this.lbl_saldo_disponible.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -321,11 +339,11 @@ namespace CajaDeAhorro
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(267, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 24);
+            this.label1.Size = new System.Drawing.Size(139, 18);
             this.label1.TabIndex = 21;
             this.label1.Text = "Últimos Movimientos";
             // 
@@ -434,11 +452,11 @@ namespace CajaDeAhorro
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(606, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 24);
+            this.label2.Size = new System.Drawing.Size(99, 18);
             this.label2.TabIndex = 24;
             this.label2.Text = "Últimas Notas";
             // 
@@ -511,6 +529,7 @@ namespace CajaDeAhorro
         private System.Windows.Forms.DataGridViewTextBoxColumn montoDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btn_ver_notas;
         private System.Windows.Forms.Button btn_crear_nota;
+        private System.Windows.Forms.Button btn_editar_nota;
     }
 }
 

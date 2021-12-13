@@ -221,5 +221,11 @@ namespace CajaDeAhorro
             Notas notas = new Notas();
             notas.ShowDialog();
         }
+
+        private void btn_editar_nota_Click(object sender, EventArgs e)
+        {
+            Notas notas = new Notas();
+            notas.ShowDialog();
+        }
     }
 }

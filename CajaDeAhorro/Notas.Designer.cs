@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label idLabel;
+            System.Windows.Forms.Label tituloLabel;
+            System.Windows.Forms.Label notaLabel;
+            System.Windows.Forms.Label id_logLabel;
+            System.Windows.Forms.Label fec_creaLabel;
+            System.Windows.Forms.Label fec_modifLabel;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tab_notas = new System.Windows.Forms.TabControl();
             this.tabP_nuevo = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,12 +44,18 @@
             this.txt_titulo_nota = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabP_editar = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.notasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.c_AHORRO_NEW_DS1 = new CajaDeAhorro.C_AHORRO_NEW_DS();
+            this.lbl_crea = new System.Windows.Forms.Label();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.tituloTextBox = new System.Windows.Forms.TextBox();
+            this.notaTextBox = new System.Windows.Forms.TextBox();
+            this.id_logTextBox = new System.Windows.Forms.TextBox();
+            this.dgv = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.c_AHORRO_NEW_DS = new CajaDeAhorro.C_AHORRO_NEW_DS();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,14 +64,79 @@
             this.tabP_eliminar = new System.Windows.Forms.TabPage();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.notasTableAdapter = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.notasTableAdapter();
+            this.dtp_notas = new System.Windows.Forms.DateTimePicker();
+            this.notasTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.notasTableAdapter();
+            this.tableAdapterManager = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.TableAdapterManager();
+            idLabel = new System.Windows.Forms.Label();
+            tituloLabel = new System.Windows.Forms.Label();
+            notaLabel = new System.Windows.Forms.Label();
+            id_logLabel = new System.Windows.Forms.Label();
+            fec_creaLabel = new System.Windows.Forms.Label();
+            fec_modifLabel = new System.Windows.Forms.Label();
             this.tab_notas.SuspendLayout();
             this.tabP_nuevo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabP_editar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notasBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS)).BeginInit();
             this.SuspendLayout();
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(339, 113);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(18, 13);
+            idLabel.TabIndex = 4;
+            idLabel.Text = "id:";
+            // 
+            // tituloLabel
+            // 
+            tituloLabel.AutoSize = true;
+            tituloLabel.Location = new System.Drawing.Point(339, 139);
+            tituloLabel.Name = "tituloLabel";
+            tituloLabel.Size = new System.Drawing.Size(32, 13);
+            tituloLabel.TabIndex = 6;
+            tituloLabel.Text = "titulo:";
+            // 
+            // notaLabel
+            // 
+            notaLabel.AutoSize = true;
+            notaLabel.Location = new System.Drawing.Point(339, 165);
+            notaLabel.Name = "notaLabel";
+            notaLabel.Size = new System.Drawing.Size(31, 13);
+            notaLabel.TabIndex = 8;
+            notaLabel.Text = "nota:";
+            // 
+            // id_logLabel
+            // 
+            id_logLabel.AutoSize = true;
+            id_logLabel.Location = new System.Drawing.Point(339, 289);
+            id_logLabel.Name = "id_logLabel";
+            id_logLabel.Size = new System.Drawing.Size(35, 13);
+            id_logLabel.TabIndex = 10;
+            id_logLabel.Text = "id log:";
+            // 
+            // fec_creaLabel
+            // 
+            fec_creaLabel.AutoSize = true;
+            fec_creaLabel.Location = new System.Drawing.Point(339, 316);
+            fec_creaLabel.Name = "fec_creaLabel";
+            fec_creaLabel.Size = new System.Drawing.Size(43, 13);
+            fec_creaLabel.TabIndex = 12;
+            fec_creaLabel.Text = "creada:";
+            // 
+            // fec_modifLabel
+            // 
+            fec_modifLabel.AutoSize = true;
+            fec_modifLabel.Location = new System.Drawing.Point(339, 342);
+            fec_modifLabel.Name = "fec_modifLabel";
+            fec_modifLabel.Size = new System.Drawing.Size(43, 13);
+            fec_modifLabel.TabIndex = 14;
+            fec_modifLabel.Text = "modific:";
             // 
             // tab_notas
             // 
@@ -68,8 +146,9 @@
             this.tab_notas.Location = new System.Drawing.Point(12, 21);
             this.tab_notas.Name = "tab_notas";
             this.tab_notas.SelectedIndex = 0;
-            this.tab_notas.Size = new System.Drawing.Size(663, 369);
+            this.tab_notas.Size = new System.Drawing.Size(663, 413);
             this.tab_notas.TabIndex = 1;
+            this.tab_notas.Selected += new System.Windows.Forms.TabControlEventHandler(this.tab_notas_Selected);
             // 
             // tabP_nuevo
             // 
@@ -81,7 +160,7 @@
             this.tabP_nuevo.Location = new System.Drawing.Point(4, 22);
             this.tabP_nuevo.Name = "tabP_nuevo";
             this.tabP_nuevo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabP_nuevo.Size = new System.Drawing.Size(655, 343);
+            this.tabP_nuevo.Size = new System.Drawing.Size(655, 387);
             this.tabP_nuevo.TabIndex = 0;
             this.tabP_nuevo.Text = "Nuevo";
             this.tabP_nuevo.UseVisualStyleBackColor = true;
@@ -90,7 +169,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(328, 98);
+            this.label2.Location = new System.Drawing.Point(328, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 15);
             this.label2.TabIndex = 4;
@@ -102,7 +181,7 @@
             this.txt_texto_nota.Location = new System.Drawing.Point(329, 117);
             this.txt_texto_nota.Multiline = true;
             this.txt_texto_nota.Name = "txt_texto_nota";
-            this.txt_texto_nota.Size = new System.Drawing.Size(296, 199);
+            this.txt_texto_nota.Size = new System.Drawing.Size(296, 234);
             this.txt_texto_nota.TabIndex = 3;
             // 
             // label1
@@ -113,12 +192,12 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Tìtulo de la nota:";
+            this.label1.Text = "Título de la nota:";
             // 
             // txt_titulo_nota
             // 
             this.txt_titulo_nota.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_titulo_nota.Location = new System.Drawing.Point(331, 45);
+            this.txt_titulo_nota.Location = new System.Drawing.Point(331, 49);
             this.txt_titulo_nota.Name = "txt_titulo_nota";
             this.txt_titulo_nota.Size = new System.Drawing.Size(294, 21);
             this.txt_titulo_nota.TabIndex = 1;
@@ -126,63 +205,141 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CajaDeAhorro.Properties.Resources._2620509_employee_job_note_seeker_unemployee_icon__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(40, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(61, 76);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(233, 255);
+            this.pictureBox1.Size = new System.Drawing.Size(199, 190);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // tabP_editar
             // 
-            this.tabP_editar.Controls.Add(this.richTextBox1);
+            this.tabP_editar.AutoScroll = true;
+            this.tabP_editar.Controls.Add(this.label5);
             this.tabP_editar.Controls.Add(this.label4);
-            this.tabP_editar.Controls.Add(this.dataGridView1);
+            this.tabP_editar.Controls.Add(this.lbl_crea);
+            this.tabP_editar.Controls.Add(idLabel);
+            this.tabP_editar.Controls.Add(this.idTextBox);
+            this.tabP_editar.Controls.Add(tituloLabel);
+            this.tabP_editar.Controls.Add(this.tituloTextBox);
+            this.tabP_editar.Controls.Add(notaLabel);
+            this.tabP_editar.Controls.Add(this.notaTextBox);
+            this.tabP_editar.Controls.Add(id_logLabel);
+            this.tabP_editar.Controls.Add(this.id_logTextBox);
+            this.tabP_editar.Controls.Add(fec_creaLabel);
+            this.tabP_editar.Controls.Add(fec_modifLabel);
+            this.tabP_editar.Controls.Add(this.dgv);
             this.tabP_editar.Controls.Add(this.label3);
             this.tabP_editar.Controls.Add(this.textBox3);
             this.tabP_editar.Controls.Add(this.btn_buscar);
             this.tabP_editar.Location = new System.Drawing.Point(4, 22);
             this.tabP_editar.Name = "tabP_editar";
             this.tabP_editar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabP_editar.Size = new System.Drawing.Size(655, 343);
+            this.tabP_editar.Size = new System.Drawing.Size(655, 387);
             this.tabP_editar.TabIndex = 1;
             this.tabP_editar.Text = "Editar";
             this.tabP_editar.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // label5
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(323, 81);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(313, 242);
-            this.richTextBox1.TabIndex = 5;
-            this.richTextBox1.Text = "";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(31, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "valor:";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(320, 58);
+            this.label4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasBindingSource1, "fec_modif", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "F"));
+            this.label4.Location = new System.Drawing.Point(395, 342);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Texto de la nota:";
+            this.label4.Size = new System.Drawing.Size(222, 13);
+            this.label4.TabIndex = 16;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dataGridView1
+            // notasBindingSource1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.notasBindingSource1.DataMember = "notas";
+            this.notasBindingSource1.DataSource = this.c_AHORRO_NEW_DS1;
+            // 
+            // c_AHORRO_NEW_DS1
+            // 
+            this.c_AHORRO_NEW_DS1.DataSetName = "C_AHORRO_NEW_DS";
+            this.c_AHORRO_NEW_DS1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lbl_crea
+            // 
+            this.lbl_crea.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasBindingSource1, "fec_crea", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "F"));
+            this.lbl_crea.Location = new System.Drawing.Point(395, 316);
+            this.lbl_crea.Name = "lbl_crea";
+            this.lbl_crea.Size = new System.Drawing.Size(222, 13);
+            this.lbl_crea.TabIndex = 15;
+            this.lbl_crea.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasBindingSource1, "id", true));
+            this.idTextBox.Location = new System.Drawing.Point(395, 110);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
+            this.idTextBox.Size = new System.Drawing.Size(222, 20);
+            this.idTextBox.TabIndex = 5;
+            this.idTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tituloTextBox
+            // 
+            this.tituloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasBindingSource1, "titulo", true));
+            this.tituloTextBox.Location = new System.Drawing.Point(395, 136);
+            this.tituloTextBox.Name = "tituloTextBox";
+            this.tituloTextBox.Size = new System.Drawing.Size(222, 20);
+            this.tituloTextBox.TabIndex = 7;
+            // 
+            // notaTextBox
+            // 
+            this.notaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasBindingSource1, "nota", true));
+            this.notaTextBox.Location = new System.Drawing.Point(395, 162);
+            this.notaTextBox.Multiline = true;
+            this.notaTextBox.Name = "notaTextBox";
+            this.notaTextBox.Size = new System.Drawing.Size(222, 118);
+            this.notaTextBox.TabIndex = 9;
+            // 
+            // id_logTextBox
+            // 
+            this.id_logTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasBindingSource1, "id_log", true));
+            this.id_logTextBox.Location = new System.Drawing.Point(395, 286);
+            this.id_logTextBox.Name = "id_logTextBox";
+            this.id_logTextBox.ReadOnly = true;
+            this.id_logTextBox.Size = new System.Drawing.Size(222, 20);
+            this.id_logTextBox.TabIndex = 11;
+            this.id_logTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // dgv
+            // 
+            this.dgv.AllowUserToAddRows = false;
+            this.dgv.AllowUserToDeleteRows = false;
+            this.dgv.AutoGenerateColumns = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.tituloDataGridViewTextBoxColumn,
-            this.notaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.notasBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 81);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(274, 242);
-            this.dataGridView1.TabIndex = 3;
+            this.tituloDataGridViewTextBoxColumn});
+            this.dgv.DataSource = this.notasBindingSource;
+            this.dgv.Location = new System.Drawing.Point(31, 110);
+            this.dgv.Name = "dgv";
+            this.dgv.ReadOnly = true;
+            this.dgv.RowHeadersVisible = false;
+            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv.Size = new System.Drawing.Size(276, 248);
+            this.dgv.TabIndex = 3;
+            this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -190,7 +347,7 @@
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 45;
+            this.idDataGridViewTextBoxColumn.Width = 55;
             // 
             // tituloDataGridViewTextBoxColumn
             // 
@@ -198,14 +355,7 @@
             this.tituloDataGridViewTextBoxColumn.HeaderText = "titulo";
             this.tituloDataGridViewTextBoxColumn.Name = "tituloDataGridViewTextBoxColumn";
             this.tituloDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tituloDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // notaDataGridViewTextBoxColumn
-            // 
-            this.notaDataGridViewTextBoxColumn.DataPropertyName = "nota";
-            this.notaDataGridViewTextBoxColumn.HeaderText = "nota";
-            this.notaDataGridViewTextBoxColumn.Name = "notaDataGridViewTextBoxColumn";
-            this.notaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tituloDataGridViewTextBoxColumn.Width = 220;
             // 
             // notasBindingSource
             // 
@@ -220,24 +370,24 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 58);
+            this.label3.Location = new System.Drawing.Point(28, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 13);
+            this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Resultados de búsqueda:";
+            this.label3.Text = "Todas las notas:";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(418, 8);
+            this.textBox3.Location = new System.Drawing.Point(70, 42);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 20);
+            this.textBox3.Size = new System.Drawing.Size(463, 20);
             this.textBox3.TabIndex = 1;
             // 
             // btn_buscar
             // 
-            this.btn_buscar.Location = new System.Drawing.Point(574, 6);
+            this.btn_buscar.Location = new System.Drawing.Point(539, 40);
             this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(75, 23);
+            this.btn_buscar.Size = new System.Drawing.Size(78, 23);
             this.btn_buscar.TabIndex = 0;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = true;
@@ -247,14 +397,14 @@
             this.tabP_eliminar.Location = new System.Drawing.Point(4, 22);
             this.tabP_eliminar.Name = "tabP_eliminar";
             this.tabP_eliminar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabP_eliminar.Size = new System.Drawing.Size(655, 343);
+            this.tabP_eliminar.Size = new System.Drawing.Size(655, 387);
             this.tabP_eliminar.TabIndex = 2;
             this.tabP_eliminar.Text = "Eliminar";
             this.tabP_eliminar.UseVisualStyleBackColor = true;
             // 
             // btn_guardar
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(584, 396);
+            this.btn_guardar.Location = new System.Drawing.Point(588, 440);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(87, 33);
             this.btn_guardar.TabIndex = 2;
@@ -266,11 +416,34 @@
             // 
             this.notasTableAdapter.ClearBeforeFill = true;
             // 
+            // dtp_notas
+            // 
+            this.dtp_notas.Location = new System.Drawing.Point(475, 2);
+            this.dtp_notas.Name = "dtp_notas";
+            this.dtp_notas.Size = new System.Drawing.Size(200, 20);
+            this.dtp_notas.TabIndex = 4;
+            // 
+            // notasTableAdapter1
+            // 
+            this.notasTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.loginTableAdapter = null;
+            this.tableAdapterManager.mensajeTableAdapter = null;
+            this.tableAdapterManager.moviTableAdapter = null;
+            this.tableAdapterManager.notasTableAdapter = this.notasTableAdapter;
+            this.tableAdapterManager.prestamoTableAdapter = null;
+            this.tableAdapterManager.sesionTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // Notas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 438);
+            this.ClientSize = new System.Drawing.Size(681, 481);
+            this.Controls.Add(this.dtp_notas);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.tab_notas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -284,7 +457,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabP_editar.ResumeLayout(false);
             this.tabP_editar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notasBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS)).EndInit();
             this.ResumeLayout(false);
@@ -305,15 +480,24 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button btn_buscar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Label label3;
         private C_AHORRO_NEW_DS c_AHORRO_NEW_DS;
         private System.Windows.Forms.BindingSource notasBindingSource;
         private C_AHORRO_NEW_DSTableAdapters.notasTableAdapter notasTableAdapter;
+        private System.Windows.Forms.DateTimePicker dtp_notas;
+        private C_AHORRO_NEW_DS c_AHORRO_NEW_DS1;
+        private C_AHORRO_NEW_DSTableAdapters.notasTableAdapter notasTableAdapter1;
+        private C_AHORRO_NEW_DSTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.BindingSource notasBindingSource1;
+        private System.Windows.Forms.TextBox tituloTextBox;
+        private System.Windows.Forms.TextBox notaTextBox;
+        private System.Windows.Forms.TextBox id_logTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tituloDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn notaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label lbl_crea;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

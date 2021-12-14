@@ -52,17 +52,25 @@ namespace CajaDeAhorro
         public void GetLastNotes()
         {
             int count = this.notasTableAdapter.FillByNotasById_log(this.c_AHORRO_NEW_DS1.notas,Auxiliar.id_logged);
-            DataGridView dataGrid = new DataGridView();
             this.loginTableAdapter1.Fill(this.c_AHORRO_NEW_DS1.login);  // ay q llenar el ds p/poder obt los datos
-            //this.sesionTableAdapter1.Fill(this.c_AHORRO_NEW_DS1.sesion); // acá igual ...
             for (int i = 0; i < count; i++)
             {
                 if (this.flp_note.Controls.Count < 6)
                 {
                     Nota nota = new Nota();
-                    string note_title = this.c_AHORRO_NEW_DS1.Tables["notas"].Rows[i].Field<string>(1).Substring(0,8)+"...";
+                    string note_title;
+                    if (this.c_AHORRO_NEW_DS1.Tables["notas"].Rows[i].Field<string>(1).Length > 8)
+                    {
+                        note_title = this.c_AHORRO_NEW_DS1.Tables["notas"].Rows[i].Field<string>(1).Substring(0, 8) + "...";
+                    }
+                    else
+                    {
+                        note_title = this.c_AHORRO_NEW_DS1.Tables["notas"].Rows[i].Field<string>(1);
+                    }
+
                     Button button = new Button();
                     button = nota.CreateNewNoteWithAttrib(note_title);
+                    button.Name = this.c_AHORRO_NEW_DS1.Tables["notas"].Rows[i].Field<int>(0).ToString();
                     button.BackColor = Color.White;
                     button.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
                     button.FlatAppearance.BorderSize = 3;
@@ -100,25 +108,15 @@ namespace CajaDeAhorro
 
             // cambio el color de "Saldo diponible" según el saldo disponible jeje
             if (Auxiliar.dineroEnCaja > 25000)
-            {
                 this.lbl_saldo_disponible.ForeColor = Color.Blue;
-            }
             else if (Auxiliar.dineroEnCaja > 5000)
-            {
                 this.lbl_saldo_disponible.ForeColor = Color.Green;
-            }
             else if (Auxiliar.dineroEnCaja > 1000)
-            {
                 this.lbl_saldo_disponible.ForeColor = Color.Gold;
-            }
             else if (Auxiliar.dineroEnCaja > 100)
-            {
                 this.lbl_saldo_disponible.ForeColor = Color.Orange;
-            }
             else
-            {
                 this.lbl_saldo_disponible.ForeColor = Color.Red;
-            }
 
             increase = 0;
             this.flp_note.Controls.Clear();
@@ -180,8 +178,7 @@ namespace CajaDeAhorro
                     Auxiliar.login.Show();
                 }
                 catch (Exception)
-                { }
-            
+                { }            
             }
         }
 
@@ -207,13 +204,12 @@ namespace CajaDeAhorro
         private void Btn_note_click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
+            Auxiliar.id_note = Convert.ToInt32(button.Name);
 
-            // obtengo el id del usuario logueado según su nombre y lo guardo en Auxiliar
-            //this.loginTableAdapter1.FillByWhoIsActiveByName(c_AHORRO_NEW_DS1.login, button.Text);
-            //Auxiliar.id_logged = c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<int>(0);
-
-            // obtengo las notas en función del usuario logueado
-            //this.notasTableAdapter.FillByNotasById_log(c_AHORRO_NEW_DS1.notas, Auxiliar.id_logged);
+            Point location = new Point(this.Location.X + this.Width - 10, this.Location.Y);
+            DetNota detNota = new DetNota();
+            detNota.WinLocation = location;
+            detNota.Show(this);
         }
 
         private void btn_crear_nota_Click(object sender, EventArgs e)
@@ -225,7 +221,8 @@ namespace CajaDeAhorro
         private void btn_editar_nota_Click(object sender, EventArgs e)
         {
             Notas notas = new Notas();
-            notas.ShowDialog();
+            notas.EditarTab = 1;
+            notas.Show(this);
         }
     }
 }

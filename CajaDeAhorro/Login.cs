@@ -159,12 +159,12 @@ namespace CajaDeAhorro
         {
             if (this.progress.Value<100)
             {
-                this.progress.Value += 1;
+                this.progress.Value += 2;
             }
             
             if (this.progress.Value == 100)
             {
-                if (this.barProgCounter == 90)
+                if (this.barProgCounter == 45)
                 {
                     tmr_exp_contr.Stop();
                     this.barProgCounter = 0;

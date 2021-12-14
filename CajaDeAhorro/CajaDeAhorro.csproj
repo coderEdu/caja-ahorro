@@ -35,7 +35,9 @@
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -66,6 +68,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>C_AHORRO_NEW_DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DetNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetNota.Designer.cs">
+      <DependentUpon>DetNota.cs</DependentUpon>
     </Compile>
     <Compile Include="Log.cs">
       <SubType>Form</SubType>
@@ -103,6 +111,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetNota.resx">
+      <DependentUpon>DetNota.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Log.resx">
       <DependentUpon>Log.cs</DependentUpon>
@@ -251,6 +262,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2620509_employee_job_note_seeker_unemployee_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\314233_note_list_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

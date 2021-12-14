@@ -35,7 +35,7 @@
             System.Windows.Forms.Label id_logLabel;
             System.Windows.Forms.Label fec_creaLabel;
             System.Windows.Forms.Label fec_modifLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tab_notas = new System.Windows.Forms.TabControl();
             this.tabP_nuevo = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
@@ -319,14 +319,14 @@
             this.dgv.AllowUserToAddRows = false;
             this.dgv.AllowUserToDeleteRows = false;
             this.dgv.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -467,8 +467,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tab_notas;
         private System.Windows.Forms.TabPage tabP_nuevo;
         private System.Windows.Forms.TabPage tabP_editar;
         private System.Windows.Forms.Button btn_guardar;
@@ -499,5 +497,6 @@
         private System.Windows.Forms.Label lbl_crea;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TabControl tab_notas;
     }
 }

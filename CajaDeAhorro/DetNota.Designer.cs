@@ -32,38 +32,38 @@
             System.Windows.Forms.Label fec_creaLabel;
             System.Windows.Forms.Label fec_modifLabel;
             this.label4 = new System.Windows.Forms.Label();
+            this.notasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.c_AHORRO_NEW_DS = new CajaDeAhorro.C_AHORRO_NEW_DS();
             this.lbl_crea = new System.Windows.Forms.Label();
             this.btn_aceptar = new System.Windows.Forms.Button();
             this.c_AHORRO_NEW_DS1 = new CajaDeAhorro.C_AHORRO_NEW_DS();
             this.notasTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.notasTableAdapter();
-            this.c_AHORRO_NEW_DS = new CajaDeAhorro.C_AHORRO_NEW_DS();
-            this.notasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.notaTextBox = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
             fec_creaLabel = new System.Windows.Forms.Label();
             fec_modifLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).BeginInit();
             this.SuspendLayout();
             // 
             // fec_creaLabel
             // 
             fec_creaLabel.AutoSize = true;
-            fec_creaLabel.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fec_creaLabel.Location = new System.Drawing.Point(24, 202);
+            fec_creaLabel.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fec_creaLabel.Location = new System.Drawing.Point(24, 200);
             fec_creaLabel.Name = "fec_creaLabel";
-            fec_creaLabel.Size = new System.Drawing.Size(45, 15);
+            fec_creaLabel.Size = new System.Drawing.Size(48, 17);
             fec_creaLabel.TabIndex = 25;
             fec_creaLabel.Text = "creada:";
             // 
             // fec_modifLabel
             // 
             fec_modifLabel.AutoSize = true;
-            fec_modifLabel.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fec_modifLabel.Location = new System.Drawing.Point(24, 228);
+            fec_modifLabel.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fec_modifLabel.Location = new System.Drawing.Point(20, 226);
             fec_modifLabel.Name = "fec_modifLabel";
-            fec_modifLabel.Size = new System.Drawing.Size(50, 15);
+            fec_modifLabel.Size = new System.Drawing.Size(52, 17);
             fec_modifLabel.TabIndex = 26;
             fec_modifLabel.Text = "modific:";
             // 
@@ -75,6 +75,16 @@
             this.label4.Size = new System.Drawing.Size(222, 13);
             this.label4.TabIndex = 28;
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // notasBindingSource
+            // 
+            this.notasBindingSource.DataMember = "notas";
+            this.notasBindingSource.DataSource = this.c_AHORRO_NEW_DS;
+            // 
+            // c_AHORRO_NEW_DS
+            // 
+            this.c_AHORRO_NEW_DS.DataSetName = "C_AHORRO_NEW_DS";
+            this.c_AHORRO_NEW_DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lbl_crea
             // 
@@ -104,21 +114,11 @@
             // 
             this.notasTableAdapter1.ClearBeforeFill = true;
             // 
-            // c_AHORRO_NEW_DS
-            // 
-            this.c_AHORRO_NEW_DS.DataSetName = "C_AHORRO_NEW_DS";
-            this.c_AHORRO_NEW_DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // notasBindingSource
-            // 
-            this.notasBindingSource.DataMember = "notas";
-            this.notasBindingSource.DataSource = this.c_AHORRO_NEW_DS;
-            // 
             // notaTextBox
             // 
             this.notaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasBindingSource, "nota", true));
             this.notaTextBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.notaTextBox.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.notaTextBox.Font = new System.Drawing.Font("Cascadia Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.notaTextBox.Location = new System.Drawing.Point(0, 0);
             this.notaTextBox.Name = "notaTextBox";
             this.notaTextBox.Size = new System.Drawing.Size(327, 179);
@@ -149,9 +149,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Texto de la nota";
             this.Load += new System.EventHandler(this.DetNota_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

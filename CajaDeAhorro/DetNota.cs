@@ -37,6 +37,7 @@ namespace CajaDeAhorro
             this.lbl_name.Visible = false;
             this.Text = lbl_name.Text;
             this.Location = WinLocation;
+
         }
     }
 }

@@ -133,6 +133,9 @@
   <data name="bank_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bank-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Database_Active_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Database-Active-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="data_management_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\data-management-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,17 +145,14 @@
   <data name="green_light" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\green_light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="green_light_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\green_light_dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="green_light_mix" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\green_light_mix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="iconfinder_23632_add_add_user_group_new_user_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_23632_add_add user_group_new_user_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Lock_Lock_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lock-Lock-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lock_PadLock_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lock-PadLock-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -168,6 +168,39 @@
   </data>
   <data name="Trafficlight_green_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Trafficlight-green-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_17332_binoculars_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\17332_binoculars_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_17368_add_file_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\17368_add_file_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_17369_edit_file_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\17369_edit_file_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_17378_forms_pencil_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\17378_forms_pencil_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_17399_blog_edit_message_pencil_sms_icon__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\17399_blog_edit_message_pencil_sms_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_17399_blog_edit_message_pencil_sms_icon__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\17399_blog_edit_message_pencil_sms_icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_17451_add_list_todo_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\17451_add_list_todo_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1889199_coins_hand_loan_loan_money_money_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1889199_coins_hand_loan_loan money_money_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1889199_coins_hand_loan_loan_money_money_icon__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1889199_coins_hand_loan_loan money_money_icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1889200_bag_coins_finance_saving_bank_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1889200_bag_coins_finance_saving_bank_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1889200_bag_coins_finance_saving_bank_icon__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1889200_bag_coins_finance_saving_bank_icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_2620509_employee_job_note_seeker_unemployee_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2620509_employee_job_note_seeker_unemployee_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -186,8 +219,5 @@
   </data>
   <data name="_6358078_account_avatar_man_people_person_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6358078_account_avatar_man_people_person_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_7549043_user_interface_verified_person_account_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7549043_user_interface_verified_person_account_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

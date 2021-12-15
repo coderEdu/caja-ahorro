@@ -266,5 +266,59 @@
   <ItemGroup>
     <None Include="Resources\314233_note_list_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1889200_bag_coins_finance_saving_bank_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1889199_coins_hand_loan_loan money_money_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\45461_connect_to_database_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1889199_coins_hand_loan_loan money_money_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1889200_bag_coins_finance_saving_bank_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1889199_coins_hand_loan_loan money_money_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1889200_bag_coins_finance_saving_bank_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database-Active-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock-PadLock-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48781_mail_write_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17378_forms_pencil_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17399_blog_edit_message_pencil_sms_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17399_blog_edit_message_pencil_sms_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17399_blog_edit_message_pencil_sms_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17451_add_list_todo_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17369_edit_file_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17368_add_file_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17332_binoculars_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

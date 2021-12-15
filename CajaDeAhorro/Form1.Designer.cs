@@ -30,11 +30,11 @@ namespace CajaDeAhorro
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_caja_titulo = new System.Windows.Forms.Label();
             this.lbl_caja_valor = new System.Windows.Forms.Label();
             this.btn_deposito = new System.Windows.Forms.Button();
@@ -83,9 +83,9 @@ namespace CajaDeAhorro
             this.lbl_caja_titulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_caja_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_caja_titulo.ForeColor = System.Drawing.Color.Green;
-            this.lbl_caja_titulo.Location = new System.Drawing.Point(239, 105);
+            this.lbl_caja_titulo.Location = new System.Drawing.Point(194, 105);
             this.lbl_caja_titulo.Name = "lbl_caja_titulo";
-            this.lbl_caja_titulo.Size = new System.Drawing.Size(639, 531);
+            this.lbl_caja_titulo.Size = new System.Drawing.Size(684, 531);
             this.lbl_caja_titulo.TabIndex = 0;
             this.lbl_caja_titulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -94,64 +94,70 @@ namespace CajaDeAhorro
             this.lbl_caja_valor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_caja_valor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbl_caja_valor.Font = new System.Drawing.Font("Consolas", 42F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_caja_valor.Location = new System.Drawing.Point(274, 477);
+            this.lbl_caja_valor.Location = new System.Drawing.Point(253, 477);
             this.lbl_caja_valor.Name = "lbl_caja_valor";
-            this.lbl_caja_valor.Size = new System.Drawing.Size(584, 139);
+            this.lbl_caja_valor.Size = new System.Drawing.Size(605, 139);
             this.lbl_caja_valor.TabIndex = 1;
             this.lbl_caja_valor.Text = "$0.00";
             this.lbl_caja_valor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btn_deposito
             // 
-            this.btn_deposito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.btn_deposito.BackColor = System.Drawing.Color.White;
             this.btn_deposito.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_deposito.FlatAppearance.BorderSize = 2;
             this.btn_deposito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_deposito.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_deposito.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_deposito.Image = global::CajaDeAhorro.Properties.Resources._1889200_bag_coins_finance_saving_bank_icon__2_;
+            this.btn_deposito.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_deposito.Location = new System.Drawing.Point(3, 3);
             this.btn_deposito.Name = "btn_deposito";
-            this.btn_deposito.Size = new System.Drawing.Size(233, 46);
+            this.btn_deposito.Size = new System.Drawing.Size(189, 46);
             this.btn_deposito.TabIndex = 8;
-            this.btn_deposito.Text = "Depositar $";
+            this.btn_deposito.Text = "Depósito $";
             this.btn_deposito.UseVisualStyleBackColor = false;
             this.btn_deposito.Click += new System.EventHandler(this.btn_deposito_Click);
             // 
             // btn_extraccion
             // 
-            this.btn_extraccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.btn_extraccion.BackColor = System.Drawing.Color.White;
             this.btn_extraccion.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_extraccion.FlatAppearance.BorderSize = 2;
             this.btn_extraccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_extraccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_extraccion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_extraccion.Image = global::CajaDeAhorro.Properties.Resources._1889199_coins_hand_loan_loan_money_money_icon__2_;
+            this.btn_extraccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_extraccion.Location = new System.Drawing.Point(3, 51);
             this.btn_extraccion.Name = "btn_extraccion";
-            this.btn_extraccion.Size = new System.Drawing.Size(233, 46);
+            this.btn_extraccion.Size = new System.Drawing.Size(189, 46);
             this.btn_extraccion.TabIndex = 9;
-            this.btn_extraccion.Text = "Extraer $";
+            this.btn_extraccion.Text = "Extracción $";
             this.btn_extraccion.UseVisualStyleBackColor = false;
             this.btn_extraccion.Click += new System.EventHandler(this.btn_extraccion_Click);
             // 
             // btn_registro
             // 
-            this.btn_registro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.btn_registro.BackColor = System.Drawing.Color.White;
             this.btn_registro.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_registro.FlatAppearance.BorderSize = 2;
             this.btn_registro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_registro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_registro.Image = global::CajaDeAhorro.Properties.Resources.Database_Active_icon;
+            this.btn_registro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_registro.Location = new System.Drawing.Point(3, 99);
             this.btn_registro.Name = "btn_registro";
-            this.btn_registro.Size = new System.Drawing.Size(233, 46);
+            this.btn_registro.Size = new System.Drawing.Size(189, 46);
             this.btn_registro.TabIndex = 11;
-            this.btn_registro.Text = "Consultar Registro";
+            this.btn_registro.Text = "Reg Trans";
             this.btn_registro.UseVisualStyleBackColor = false;
             this.btn_registro.Click += new System.EventHandler(this.btn_registro_Click);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(274, 454);
+            this.dateTimePicker1.Location = new System.Drawing.Point(253, 454);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 12;
@@ -179,15 +185,17 @@ namespace CajaDeAhorro
             // 
             // btn_sesion
             // 
-            this.btn_sesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.btn_sesion.BackColor = System.Drawing.Color.White;
             this.btn_sesion.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_sesion.FlatAppearance.BorderSize = 2;
             this.btn_sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_sesion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_sesion.Image = global::CajaDeAhorro.Properties.Resources.Lock_PadLock_icon;
+            this.btn_sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_sesion.Location = new System.Drawing.Point(3, 147);
             this.btn_sesion.Name = "btn_sesion";
-            this.btn_sesion.Size = new System.Drawing.Size(233, 46);
+            this.btn_sesion.Size = new System.Drawing.Size(189, 46);
             this.btn_sesion.TabIndex = 14;
             this.btn_sesion.Text = "Cerrar Sesión";
             this.btn_sesion.UseVisualStyleBackColor = false;
@@ -210,20 +218,22 @@ namespace CajaDeAhorro
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 105);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(239, 531);
+            this.panel1.Size = new System.Drawing.Size(194, 531);
             this.panel1.TabIndex = 15;
             // 
             // btn_editar_nota
             // 
-            this.btn_editar_nota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.btn_editar_nota.BackColor = System.Drawing.Color.White;
             this.btn_editar_nota.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_editar_nota.FlatAppearance.BorderSize = 2;
             this.btn_editar_nota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_editar_nota.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_editar_nota.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_editar_nota.Image = global::CajaDeAhorro.Properties.Resources._17369_edit_file_icon;
+            this.btn_editar_nota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_editar_nota.Location = new System.Drawing.Point(3, 291);
             this.btn_editar_nota.Name = "btn_editar_nota";
-            this.btn_editar_nota.Size = new System.Drawing.Size(233, 46);
+            this.btn_editar_nota.Size = new System.Drawing.Size(189, 46);
             this.btn_editar_nota.TabIndex = 22;
             this.btn_editar_nota.Text = "Editar Nota";
             this.btn_editar_nota.UseVisualStyleBackColor = false;
@@ -231,30 +241,34 @@ namespace CajaDeAhorro
             // 
             // btn_ver_notas
             // 
-            this.btn_ver_notas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.btn_ver_notas.BackColor = System.Drawing.Color.White;
             this.btn_ver_notas.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_ver_notas.FlatAppearance.BorderSize = 2;
             this.btn_ver_notas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ver_notas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ver_notas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_ver_notas.Image = global::CajaDeAhorro.Properties.Resources._17332_binoculars_icon;
+            this.btn_ver_notas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_ver_notas.Location = new System.Drawing.Point(3, 339);
             this.btn_ver_notas.Name = "btn_ver_notas";
-            this.btn_ver_notas.Size = new System.Drawing.Size(233, 46);
+            this.btn_ver_notas.Size = new System.Drawing.Size(189, 46);
             this.btn_ver_notas.TabIndex = 21;
             this.btn_ver_notas.Text = "Ver Notas";
             this.btn_ver_notas.UseVisualStyleBackColor = false;
             // 
             // btn_crear_nota
             // 
-            this.btn_crear_nota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.btn_crear_nota.BackColor = System.Drawing.Color.White;
             this.btn_crear_nota.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_crear_nota.FlatAppearance.BorderSize = 2;
             this.btn_crear_nota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_crear_nota.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_crear_nota.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_crear_nota.Image = global::CajaDeAhorro.Properties.Resources._17368_add_file_icon;
+            this.btn_crear_nota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_crear_nota.Location = new System.Drawing.Point(3, 243);
             this.btn_crear_nota.Name = "btn_crear_nota";
-            this.btn_crear_nota.Size = new System.Drawing.Size(233, 46);
+            this.btn_crear_nota.Size = new System.Drawing.Size(189, 46);
             this.btn_crear_nota.TabIndex = 20;
             this.btn_crear_nota.Text = "Crear Nota";
             this.btn_crear_nota.UseVisualStyleBackColor = false;
@@ -264,7 +278,7 @@ namespace CajaDeAhorro
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::CajaDeAhorro.Properties.Resources.Trafficlight_green_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(128, 475);
+            this.pictureBox1.Location = new System.Drawing.Point(105, 475);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(17, 17);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -273,15 +287,17 @@ namespace CajaDeAhorro
             // 
             // btn_edit_msg
             // 
-            this.btn_edit_msg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.btn_edit_msg.BackColor = System.Drawing.Color.White;
             this.btn_edit_msg.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_edit_msg.FlatAppearance.BorderSize = 2;
             this.btn_edit_msg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_msg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_edit_msg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_edit_msg.Image = global::CajaDeAhorro.Properties.Resources._17399_blog_edit_message_pencil_sms_icon__2_;
+            this.btn_edit_msg.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_edit_msg.Location = new System.Drawing.Point(3, 195);
             this.btn_edit_msg.Name = "btn_edit_msg";
-            this.btn_edit_msg.Size = new System.Drawing.Size(233, 46);
+            this.btn_edit_msg.Size = new System.Drawing.Size(189, 46);
             this.btn_edit_msg.TabIndex = 15;
             this.btn_edit_msg.Text = "Editar Mensaje";
             this.btn_edit_msg.UseVisualStyleBackColor = false;
@@ -289,7 +305,7 @@ namespace CajaDeAhorro
             // lbl_name_logged
             // 
             this.lbl_name_logged.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_name_logged.Location = new System.Drawing.Point(46, 498);
+            this.lbl_name_logged.Location = new System.Drawing.Point(24, 498);
             this.lbl_name_logged.Name = "lbl_name_logged";
             this.lbl_name_logged.Size = new System.Drawing.Size(146, 19);
             this.lbl_name_logged.TabIndex = 18;
@@ -299,7 +315,7 @@ namespace CajaDeAhorro
             // pbx_act_sess
             // 
             this.pbx_act_sess.Image = global::CajaDeAhorro.Properties.Resources._6358078_account_avatar_man_people_person_icon;
-            this.pbx_act_sess.Location = new System.Drawing.Point(95, 440);
+            this.pbx_act_sess.Location = new System.Drawing.Point(73, 440);
             this.pbx_act_sess.Name = "pbx_act_sess";
             this.pbx_act_sess.Size = new System.Drawing.Size(48, 50);
             this.pbx_act_sess.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -341,7 +357,7 @@ namespace CajaDeAhorro
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(267, 116);
+            this.label1.Location = new System.Drawing.Point(246, 116);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 18);
             this.label1.TabIndex = 21;
@@ -352,14 +368,14 @@ namespace CajaDeAhorro
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.ColumnHeadersHeight = 25;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -367,17 +383,17 @@ namespace CajaDeAhorro
             this.tipoDataGridViewTextBoxColumn,
             this.montoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.moviBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(274, 169);
+            this.dataGridView1.Location = new System.Drawing.Point(253, 169);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(304, 207);
@@ -386,10 +402,10 @@ namespace CajaDeAhorro
             // fechaDataGridViewTextBoxColumn
             // 
             this.fechaDataGridViewTextBoxColumn.DataPropertyName = "fecha";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "G";
-            dataGridViewCellStyle2.NullValue = null;
-            this.fechaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Format = "G";
+            dataGridViewCellStyle7.NullValue = null;
+            this.fechaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.fechaDataGridViewTextBoxColumn.HeaderText = "fecha";
             this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
             this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
@@ -398,8 +414,8 @@ namespace CajaDeAhorro
             // tipoDataGridViewTextBoxColumn
             // 
             this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.tipoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.tipoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.tipoDataGridViewTextBoxColumn.HeaderText = "tipo";
             this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
             this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
@@ -408,10 +424,10 @@ namespace CajaDeAhorro
             // montoDataGridViewTextBoxColumn
             // 
             this.montoDataGridViewTextBoxColumn.DataPropertyName = "monto";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.montoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.Format = "C2";
+            dataGridViewCellStyle9.NullValue = null;
+            this.montoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.montoDataGridViewTextBoxColumn.HeaderText = "monto";
             this.montoDataGridViewTextBoxColumn.Name = "montoDataGridViewTextBoxColumn";
             this.montoDataGridViewTextBoxColumn.ReadOnly = true;

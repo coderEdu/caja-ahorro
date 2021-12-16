@@ -15,7 +15,7 @@ namespace CajaDeAhorro
     public partial class Form1 : Form
     {
         static int increase;
-        //public bool RefrescarCaja { get; set; }
+        public double WinOpacity { get; set; }
         public Form1()
         {
             InitializeComponent();
@@ -131,11 +131,13 @@ namespace CajaDeAhorro
 
         private void btn_deposito_Click(object sender, EventArgs e)
         {
+            this.WinOpacity = 0.5;
             MostrarVentTrans(sender);
         }
 
         private void btn_extraccion_Click(object sender, EventArgs e)
         {
+            this.WinOpacity = 0.5;
             MostrarVentTrans(sender);
         }
 
@@ -159,6 +161,7 @@ namespace CajaDeAhorro
 
         private void btn_sesion_Click(object sender, EventArgs e)
         {
+            this.WinOpacity = 0.5;
             DialogResult result;
             result = MessageBox.Show("Está seguro de querer cerrar la sesión?", "Caja-ahorro - Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -185,6 +188,7 @@ namespace CajaDeAhorro
 
         private void Form1_Activated(object sender, EventArgs e)
         {
+            this.Opacity = 1;
             ConnectToDB();
         }
 
@@ -208,15 +212,22 @@ namespace CajaDeAhorro
 
         private void btn_crear_nota_Click(object sender, EventArgs e)
         {
+            this.WinOpacity = 0.5;
             Notas notas = new Notas();
             notas.ShowDialog();
         }
 
         private void btn_editar_nota_Click(object sender, EventArgs e)
         {
+            this.WinOpacity = 0.5;
             Notas notas = new Notas();
             notas.EditarTab = true;
             notas.Show(this);
+        }
+
+        private void Form1_Deactivate(object sender, EventArgs e)
+        {
+            this.Opacity = WinOpacity;
         }
     }
 }

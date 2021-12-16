@@ -30,13 +30,14 @@ namespace CajaDeAhorro
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtp_desde = new System.Windows.Forms.DateTimePicker();
             this.lbl_desde = new System.Windows.Forms.Label();
             this.lbl_hasta = new System.Windows.Forms.Label();
@@ -71,6 +72,10 @@ namespace CajaDeAhorro
             this.grp_resultado = new System.Windows.Forms.GroupBox();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.mensajeTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.mensajeTableAdapter();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_crea_nota = new System.Windows.Forms.Button();
             this.grp_busqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moviBindingSource)).BeginInit();
@@ -81,6 +86,9 @@ namespace CajaDeAhorro
             this.grp_busc_msg.SuspendLayout();
             this.grp_monto.SuspendLayout();
             this.grp_resultado.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtp_desde
@@ -104,18 +112,18 @@ namespace CajaDeAhorro
             // lbl_hasta
             // 
             this.lbl_hasta.BackColor = System.Drawing.Color.Silver;
-            this.lbl_hasta.Location = new System.Drawing.Point(246, 29);
+            this.lbl_hasta.Location = new System.Drawing.Point(26, 82);
             this.lbl_hasta.Name = "lbl_hasta";
-            this.lbl_hasta.Size = new System.Drawing.Size(197, 13);
+            this.lbl_hasta.Size = new System.Drawing.Size(200, 13);
             this.lbl_hasta.TabIndex = 3;
             this.lbl_hasta.Text = "hasta:";
             this.lbl_hasta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dtp_hasta
             // 
-            this.dtp_hasta.Location = new System.Drawing.Point(246, 45);
+            this.dtp_hasta.Location = new System.Drawing.Point(26, 98);
             this.dtp_hasta.Name = "dtp_hasta";
-            this.dtp_hasta.Size = new System.Drawing.Size(197, 20);
+            this.dtp_hasta.Size = new System.Drawing.Size(200, 20);
             this.dtp_hasta.TabIndex = 2;
             // 
             // grp_busqueda
@@ -124,10 +132,10 @@ namespace CajaDeAhorro
             this.grp_busqueda.Controls.Add(this.cbx_tipo);
             this.grp_busqueda.Location = new System.Drawing.Point(21, 22);
             this.grp_busqueda.Name = "grp_busqueda";
-            this.grp_busqueda.Size = new System.Drawing.Size(471, 57);
+            this.grp_busqueda.Size = new System.Drawing.Size(249, 57);
             this.grp_busqueda.TabIndex = 4;
             this.grp_busqueda.TabStop = false;
-            this.grp_busqueda.Text = "Tipo de transacción a buscar";
+            this.grp_busqueda.Text = "tipo de transacción a buscar";
             // 
             // cbx_tipo
             // 
@@ -137,9 +145,9 @@ namespace CajaDeAhorro
             "____AMBOS",
             "____DEPOSITOS",
             "____EXTRACCIONES"});
-            this.cbx_tipo.Location = new System.Drawing.Point(159, 21);
+            this.cbx_tipo.Location = new System.Drawing.Point(26, 22);
             this.cbx_tipo.Name = "cbx_tipo";
-            this.cbx_tipo.Size = new System.Drawing.Size(148, 23);
+            this.cbx_tipo.Size = new System.Drawing.Size(200, 23);
             this.cbx_tipo.TabIndex = 5;
             this.cbx_tipo.TabStop = false;
             this.cbx_tipo.Text = "____AMBOS";
@@ -147,7 +155,7 @@ namespace CajaDeAhorro
             // check_fecha
             // 
             this.check_fecha.AutoSize = true;
-            this.check_fecha.Location = new System.Drawing.Point(5, 198);
+            this.check_fecha.Location = new System.Drawing.Point(5, 257);
             this.check_fecha.Name = "check_fecha";
             this.check_fecha.Size = new System.Drawing.Size(15, 14);
             this.check_fecha.TabIndex = 11;
@@ -167,7 +175,7 @@ namespace CajaDeAhorro
             // dtp_exacta
             // 
             this.dtp_exacta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_exacta.Location = new System.Drawing.Point(135, 45);
+            this.dtp_exacta.Location = new System.Drawing.Point(26, 46);
             this.dtp_exacta.Name = "dtp_exacta";
             this.dtp_exacta.Size = new System.Drawing.Size(200, 20);
             this.dtp_exacta.TabIndex = 7;
@@ -175,7 +183,7 @@ namespace CajaDeAhorro
             // lbl_exacta
             // 
             this.lbl_exacta.BackColor = System.Drawing.Color.Silver;
-            this.lbl_exacta.Location = new System.Drawing.Point(135, 29);
+            this.lbl_exacta.Location = new System.Drawing.Point(26, 30);
             this.lbl_exacta.Name = "lbl_exacta";
             this.lbl_exacta.Size = new System.Drawing.Size(200, 13);
             this.lbl_exacta.TabIndex = 8;
@@ -186,19 +194,19 @@ namespace CajaDeAhorro
             // 
             this.dgv.AllowUserToAddRows = false;
             this.dgv.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(218)))));
+            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle33;
             this.dgv.AutoGenerateColumns = false;
-            this.dgv.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgv.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -206,72 +214,76 @@ namespace CajaDeAhorro
             this.tipoDataGridViewTextBoxColumn,
             this.montoDataGridViewTextBoxColumn});
             this.dgv.DataSource = this.moviBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle39;
             this.dgv.EnableHeadersVisualStyles = false;
-            this.dgv.Location = new System.Drawing.Point(508, 22);
+            this.dgv.Location = new System.Drawing.Point(15, 388);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle40;
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(507, 221);
+            this.dgv.Size = new System.Drawing.Size(861, 222);
             this.dgv.TabIndex = 5;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
             // id
             // 
             this.id.DataPropertyName = "id";
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.id.DefaultCellStyle = dataGridViewCellStyle35;
             this.id.HeaderText = "id";
             this.id.Name = "id";
             this.id.ReadOnly = true;
-            this.id.Width = 35;
             // 
             // fechaDataGridViewTextBoxColumn
             // 
             this.fechaDataGridViewTextBoxColumn.DataPropertyName = "fecha";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "F";
-            dataGridViewCellStyle3.NullValue = null;
-            this.fechaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle36.Format = "F";
+            dataGridViewCellStyle36.NullValue = null;
+            this.fechaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle36;
             this.fechaDataGridViewTextBoxColumn.HeaderText = "fecha";
             this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
             this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaDataGridViewTextBoxColumn.Width = 310;
             // 
             // tipoDataGridViewTextBoxColumn
             // 
             this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.tipoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.tipoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle37;
             this.tipoDataGridViewTextBoxColumn.HeaderText = "tipo";
             this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
             this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipoDataGridViewTextBoxColumn.Width = 200;
             // 
             // montoDataGridViewTextBoxColumn
             // 
             this.montoDataGridViewTextBoxColumn.DataPropertyName = "monto";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.montoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle38.Format = "C2";
+            dataGridViewCellStyle38.NullValue = null;
+            this.montoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle38;
             this.montoDataGridViewTextBoxColumn.HeaderText = "monto";
             this.montoDataGridViewTextBoxColumn.Name = "montoDataGridViewTextBoxColumn";
             this.montoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.montoDataGridViewTextBoxColumn.Width = 250;
             // 
             // moviBindingSource
             // 
@@ -285,15 +297,15 @@ namespace CajaDeAhorro
             // 
             // btn_buscar_trans
             // 
-            this.btn_buscar_trans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.btn_buscar_trans.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(51)))));
+            this.btn_buscar_trans.BackColor = System.Drawing.Color.White;
+            this.btn_buscar_trans.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btn_buscar_trans.FlatAppearance.BorderSize = 2;
             this.btn_buscar_trans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_buscar_trans.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_buscar_trans.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_buscar_trans.Location = new System.Drawing.Point(832, 431);
+            this.btn_buscar_trans.Location = new System.Drawing.Point(769, 623);
             this.btn_buscar_trans.Name = "btn_buscar_trans";
-            this.btn_buscar_trans.Size = new System.Drawing.Size(106, 28);
+            this.btn_buscar_trans.Size = new System.Drawing.Size(106, 30);
             this.btn_buscar_trans.TabIndex = 6;
             this.btn_buscar_trans.TabStop = false;
             this.btn_buscar_trans.Text = "Buscar";
@@ -307,7 +319,7 @@ namespace CajaDeAhorro
             this.lbl_trans_finds.ForeColor = System.Drawing.Color.MediumBlue;
             this.lbl_trans_finds.Location = new System.Drawing.Point(7, 21);
             this.lbl_trans_finds.Name = "lbl_trans_finds";
-            this.lbl_trans_finds.Size = new System.Drawing.Size(272, 23);
+            this.lbl_trans_finds.Size = new System.Drawing.Size(244, 23);
             this.lbl_trans_finds.TabIndex = 7;
             this.lbl_trans_finds.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -324,46 +336,38 @@ namespace CajaDeAhorro
             this.grp_fechas.Controls.Add(this.lbl_hasta);
             this.grp_fechas.Location = new System.Drawing.Point(36, 108);
             this.grp_fechas.Name = "grp_fechas";
-            this.grp_fechas.Size = new System.Drawing.Size(471, 89);
+            this.grp_fechas.Size = new System.Drawing.Size(249, 143);
             this.grp_fechas.TabIndex = 6;
             this.grp_fechas.TabStop = false;
-            this.grp_fechas.Text = "Buscar en un período";
+            this.grp_fechas.Text = "buscar en un período";
             // 
             // grp_fecha
             // 
             this.grp_fecha.BackColor = System.Drawing.SystemColors.Window;
             this.grp_fecha.Controls.Add(this.lbl_exacta);
             this.grp_fecha.Controls.Add(this.dtp_exacta);
-            this.grp_fecha.Location = new System.Drawing.Point(36, 213);
+            this.grp_fecha.Location = new System.Drawing.Point(36, 272);
             this.grp_fecha.Name = "grp_fecha";
-            this.grp_fecha.Size = new System.Drawing.Size(471, 89);
+            this.grp_fecha.Size = new System.Drawing.Size(249, 88);
             this.grp_fecha.TabIndex = 6;
             this.grp_fecha.TabStop = false;
-            this.grp_fecha.Text = "Buscar en una fecha";
+            this.grp_fecha.Text = "buscar en una fecha";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.Controls.Add(this.check_busc_msg);
-            this.panel1.Controls.Add(this.grp_busc_msg);
-            this.panel1.Controls.Add(this.check_monto);
-            this.panel1.Controls.Add(this.lbl_concepto);
-            this.panel1.Controls.Add(this.grp_monto);
-            this.panel1.Controls.Add(this.lbl_total);
-            this.panel1.Controls.Add(this.grp_resultado);
             this.panel1.Controls.Add(this.check_fecha);
             this.panel1.Controls.Add(this.check_fechas);
             this.panel1.Controls.Add(this.grp_busqueda);
-            this.panel1.Controls.Add(this.dgv);
             this.panel1.Location = new System.Drawing.Point(15, 15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1035, 404);
+            this.panel1.Size = new System.Drawing.Size(291, 367);
             this.panel1.TabIndex = 12;
             // 
             // check_busc_msg
             // 
             this.check_busc_msg.AutoSize = true;
-            this.check_busc_msg.Location = new System.Drawing.Point(210, 311);
+            this.check_busc_msg.Location = new System.Drawing.Point(6, 113);
             this.check_busc_msg.Name = "check_busc_msg";
             this.check_busc_msg.Size = new System.Drawing.Size(15, 14);
             this.check_busc_msg.TabIndex = 17;
@@ -374,29 +378,29 @@ namespace CajaDeAhorro
             // 
             this.grp_busc_msg.BackColor = System.Drawing.SystemColors.Window;
             this.grp_busc_msg.Controls.Add(this.txt_busc_msg);
-            this.grp_busc_msg.Location = new System.Drawing.Point(226, 311);
+            this.grp_busc_msg.Location = new System.Drawing.Point(22, 113);
             this.grp_busc_msg.Name = "grp_busc_msg";
-            this.grp_busc_msg.Size = new System.Drawing.Size(266, 75);
+            this.grp_busc_msg.Size = new System.Drawing.Size(225, 75);
             this.grp_busc_msg.TabIndex = 16;
             this.grp_busc_msg.TabStop = false;
-            this.grp_busc_msg.Text = "Buscar en los mensajes";
+            this.grp_busc_msg.Text = "buscar en los mensajes";
             // 
             // txt_busc_msg
             // 
             this.txt_busc_msg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.txt_busc_msg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_busc_msg.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_busc_msg.Location = new System.Drawing.Point(29, 27);
+            this.txt_busc_msg.Location = new System.Drawing.Point(17, 27);
             this.txt_busc_msg.Multiline = true;
             this.txt_busc_msg.Name = "txt_busc_msg";
-            this.txt_busc_msg.Size = new System.Drawing.Size(209, 27);
+            this.txt_busc_msg.Size = new System.Drawing.Size(168, 27);
             this.txt_busc_msg.TabIndex = 14;
             this.txt_busc_msg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // check_monto
             // 
             this.check_monto.AutoSize = true;
-            this.check_monto.Location = new System.Drawing.Point(5, 311);
+            this.check_monto.Location = new System.Drawing.Point(6, 22);
             this.check_monto.Name = "check_monto";
             this.check_monto.Size = new System.Drawing.Size(15, 14);
             this.check_monto.TabIndex = 15;
@@ -405,11 +409,11 @@ namespace CajaDeAhorro
             // 
             // lbl_concepto
             // 
-            this.lbl_concepto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(202)))));
+            this.lbl_concepto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(235)))));
             this.lbl_concepto.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_concepto.Location = new System.Drawing.Point(504, 317);
+            this.lbl_concepto.Location = new System.Drawing.Point(16, 13);
             this.lbl_concepto.Name = "lbl_concepto";
-            this.lbl_concepto.Size = new System.Drawing.Size(511, 69);
+            this.lbl_concepto.Size = new System.Drawing.Size(532, 125);
             this.lbl_concepto.TabIndex = 14;
             this.lbl_concepto.Text = "Concepto:";
             this.lbl_concepto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -418,22 +422,22 @@ namespace CajaDeAhorro
             // 
             this.grp_monto.BackColor = System.Drawing.SystemColors.Window;
             this.grp_monto.Controls.Add(this.txt_monto);
-            this.grp_monto.Location = new System.Drawing.Point(21, 311);
+            this.grp_monto.Location = new System.Drawing.Point(22, 22);
             this.grp_monto.Name = "grp_monto";
-            this.grp_monto.Size = new System.Drawing.Size(175, 75);
+            this.grp_monto.Size = new System.Drawing.Size(225, 75);
             this.grp_monto.TabIndex = 6;
             this.grp_monto.TabStop = false;
-            this.grp_monto.Text = "Buscar por monto";
+            this.grp_monto.Text = "buscar por monto";
             // 
             // txt_monto
             // 
             this.txt_monto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.txt_monto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_monto.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_monto.Location = new System.Drawing.Point(29, 27);
+            this.txt_monto.Location = new System.Drawing.Point(17, 27);
             this.txt_monto.Multiline = true;
             this.txt_monto.Name = "txt_monto";
-            this.txt_monto.Size = new System.Drawing.Size(117, 27);
+            this.txt_monto.Size = new System.Drawing.Size(168, 27);
             this.txt_monto.TabIndex = 14;
             this.txt_monto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -441,9 +445,9 @@ namespace CajaDeAhorro
             // 
             this.lbl_total.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_total.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total.Location = new System.Drawing.Point(795, 258);
+            this.lbl_total.Location = new System.Drawing.Point(26, 96);
             this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(220, 51);
+            this.lbl_total.Size = new System.Drawing.Size(241, 51);
             this.lbl_total.TabIndex = 13;
             this.lbl_total.Text = "Total:  $";
             this.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -451,12 +455,12 @@ namespace CajaDeAhorro
             // grp_resultado
             // 
             this.grp_resultado.Controls.Add(this.lbl_trans_finds);
-            this.grp_resultado.Location = new System.Drawing.Point(504, 252);
+            this.grp_resultado.Location = new System.Drawing.Point(18, 26);
             this.grp_resultado.Name = "grp_resultado";
-            this.grp_resultado.Size = new System.Drawing.Size(285, 57);
+            this.grp_resultado.Size = new System.Drawing.Size(257, 57);
             this.grp_resultado.TabIndex = 12;
             this.grp_resultado.TabStop = false;
-            this.grp_resultado.Text = "Coincidencias";
+            this.grp_resultado.Text = "coincidencias";
             // 
             // btn_cancelar
             // 
@@ -479,18 +483,71 @@ namespace CajaDeAhorro
             // 
             this.mensajeTableAdapter1.ClearBeforeFill = true;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Window;
+            this.panel2.Controls.Add(this.grp_monto);
+            this.panel2.Controls.Add(this.check_busc_msg);
+            this.panel2.Controls.Add(this.check_monto);
+            this.panel2.Controls.Add(this.grp_busc_msg);
+            this.panel2.Location = new System.Drawing.Point(312, 15);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(267, 211);
+            this.panel2.TabIndex = 13;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.Window;
+            this.panel3.Controls.Add(this.btn_crea_nota);
+            this.panel3.Controls.Add(this.grp_resultado);
+            this.panel3.Controls.Add(this.lbl_total);
+            this.panel3.Location = new System.Drawing.Point(585, 15);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(291, 211);
+            this.panel3.TabIndex = 15;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.Window;
+            this.panel4.Controls.Add(this.lbl_concepto);
+            this.panel4.Location = new System.Drawing.Point(312, 232);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(564, 150);
+            this.panel4.TabIndex = 16;
+            // 
+            // btn_crea_nota
+            // 
+            this.btn_crea_nota.BackColor = System.Drawing.Color.White;
+            this.btn_crea_nota.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_crea_nota.FlatAppearance.BorderSize = 2;
+            this.btn_crea_nota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_crea_nota.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_crea_nota.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_crea_nota.Location = new System.Drawing.Point(28, 158);
+            this.btn_crea_nota.Name = "btn_crea_nota";
+            this.btn_crea_nota.Size = new System.Drawing.Size(239, 30);
+            this.btn_crea_nota.TabIndex = 17;
+            this.btn_crea_nota.TabStop = false;
+            this.btn_crea_nota.Text = "Crear nota";
+            this.btn_crea_nota.UseVisualStyleBackColor = false;
+            this.btn_crea_nota.Click += new System.EventHandler(this.btn_crea_nota_Click);
+            // 
             // Log
             // 
             this.AcceptButton = this.btn_buscar_trans;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1064, 471);
+            this.ClientSize = new System.Drawing.Size(887, 665);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.grp_fecha);
             this.Controls.Add(this.grp_fechas);
             this.Controls.Add(this.btn_buscar_trans);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dgv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -511,6 +568,10 @@ namespace CajaDeAhorro
             this.grp_monto.ResumeLayout(false);
             this.grp_monto.PerformLayout();
             this.grp_resultado.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -543,13 +604,17 @@ namespace CajaDeAhorro
         private System.Windows.Forms.GroupBox grp_monto;
         private System.Windows.Forms.Label lbl_concepto;
         private C_AHORRO_NEW_DSTableAdapters.mensajeTableAdapter mensajeTableAdapter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn montoDataGridViewTextBoxColumn;
         private System.Windows.Forms.CheckBox check_monto;
         private System.Windows.Forms.CheckBox check_busc_msg;
         private System.Windows.Forms.GroupBox grp_busc_msg;
         private System.Windows.Forms.TextBox txt_busc_msg;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn montoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_crea_nota;
     }
 }

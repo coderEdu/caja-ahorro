@@ -189,6 +189,7 @@ namespace CajaDeAhorro
         private void Form1_Activated(object sender, EventArgs e)
         {
             this.Opacity = 1;
+            this.WinOpacity = 1;
             ConnectToDB();
         }
 
@@ -227,7 +228,8 @@ namespace CajaDeAhorro
 
         private void Form1_Deactivate(object sender, EventArgs e)
         {
-            this.Opacity = WinOpacity;
+            if (this.WinOpacity < 1)
+                this.Opacity = WinOpacity;
         }
     }
 }

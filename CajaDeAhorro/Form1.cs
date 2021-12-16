@@ -169,8 +169,9 @@ namespace CajaDeAhorro
             {
                 try
                 {
+                    this.WinOpacity = 0.5;
                     this.sesionTableAdapter1.ChangeSessStateUpQuery(0, Auxiliar.id_logged, Auxiliar.id_logged);
-                    MessageBox.Show("Ha cerrado la sesión.", "Caja-ahorro - Sesión Cerrada", MessageBoxButtons.OK, MessageBoxIcon.Information); // working here
+                    MessageBox.Show("Ha cerrado la sesión con < "+Auxiliar.LoggUserName+" >", "Caja-ahorro - Sesión Cerrada", MessageBoxButtons.OK, MessageBoxIcon.Information); // working here
                     this.Hide();
                     Auxiliar.login.Show();
                 }

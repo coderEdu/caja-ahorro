@@ -47,7 +47,7 @@ namespace CajaDeAhorro
             // 
             // btn_trans
             // 
-            this.btn_trans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(202)))));
+            this.btn_trans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.btn_trans.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(51)))));
             this.btn_trans.FlatAppearance.BorderSize = 2;
             this.btn_trans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

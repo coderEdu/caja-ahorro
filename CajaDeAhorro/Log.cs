@@ -47,19 +47,19 @@ namespace CajaDeAhorro
 
         public void AjustarCamposDGV()
         {
-            this.dgv.Columns[0].Width = 35;
+            this.dgv.Columns[0].Width = 100;
 
-            if (this.c_AHORRO_NEW_DS1.movi.Rows.Count > 9)
+            if (this.c_AHORRO_NEW_DS1.movi.Rows.Count > 10)
             {
-                this.dgv.Columns[1].Width = 278;      // 3 -    282
-                this.dgv.Columns[2].Width = 99-10;     // 6 4 1  99-5
-                this.dgv.Columns[3].Width = 97-10;    // 6 8 2  97-10
+                this.dgv.Columns[1].Width = 307;      // 3 -    282
+                this.dgv.Columns[2].Width = 195;     // 6 4 1  99-5
+                this.dgv.Columns[3].Width = 240;    // 6 8 2  97-10
             }
             else
             {
-                this.dgv.Columns[1].Width = 282;    //282
-                this.dgv.Columns[2].Width = 99-10;     //99
-                this.dgv.Columns[3].Width = 97;     //97
+                this.dgv.Columns[1].Width = 310;    //282
+                this.dgv.Columns[2].Width = 200;     //99
+                this.dgv.Columns[3].Width = 250;     //97
             }
         }
 
@@ -422,17 +422,11 @@ namespace CajaDeAhorro
             }
         }
 
-        //private void fillByMontoToolStripButton_Click_1(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        this.moviTableAdapter1.FillByMonto(this.c_AHORRO_NEW_DS1.movi, new System.Nullable<int>(((int)(System.Convert.ChangeType(montoToolStripTextBox.Text, typeof(int))))));
-        //    }
-        //    catch (System.Exception ex)
-        //    {
-        //        System.Windows.Forms.MessageBox.Show(ex.Message);
-        //    }
+        private void btn_crea_nota_Click(object sender, EventArgs e)
+        {
+            Notas notas = new Notas();
+            notas.Show(this);
+        }
 
-        //}
     }
 }

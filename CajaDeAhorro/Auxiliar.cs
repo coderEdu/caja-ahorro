@@ -16,10 +16,12 @@ namespace CajaDeAhorro
     {
         public static int dineroEnCaja;
         public static int id_logged;
+        public static int id_note;
         public static string LoggUserName;
         public static Form form1;
         public static Form login;
         public static Form admin;
+        public static Dictionary<int, string> dic = new Dictionary<int, string>();
 
         public static int getDineroEnCaja()
         {

@@ -159,12 +159,12 @@ namespace CajaDeAhorro
         {
             if (this.progress.Value<100)
             {
-                this.progress.Value += 1;
+                this.progress.Value += 2;
             }
             
             if (this.progress.Value == 100)
             {
-                if (this.barProgCounter == 90)
+                if (this.barProgCounter == 45)
                 {
                     tmr_exp_contr.Stop();
                     this.barProgCounter = 0;
@@ -193,7 +193,7 @@ namespace CajaDeAhorro
 
         private void flp_sess_ControlAdded(object sender, ControlEventArgs e)
         {
-            Button btn = (Button)this.flp_sess.Controls[increase];
+            Button btn = (Button)flp_sess.Controls[increase];
             btn.Click += Btn_session_click;
             ++increase;
  

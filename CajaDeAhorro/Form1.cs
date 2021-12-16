@@ -108,15 +108,15 @@ namespace CajaDeAhorro
 
             // cambio el color de "Saldo diponible" según el saldo disponible jeje
             if (Auxiliar.dineroEnCaja > 25000)
-                this.lbl_saldo_disponible.ForeColor = Color.Blue;
+                this.lbl_caja_valor.ForeColor = Color.Blue;
             else if (Auxiliar.dineroEnCaja > 5000)
-                this.lbl_saldo_disponible.ForeColor = Color.Green;
+                this.lbl_caja_valor.ForeColor = Color.Green;
             else if (Auxiliar.dineroEnCaja > 1000)
-                this.lbl_saldo_disponible.ForeColor = Color.Gold;
+                this.lbl_caja_valor.ForeColor = Color.Gold;
             else if (Auxiliar.dineroEnCaja > 100)
-                this.lbl_saldo_disponible.ForeColor = Color.Orange;
+                this.lbl_caja_valor.ForeColor = Color.Orange;
             else
-                this.lbl_saldo_disponible.ForeColor = Color.Red;
+                this.lbl_caja_valor.ForeColor = Color.Red;
 
             increase = 0;
             this.flp_note.Controls.Clear();
@@ -148,12 +148,6 @@ namespace CajaDeAhorro
             else
                 transaccion.Text = Auxiliar.getAppName() + " Realizar una extracción";
             transaccion.ShowDialog();
-        }
-
-        private void Form1_Paint(object sender, PaintEventArgs e)
-        {
-            //this.Refresh();
-            //ConnectToDB();
         }
 
         private void btn_registro_Click(object sender, EventArgs e)
@@ -221,7 +215,7 @@ namespace CajaDeAhorro
         private void btn_editar_nota_Click(object sender, EventArgs e)
         {
             Notas notas = new Notas();
-            notas.EditarTab = 1;
+            notas.EditarTab = true;
             notas.Show(this);
         }
     }

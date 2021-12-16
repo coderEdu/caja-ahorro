@@ -18,7 +18,7 @@ namespace CajaDeAhorro
     }
     public partial class Notas : Form
     {
-        public int EditarTab { get; set; }
+        public bool EditarTab { get; set; }
         MyTabs myTab;
         public Notas()
         {
@@ -37,7 +37,7 @@ namespace CajaDeAhorro
             catch (Exception)
             { }
             
-            if (EditarTab==1)
+            if (EditarTab)
             {
                 this.tab_notas.SelectedTab = tabP_editar;
             }

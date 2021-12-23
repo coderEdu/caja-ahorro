@@ -65,7 +65,9 @@
       <DependentUpon>C_AHORRO_NEW_DS.xsd</DependentUpon>
     </Compile>
     <Compile Include="C_AHORRO_NEW_DS.Designer.cs">
-      <DependentUpon>C_AHORRO_NEW_DS.cs</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>C_AHORRO_NEW_DS.xsd</DependentUpon>
     </Compile>
     <Compile Include="DetNota.cs">
       <SubType>Form</SubType>
@@ -150,7 +152,11 @@
     <None Include="C_AHORRO_NEW_DS.xsc">
       <DependentUpon>C_AHORRO_NEW_DS.xsd</DependentUpon>
     </None>
-    <None Include="C_AHORRO_NEW_DS.xsd" />
+    <None Include="C_AHORRO_NEW_DS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>C_AHORRO_NEW_DS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="C_AHORRO_NEW_DS.xss">
       <DependentUpon>C_AHORRO_NEW_DS.xsd</DependentUpon>
     </None>

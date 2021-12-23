@@ -67,7 +67,7 @@ namespace CajaDeAhorro
                 return;
             }
 
-            int id = this.c_AHORRO_NEW_DS1.movi.Rows.Count + 1;
+            int id = Convert.ToInt32(this.moviTableAdapter2.MaxIdScalarQuery()) + 1;
 
             if (this.Text.EndsWith("ito"))
             {

@@ -10,7 +10,7 @@ namespace CajaDeAhorro
     {
         /// <summary>
         /// The main entry point for the application.
-        /// </summary>
+        /// </summary> 
         [STAThread]
         static void Main()
         {
@@ -20,6 +20,7 @@ namespace CajaDeAhorro
             //Application.Run(new Log());
             //Application.Run(new Administrador());
             //Application.Run(new Notas());
+            //Application.Run(new Mensaje());
         }
     }
 }

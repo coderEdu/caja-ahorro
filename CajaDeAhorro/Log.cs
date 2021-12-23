@@ -13,6 +13,9 @@ namespace CajaDeAhorro
     public partial class Log : Form
     {
         public string LoggedUserName { get; set; }
+        double opacity = 0.6;
+        public double WinOpacity { get; set; }
+
         public Log()
         {
             InitializeComponent();
@@ -424,9 +427,25 @@ namespace CajaDeAhorro
 
         private void btn_crea_nota_Click(object sender, EventArgs e)
         {
+            this.WinOpacity = this.opacity;
             Notas notas = new Notas();
             notas.Show(this);
         }
 
+        private void Log_Activated(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Log_Deactivate(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_edit_msg_Click(object sender, EventArgs e)
+        {
+            Mensaje mensaje = new Mensaje();
+            mensaje.Show(this);
+        }
     }
 }

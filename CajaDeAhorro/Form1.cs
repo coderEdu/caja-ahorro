@@ -15,6 +15,7 @@ namespace CajaDeAhorro
     public partial class Form1 : Form
     {
         static int increase;
+        public double opacity = 0.6;
         public double WinOpacity { get; set; }
         public Form1()
         {
@@ -131,13 +132,13 @@ namespace CajaDeAhorro
 
         private void btn_deposito_Click(object sender, EventArgs e)
         {
-            this.WinOpacity = 0.5;
+            this.WinOpacity = this.opacity;
             MostrarVentTrans(sender);
         }
 
         private void btn_extraccion_Click(object sender, EventArgs e)
         {
-            this.WinOpacity = 0.5;
+            this.WinOpacity = this.opacity;
             MostrarVentTrans(sender);
         }
 
@@ -161,7 +162,7 @@ namespace CajaDeAhorro
 
         private void btn_sesion_Click(object sender, EventArgs e)
         {
-            this.WinOpacity = 0.5;
+            this.WinOpacity = this.opacity;
             DialogResult result;
             result = MessageBox.Show("Está seguro de querer cerrar la sesión?", "Caja-ahorro - Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -169,7 +170,7 @@ namespace CajaDeAhorro
             {
                 try
                 {
-                    this.WinOpacity = 0.5;
+                    this.WinOpacity = this.opacity;
                     this.sesionTableAdapter1.ChangeSessStateUpQuery(0, Auxiliar.id_logged, Auxiliar.id_logged);
                     MessageBox.Show("Ha cerrado la sesión con < "+Auxiliar.LoggUserName+" >", "Caja-ahorro - Sesión Cerrada", MessageBoxButtons.OK, MessageBoxIcon.Information); // working here
                     this.Hide();
@@ -214,14 +215,14 @@ namespace CajaDeAhorro
 
         private void btn_crear_nota_Click(object sender, EventArgs e)
         {
-            this.WinOpacity = 0.5;
+            this.WinOpacity = this.opacity;
             Notas notas = new Notas();
             notas.ShowDialog();
         }
 
         private void btn_editar_nota_Click(object sender, EventArgs e)
         {
-            this.WinOpacity = 0.5;
+            this.WinOpacity = this.opacity;
             Notas notas = new Notas();
             notas.EditarTab = true;
             notas.Show(this);
@@ -232,5 +233,6 @@ namespace CajaDeAhorro
             if (this.WinOpacity < 1)
                 this.Opacity = WinOpacity;
         }
+
     }
 }

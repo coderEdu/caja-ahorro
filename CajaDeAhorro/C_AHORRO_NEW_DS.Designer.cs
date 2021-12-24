@@ -42,13 +42,13 @@ namespace CajaDeAhorro {
         
         private global::System.Data.DataRelation relationFK_notas_login;
         
-        private global::System.Data.DataRelation relationFK_mensaje_movi;
+        private global::System.Data.DataRelation relationFK_creado_login;
         
-        private global::System.Data.DataRelation relationFK_sesion_login;
+        private global::System.Data.DataRelation relationFK_mensaje_movi;
         
         private global::System.Data.DataRelation relationFK_prestamo_movi;
         
-        private global::System.Data.DataRelation relationFK_creado_login;
+        private global::System.Data.DataRelation relationFK_sesion_login;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -352,10 +352,10 @@ namespace CajaDeAhorro {
             }
             this.relationFK_movi_login = this.Relations["FK_movi_login"];
             this.relationFK_notas_login = this.Relations["FK_notas_login"];
-            this.relationFK_mensaje_movi = this.Relations["FK_mensaje_movi"];
-            this.relationFK_sesion_login = this.Relations["FK_sesion_login"];
-            this.relationFK_prestamo_movi = this.Relations["FK_prestamo_movi"];
             this.relationFK_creado_login = this.Relations["FK_creado_login"];
+            this.relationFK_mensaje_movi = this.Relations["FK_mensaje_movi"];
+            this.relationFK_prestamo_movi = this.Relations["FK_prestamo_movi"];
+            this.relationFK_sesion_login = this.Relations["FK_sesion_login"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -395,6 +395,13 @@ namespace CajaDeAhorro {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_creado_login", new global::System.Data.DataColumn[] {
+                        this.tablelogin.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecreado.idColumn});
+            this.tablecreado.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             this.relationFK_movi_login = new global::System.Data.DataRelation("FK_movi_login", new global::System.Data.DataColumn[] {
                         this.tablelogin.idColumn}, new global::System.Data.DataColumn[] {
                         this.tablemovi.id_logColumn}, false);
@@ -403,22 +410,22 @@ namespace CajaDeAhorro {
                         this.tablelogin.idColumn}, new global::System.Data.DataColumn[] {
                         this.tablenotas.id_logColumn}, false);
             this.Relations.Add(this.relationFK_notas_login);
-            this.relationFK_mensaje_movi = new global::System.Data.DataRelation("FK_mensaje_movi", new global::System.Data.DataColumn[] {
-                        this.tablemovi.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tablemensaje.idColumn}, false);
-            this.Relations.Add(this.relationFK_mensaje_movi);
-            this.relationFK_sesion_login = new global::System.Data.DataRelation("FK_sesion_login", new global::System.Data.DataColumn[] {
-                        this.tablelogin.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tablesesion.idColumn}, false);
-            this.Relations.Add(this.relationFK_sesion_login);
-            this.relationFK_prestamo_movi = new global::System.Data.DataRelation("FK_prestamo_movi", new global::System.Data.DataColumn[] {
-                        this.tablemovi.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableprestamo.idColumn}, false);
-            this.Relations.Add(this.relationFK_prestamo_movi);
             this.relationFK_creado_login = new global::System.Data.DataRelation("FK_creado_login", new global::System.Data.DataColumn[] {
                         this.tablelogin.idColumn}, new global::System.Data.DataColumn[] {
                         this.tablecreado.idColumn}, false);
             this.Relations.Add(this.relationFK_creado_login);
+            this.relationFK_mensaje_movi = new global::System.Data.DataRelation("FK_mensaje_movi", new global::System.Data.DataColumn[] {
+                        this.tablemovi.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablemensaje.idColumn}, false);
+            this.Relations.Add(this.relationFK_mensaje_movi);
+            this.relationFK_prestamo_movi = new global::System.Data.DataRelation("FK_prestamo_movi", new global::System.Data.DataColumn[] {
+                        this.tablemovi.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableprestamo.idColumn}, false);
+            this.Relations.Add(this.relationFK_prestamo_movi);
+            this.relationFK_sesion_login = new global::System.Data.DataRelation("FK_sesion_login", new global::System.Data.DataColumn[] {
+                        this.tablelogin.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablesesion.idColumn}, false);
+            this.Relations.Add(this.relationFK_sesion_login);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2709,6 +2716,17 @@ namespace CajaDeAhorro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public creadoRow[] GetcreadoRows() {
+                if ((this.Table.ChildRelations["FK_creado_login"] == null)) {
+                    return new creadoRow[0];
+                }
+                else {
+                    return ((creadoRow[])(base.GetChildRows(this.Table.ChildRelations["FK_creado_login"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public notasRow[] GetnotasRows() {
                 if ((this.Table.ChildRelations["FK_notas_login"] == null)) {
                     return new notasRow[0];
@@ -2737,17 +2755,6 @@ namespace CajaDeAhorro {
                 }
                 else {
                     return ((sesionRow[])(base.GetChildRows(this.Table.ChildRelations["FK_sesion_login"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public creadoRow[] GetcreadoRows() {
-                if ((this.Table.ChildRelations["FK_creado_login"] == null)) {
-                    return new creadoRow[0];
-                }
-                else {
-                    return ((creadoRow[])(base.GetChildRows(this.Table.ChildRelations["FK_creado_login"])));
                 }
             }
         }
@@ -7723,16 +7730,23 @@ SELECT id, titulo, nota, id_log, fec_crea, fec_modif FROM notas WHERE (id = @id)
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id, fec_crea FROM dbo.creado";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        id, fec_crea\r\nFROM            creado\r\nWHERE        (id = @id_log)";
+            this._commandCollection[1].CommandText = "INSERT INTO creado\r\n                         (id, fec_crea)\r\nVALUES        (@id,@" +
+                "fec_crea); \r\nSELECT id, fec_crea FROM creado WHERE (id = @id)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_log", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fec_crea", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fec_crea", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT        id, fec_crea\r\nFROM            creado\r\nWHERE        (id = @id_log)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_log", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7764,7 +7778,7 @@ SELECT id, titulo, nota, id_log, fec_crea, fec_modif FROM notas WHERE (id = @id)
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByFecCrea(C_AHORRO_NEW_DS.creadoDataTable dataTable, int id_log) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_log));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7778,7 +7792,7 @@ SELECT id, titulo, nota, id_log, fec_crea, fec_modif FROM notas WHERE (id = @id)
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual C_AHORRO_NEW_DS.creadoDataTable GetDataByFecCrea(int id_log) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_log));
             C_AHORRO_NEW_DS.creadoDataTable dataTable = new C_AHORRO_NEW_DS.creadoDataTable();
             this.Adapter.Fill(dataTable);
@@ -7915,6 +7929,36 @@ SELECT id, titulo, nota, id_log, fec_crea, fec_modif FROM notas WHERE (id = @id)
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(global::System.Nullable<global::System.DateTime> fec_crea, int Original_id, global::System.Nullable<global::System.DateTime> Original_fec_crea) {
             return this.Update(Original_id, fec_crea, Original_id, Original_fec_crea);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int FecCreaInsertQuery(int id, global::System.Nullable<global::System.DateTime> fec_crea) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((int)(id));
+            if ((fec_crea.HasValue == true)) {
+                command.Parameters[1].Value = ((System.DateTime)(fec_crea.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

@@ -12,6 +12,7 @@ using System.Windows.Forms;
 namespace CajaDeAhorro
 {
     public enum Estados { exp, con, mov1, mov2 }
+    
     public partial class Login : Form
     {
         public Estados ExpOrContr { get; set; }    
@@ -53,7 +54,9 @@ namespace CajaDeAhorro
 
         public void GetActiveSessions()
         {
+
             int count = this.sesionTableAdapter1.Fill(this.c_AHORRO_NEW_DS1.sesion);
+
             DataGridView dataGrid = new DataGridView();
             this.loginTableAdapter1.Fill(this.c_AHORRO_NEW_DS1.login);  // ay q llenar el ds p/poder obt los datos
             this.sesionTableAdapter1.Fill(this.c_AHORRO_NEW_DS1.sesion); // acá igual ...
@@ -117,10 +120,10 @@ namespace CajaDeAhorro
             if (this.txt_nombre_nuevo_usuario.TextLength > 0 && this.txt_pass_nuevo_usuario.TextLength > 0)
             {
                 DialogResult Dr;
-                Dr= MessageBox.Show("Confirma la creación del nuevo usuario?", "Caja de ahorro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                Dr = MessageBox.Show("Confirma la creación del nuevo usuario?", "Caja de ahorro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (Dr == DialogResult.No)
                     return;
-                if (this.loginTableAdapter1.CheckUserScalarQuery(this.txt_nombre_nuevo_usuario.Text) == 1)
+                if (this.loginTableAdapter1.CheckUserScalarQuery(this.txt_nombre_nuevo_usuario.Text) == 1)  
                 {
                     MessageBox.Show("Error: ya existe un usuario con el mismo nombre.\nPor favor, ingrese un nombre diferente.",
                         "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -131,8 +134,14 @@ namespace CajaDeAhorro
                 {
                     try
                     {
-                        int newUserId = Convert.ToInt32(this.loginTableAdapter1.BiggestIdScalarQuery()) + 1;
+                        int newUserId = Convert.ToInt32(this.loginTableAdapter1.BiggestIdScalarQuery()) + 1;    // working here 24/12/2021 05:30
                         this.loginTableAdapter1.InsertQuery(newUserId, this.txt_nombre_nuevo_usuario.Text, this.txt_pass_nuevo_usuario.Text, 0);
+                        try
+                        {
+                            this.creadoTableAdapter1.FecCreaInsertQuery(newUserId, DateTime.Now);
+                        }
+                        catch (Exception) { }
+
                         MessageBox.Show("Nuevo usuario creado.", "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         //this.ExpOrContr = Estados.mov2;
                         //this.tmr_exp_contr.Start();

@@ -57,6 +57,7 @@ namespace CajaDeAhorro
             this.label5 = new System.Windows.Forms.Label();
             this.sesionTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.sesionTableAdapter();
             this.progress = new System.Windows.Forms.ProgressBar();
+            this.creadoTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.creadoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_login)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_action)).BeginInit();
@@ -363,6 +364,10 @@ namespace CajaDeAhorro
             this.progress.Size = new System.Drawing.Size(859, 3);
             this.progress.TabIndex = 22;
             // 
+            // creadoTableAdapter1
+            // 
+            this.creadoTableAdapter1.ClearBeforeFill = true;
+            // 
             // Login
             // 
             this.AcceptButton = this.btn_login;
@@ -425,5 +430,6 @@ namespace CajaDeAhorro
         private System.Windows.Forms.Label label5;
         private C_AHORRO_NEW_DSTableAdapters.sesionTableAdapter sesionTableAdapter1;
         private System.Windows.Forms.ProgressBar progress;
+        private C_AHORRO_NEW_DSTableAdapters.creadoTableAdapter creadoTableAdapter1;
     }
 }

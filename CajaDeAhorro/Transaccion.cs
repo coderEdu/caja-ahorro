@@ -86,10 +86,14 @@ namespace CajaDeAhorro
             else
             {
                 if (montoFromTextbox > dineroEnCaja)
-                    if (dineroEnCaja==0)
+                {
+                    if (dineroEnCaja == 0)
                         MessageBox.Show("Error: no dispone de saldo!", "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else
                         MessageBox.Show("Error: no dispone de saldo suficiente!", "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    return;
+                } 
                 else
                 {
                     dineroEnCaja -= montoFromTextbox;
@@ -106,12 +110,13 @@ namespace CajaDeAhorro
                 }
             }
             this.loginTableAdapter1.UpdateQuery(dineroEnCaja, Auxiliar.id_logged, Auxiliar.id_logged);
-            // working here
+            // ************************************************************************************************   working here   *************************
             if (this.txt_concepto.TextLength > 0)
             {
                 this.mensajeTableAdapter1.MessageInsertQuery(id, this.txt_concepto.Text); 
             }
             this.Close();
+            // ************************************************************************************************   working here   *************************
         }
 
         private void txt_trans_monto_KeyPress(object sender, KeyPressEventArgs e)

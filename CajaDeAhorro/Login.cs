@@ -61,7 +61,7 @@ namespace CajaDeAhorro
             {
                 if (this.c_AHORRO_NEW_DS1.Tables["sesion"].Rows[i].Field<int>(1)==1)
                 {
-                    if (this.flp_sess.Controls.Count < 12)
+                    if (this.flp_sess.Controls.Count < 15)
                     {
                         Session session = new Session();
                         string loggName = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[i].Field<string>(1).Replace(" ", "");
@@ -131,8 +131,7 @@ namespace CajaDeAhorro
                 {
                     try
                     {
-                        int biggestId = Convert.ToInt32(this.loginTableAdapter1.BiggestIdScalarQuery());
-                        int newUserId = biggestId + 1;
+                        int newUserId = Convert.ToInt32(this.loginTableAdapter1.BiggestIdScalarQuery()) + 1;
                         this.loginTableAdapter1.InsertQuery(newUserId, this.txt_nombre_nuevo_usuario.Text, this.txt_pass_nuevo_usuario.Text, 0);
                         MessageBox.Show("Nuevo usuario creado.", "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         //this.ExpOrContr = Estados.mov2;

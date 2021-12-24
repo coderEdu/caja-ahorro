@@ -36,6 +36,19 @@ namespace CajaDeAhorro
 
             this.Text = Auxiliar.getAppName() + " Sesión Activa";      
             this.lbl_dios_desmolde.Visible = true;
+            this.creadoTableAdapter1.FillByFecCrea(c_AHORRO_NEW_DS1.creado, Auxiliar.id_logged);
+            DateTime dateTime = new DateTime();
+
+            try
+            {
+                dateTime = this.c_AHORRO_NEW_DS1.Tables["creado"].Rows[0].Field<DateTime>("fec_crea");
+                this.lbl_fecha_portada.Text = "cuenta activa desde:  " + dateTime.ToString("dddd, dd MMMM yyyy HH:mm:ss");
+            }
+            catch (Exception) { this.lbl_fecha_portada.Text = "cuenta activa desde:  n/a"; }
+
+            this.lbl_fecha_portada.Location = new Point(this.Width / 2 - (this.lbl_fecha_portada.Width / 2) - 10, this.lbl_fecha_portada.Location.Y);
+
+
             ConnectToDB();
 
             // ********************* some test lines ***************
@@ -88,7 +101,7 @@ namespace CajaDeAhorro
             Auxiliar.LoggUserName = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[0].Field<string>(1).ToString();
             Auxiliar.LoggUserName = Auxiliar.LoggUserName.Replace(" ", "");   // quito los espacios en blanco del final
             //lbl_dios_desmolde.Text = "usuario activo [ " + Auxiliar.LoggUserName + " ]";
-            lbl_fecha_portada.Text = dateTimePicker1.Text;
+            //lbl_fecha_portada.Text = dateTimePicker1.Text;
             lbl_dios_desmolde.Text = "bienvenido a su cuenta - menu principal".ToUpper();
             lbl_name_logged.Text = Auxiliar.LoggUserName;
             // capturo el valor caja del row del usuario logueado

@@ -70,8 +70,8 @@ namespace CajaDeAhorro
                         string loggName = this.c_AHORRO_NEW_DS1.Tables["login"].Rows[i].Field<string>(1).Replace(" ", "");
                         Button button = new Button();
                         button = session.CreateNewSessionWithAttribs(loggName);
-                        button.BackColor = Color.WhiteSmoke;
-                        button.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+                        button.BackColor = Color.White;
+                        button.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuBar;
                         button.FlatAppearance.BorderSize = 3;
                         this.flp_sess.Controls.Add(button);
                     }

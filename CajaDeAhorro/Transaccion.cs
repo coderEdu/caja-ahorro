@@ -76,7 +76,7 @@ namespace CajaDeAhorro
                 try
                 {
                     // nuevo registro de transacción de depósito
-                    this.moviTableAdapter2.InsertQuery(id, dateTime, "deposito", montoFromTextbox, Auxiliar.id_logged);      // working here
+                    this.moviTableAdapter2.InsertQuery(id, dateTime, "deposito", montoFromTextbox, Auxiliar.id_logged);
                 }
                 catch (SqlException ex)
                 {
@@ -101,7 +101,7 @@ namespace CajaDeAhorro
                     try
                     {
                         // nuevo registro de transacción de extracción
-                        this.moviTableAdapter2.InsertQuery(id, dateTime, "extracción", montoFromTextbox, Auxiliar.id_logged);        // working here
+                        this.moviTableAdapter2.InsertQuery(id, dateTime, "extracción", montoFromTextbox, Auxiliar.id_logged);
                     }
                     catch (SqlException ex)
                     {

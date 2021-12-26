@@ -1088,24 +1088,27 @@ WHERE        (id = @id_log)</CommandText>
       <xs:selector xpath=".//mstns:creado" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
-    <xs:keyref name="FK_creado_login" refer="Constraint1" msprop:rel_Generator_UserParentTable="login" msprop:rel_Generator_UserChildTable="creado" msprop:rel_Generator_RelationVarName="relationFK_creado_login" msprop:rel_Generator_ChildPropName="GetcreadoRows" msprop:rel_Generator_UserRelationName="FK_creado_login" msprop:rel_Generator_ParentPropName="loginRow">
+    <xs:keyref name="FK_creado_login" refer="Constraint1" msprop:rel_Generator_UserParentTable="login" msprop:rel_Generator_UserChildTable="creado" msprop:rel_Generator_RelationVarName="relationFK_creado_login" msprop:rel_Generator_ChildPropName="GetcreadoRows" msprop:rel_Generator_ParentPropName="loginRow" msprop:rel_Generator_UserRelationName="FK_creado_login">
       <xs:selector xpath=".//mstns:creado" />
       <xs:field xpath="mstns:id" />
     </xs:keyref>
-    <xs:keyref name="FK_notas_login" refer="Constraint1" msprop:rel_Generator_UserParentTable="login" msprop:rel_Generator_UserChildTable="notas" msprop:rel_Generator_RelationVarName="relationFK_notas_login" msprop:rel_Generator_ChildPropName="GetnotasRows" msprop:rel_Generator_UserRelationName="FK_notas_login" msprop:rel_Generator_ParentPropName="loginRow">
+    <xs:keyref name="FK_notas_login" refer="Constraint1" msprop:rel_Generator_UserParentTable="login" msprop:rel_Generator_UserChildTable="notas" msprop:rel_Generator_RelationVarName="relationFK_notas_login" msprop:rel_Generator_ChildPropName="GetnotasRows" msprop:rel_Generator_ParentPropName="loginRow" msprop:rel_Generator_UserRelationName="FK_notas_login">
       <xs:selector xpath=".//mstns:notas" />
       <xs:field xpath="mstns:id_log" />
     </xs:keyref>
-    <xs:keyref name="FK_movi_login" refer="Constraint1" msprop:rel_Generator_UserParentTable="login" msprop:rel_Generator_UserChildTable="movi" msprop:rel_Generator_RelationVarName="relationFK_movi_login" msprop:rel_Generator_ChildPropName="GetmoviRows" msprop:rel_Generator_UserRelationName="FK_movi_login" msprop:rel_Generator_ParentPropName="loginRow" msdata:AcceptRejectRule="Cascade">
+    <xs:keyref name="FK_mensaje_movi" refer="movi_Constraint1" msprop:rel_Generator_UserParentTable="movi" msprop:rel_Generator_UserChildTable="mensaje" msprop:rel_Generator_RelationVarName="relationFK_mensaje_movi" msprop:rel_Generator_ChildPropName="GetmensajeRows" msprop:rel_Generator_ParentPropName="moviRow" msprop:rel_Generator_UserRelationName="FK_mensaje_movi">
+      <xs:selector xpath=".//mstns:mensaje" />
+      <xs:field xpath="mstns:id" />
+    </xs:keyref>
+    <xs:keyref name="FK_movi_login" refer="Constraint1" msprop:rel_Generator_UserParentTable="login" msprop:rel_Generator_UserChildTable="movi" msprop:rel_Generator_RelationVarName="relationFK_movi_login" msprop:rel_Generator_ChildPropName="GetmoviRows" msprop:rel_Generator_ParentPropName="loginRow" msprop:rel_Generator_UserRelationName="FK_movi_login" msdata:AcceptRejectRule="Cascade">
       <xs:selector xpath=".//mstns:movi" />
       <xs:field xpath="mstns:id_log" />
     </xs:keyref>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_mensaje_movi" msdata:parent="movi" msdata:child="mensaje" msdata:parentkey="id" msdata:childkey="id" msprop:Generator_UserParentTable="movi" msprop:Generator_UserChildTable="mensaje" msprop:Generator_RelationVarName="relationFK_mensaje_movi" msprop:Generator_ChildPropName="GetmensajeRows" msprop:Generator_UserRelationName="FK_mensaje_movi" msprop:Generator_ParentPropName="moviRow" />
-      <msdata:Relationship name="FK_prestamo_movi" msdata:parent="movi" msdata:child="prestamo" msdata:parentkey="id" msdata:childkey="id" msprop:Generator_UserParentTable="movi" msprop:Generator_UserChildTable="prestamo" msprop:Generator_RelationVarName="relationFK_prestamo_movi" msprop:Generator_ChildPropName="GetprestamoRows" msprop:Generator_ParentPropName="moviRow" msprop:Generator_UserRelationName="FK_prestamo_movi" />
-      <msdata:Relationship name="FK_sesion_login" msdata:parent="login" msdata:child="sesion" msdata:parentkey="id" msdata:childkey="id" msprop:Generator_UserParentTable="login" msprop:Generator_UserChildTable="sesion" msprop:Generator_RelationVarName="relationFK_sesion_login" msprop:Generator_ChildPropName="GetsesionRows" msprop:Generator_ParentPropName="loginRow" msprop:Generator_UserRelationName="FK_sesion_login" />
+      <msdata:Relationship name="FK_prestamo_movi" msdata:parent="movi" msdata:child="prestamo" msdata:parentkey="id" msdata:childkey="id" msprop:Generator_UserParentTable="movi" msprop:Generator_UserChildTable="prestamo" msprop:Generator_RelationVarName="relationFK_prestamo_movi" msprop:Generator_ChildPropName="GetprestamoRows" msprop:Generator_UserRelationName="FK_prestamo_movi" msprop:Generator_ParentPropName="moviRow" />
+      <msdata:Relationship name="FK_sesion_login" msdata:parent="login" msdata:child="sesion" msdata:parentkey="id" msdata:childkey="id" msprop:Generator_UserParentTable="login" msprop:Generator_UserChildTable="sesion" msprop:Generator_RelationVarName="relationFK_sesion_login" msprop:Generator_ChildPropName="GetsesionRows" msprop:Generator_UserRelationName="FK_sesion_login" msprop:Generator_ParentPropName="loginRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

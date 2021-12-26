@@ -40,11 +40,11 @@ namespace CajaDeAhorro {
         
         private global::System.Data.DataRelation relationFK_movi_login;
         
+        private global::System.Data.DataRelation relationFK_mensaje_movi;
+        
         private global::System.Data.DataRelation relationFK_notas_login;
         
         private global::System.Data.DataRelation relationFK_creado_login;
-        
-        private global::System.Data.DataRelation relationFK_mensaje_movi;
         
         private global::System.Data.DataRelation relationFK_prestamo_movi;
         
@@ -351,9 +351,9 @@ namespace CajaDeAhorro {
                 }
             }
             this.relationFK_movi_login = this.Relations["FK_movi_login"];
+            this.relationFK_mensaje_movi = this.Relations["FK_mensaje_movi"];
             this.relationFK_notas_login = this.Relations["FK_notas_login"];
             this.relationFK_creado_login = this.Relations["FK_creado_login"];
-            this.relationFK_mensaje_movi = this.Relations["FK_mensaje_movi"];
             this.relationFK_prestamo_movi = this.Relations["FK_prestamo_movi"];
             this.relationFK_sesion_login = this.Relations["FK_sesion_login"];
         }
@@ -388,6 +388,13 @@ namespace CajaDeAhorro {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.Cascade;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_mensaje_movi", new global::System.Data.DataColumn[] {
+                        this.tablemovi.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablemensaje.idColumn});
+            this.tablemensaje.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_notas_login", new global::System.Data.DataColumn[] {
                         this.tablelogin.idColumn}, new global::System.Data.DataColumn[] {
                         this.tablenotas.id_logColumn});
@@ -406,6 +413,10 @@ namespace CajaDeAhorro {
                         this.tablelogin.idColumn}, new global::System.Data.DataColumn[] {
                         this.tablemovi.id_logColumn}, false);
             this.Relations.Add(this.relationFK_movi_login);
+            this.relationFK_mensaje_movi = new global::System.Data.DataRelation("FK_mensaje_movi", new global::System.Data.DataColumn[] {
+                        this.tablemovi.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablemensaje.idColumn}, false);
+            this.Relations.Add(this.relationFK_mensaje_movi);
             this.relationFK_notas_login = new global::System.Data.DataRelation("FK_notas_login", new global::System.Data.DataColumn[] {
                         this.tablelogin.idColumn}, new global::System.Data.DataColumn[] {
                         this.tablenotas.id_logColumn}, false);
@@ -414,10 +425,6 @@ namespace CajaDeAhorro {
                         this.tablelogin.idColumn}, new global::System.Data.DataColumn[] {
                         this.tablecreado.idColumn}, false);
             this.Relations.Add(this.relationFK_creado_login);
-            this.relationFK_mensaje_movi = new global::System.Data.DataRelation("FK_mensaje_movi", new global::System.Data.DataColumn[] {
-                        this.tablemovi.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tablemensaje.idColumn}, false);
-            this.Relations.Add(this.relationFK_mensaje_movi);
             this.relationFK_prestamo_movi = new global::System.Data.DataRelation("FK_prestamo_movi", new global::System.Data.DataColumn[] {
                         this.tablemovi.idColumn}, new global::System.Data.DataColumn[] {
                         this.tableprestamo.idColumn}, false);

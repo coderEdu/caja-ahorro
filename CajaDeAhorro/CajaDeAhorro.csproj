@@ -329,5 +329,8 @@
   <ItemGroup>
     <None Include="Resources\17332_binoculars_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28363_door_exit_logout_mail_out_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

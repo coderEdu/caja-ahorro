@@ -252,5 +252,9 @@ namespace CajaDeAhorro
                 this.Opacity = WinOpacity;
         }
 
+        private void btn_exit_sess_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

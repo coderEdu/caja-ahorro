@@ -105,7 +105,7 @@ namespace CajaDeAhorro
         // logica para la búsqueda por fechas
         private void LogicCheckFechas(DateTime dtDesde, DateTime dtHasta)   // busca en un período
         {
-            if (this.cbx_tipo.SelectedItem.Equals("____AMBOS"))
+            if (this.cbx_tipo.SelectedItem.Equals("AMBOS"))
             {
                 if (CheckedNoVacioYMayorQueCero())
                 {
@@ -123,7 +123,7 @@ namespace CajaDeAhorro
                 }
 
             }
-            else if (this.cbx_tipo.SelectedItem.Equals("____DEPOSITOS")) // working here
+            else if (this.cbx_tipo.SelectedItem.Equals("DEPOSITOS")) // working here
             {
                 if (CheckedNoVacioYMayorQueCero())
                 {
@@ -170,7 +170,7 @@ namespace CajaDeAhorro
             DateTime fecha_time1 = DateTime.Parse(sfecha_time1);
             DateTime fecha_time2 = DateTime.Parse(sfecha_time2);
 
-            if (this.cbx_tipo.SelectedItem.Equals("____AMBOS"))
+            if (this.cbx_tipo.SelectedItem.Equals("AMBOS"))
             {
                 if (CheckedNoVacioYMayorQueCero())
                 {
@@ -187,7 +187,7 @@ namespace CajaDeAhorro
                     this.lbl_trans_finds.Text = this.TransEncontr(this.moviTableAdapter1.FillByFechaExactaAmbos(this.c_AHORRO_NEW_DS1.movi, Auxiliar.id_logged, fecha_time1, fecha_time2));
                 }
             }
-            else if (this.cbx_tipo.SelectedItem.Equals("____DEPOSITOS"))             // working here
+            else if (this.cbx_tipo.SelectedItem.Equals("DEPOSITOS"))             // working here
             {
                 if (CheckedNoVacioYMayorQueCero())
                 {
@@ -230,7 +230,7 @@ namespace CajaDeAhorro
 
         private void LogicBuscarSinFechas()     // busca sin fechas
         {
-            if (this.cbx_tipo.SelectedItem.Equals("____AMBOS"))
+            if (this.cbx_tipo.SelectedItem.Equals("AMBOS"))
             {
                 if (CheckedNoVacioYMayorQueCero())
                 {
@@ -257,7 +257,7 @@ namespace CajaDeAhorro
                     MostrarSumatoriaMonto();
                 }
             }
-            else if (this.cbx_tipo.SelectedItem.Equals("____DEPOSITOS")) // en esta parte tengo que agregar la búsqueda por monto
+            else if (this.cbx_tipo.SelectedItem.Equals("DEPOSITOS")) // en esta parte tengo que agregar la búsqueda por monto
             {
 
                 if (CheckedNoVacioYMayorQueCero())

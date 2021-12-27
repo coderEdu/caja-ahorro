@@ -143,15 +143,15 @@ namespace CajaDeAhorro
             this.cbx_tipo.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_tipo.FormattingEnabled = true;
             this.cbx_tipo.Items.AddRange(new object[] {
-            "____AMBOS",
-            "____DEPOSITOS",
-            "____EXTRACCIONES"});
-            this.cbx_tipo.Location = new System.Drawing.Point(26, 22);
+            "AMBOS",
+            "DEPOSITOS",
+            "EXTRACCIONES"});
+            this.cbx_tipo.Location = new System.Drawing.Point(68, 21);
             this.cbx_tipo.Name = "cbx_tipo";
-            this.cbx_tipo.Size = new System.Drawing.Size(200, 23);
+            this.cbx_tipo.Size = new System.Drawing.Size(115, 23);
             this.cbx_tipo.TabIndex = 5;
             this.cbx_tipo.TabStop = false;
-            this.cbx_tipo.Text = "____AMBOS";
+            this.cbx_tipo.Text = "AMBOS";
             // 
             // check_fecha
             // 

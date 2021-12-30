@@ -29,7 +29,7 @@ namespace CajaDeAhorro
             //  MessageBox.Show(sfecha_time2);
             // ends code for test
             // TODO: This line of code loads data into the 'cAJA_AHORRODataSet.movi' table. You can move, or remove it, as needed.
-            this.Text = Auxiliar.getAppName() + "Registro de transacciones del usuario [ " + LoggedUserName + " ]";
+            this.Text = Auxiliar.getAppName() + "Registro de transacciones de la cuenta [ " + LoggedUserName + " ]";
             this.lbl_exacta.Enabled = false;
             this.lbl_desde.Enabled = false;
             this.lbl_hasta.Enabled = false;

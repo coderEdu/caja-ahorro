@@ -295,7 +295,7 @@ namespace CajaDeAhorro
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(256, 41);
             this.label4.TabIndex = 20;
-            this.label4.Text = "NUEVO USUARIO";
+            this.label4.Text = "NUEVA CUENTA";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tab_sesion
@@ -339,7 +339,7 @@ namespace CajaDeAhorro
             this.tabP_nuevo.Padding = new System.Windows.Forms.Padding(3);
             this.tabP_nuevo.Size = new System.Drawing.Size(378, 243);
             this.tabP_nuevo.TabIndex = 1;
-            this.tabP_nuevo.Text = "Nuevo usuario";
+            this.tabP_nuevo.Text = "Nueva cuenta";
             // 
             // label5
             // 
@@ -350,7 +350,7 @@ namespace CajaDeAhorro
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(448, 41);
             this.label5.TabIndex = 21;
-            this.label5.Text = "USUARIOS CON SESIONES ACTIVAS";
+            this.label5.Text = "CUENTAS CON SESIONES ACTIVAS";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // sesionTableAdapter1

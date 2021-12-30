@@ -120,12 +120,12 @@ namespace CajaDeAhorro
             if (this.txt_nombre_nuevo_usuario.TextLength > 0 && this.txt_pass_nuevo_usuario.TextLength > 0)
             {
                 DialogResult Dr;
-                Dr = MessageBox.Show("Confirma la creación del nuevo usuario?", "Caja de ahorro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                Dr = MessageBox.Show("Confirma la creación de la nueva cuenta?", "Caja de ahorro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (Dr == DialogResult.No)
                     return;
                 if (this.loginTableAdapter1.CheckUserScalarQuery(this.txt_nombre_nuevo_usuario.Text) == 1)  
                 {
-                    MessageBox.Show("Error: ya existe un usuario con el mismo nombre.\nPor favor, ingrese un nombre diferente.",
+                    MessageBox.Show("Error: ya existe una cuenta con el mismo nombre.\nPor favor, ingrese un nombre diferente.",
                         "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     this.txt_nombre_nuevo_usuario.Focus();
                     this.txt_nombre_nuevo_usuario.SelectAll();
@@ -142,7 +142,7 @@ namespace CajaDeAhorro
                         }
                         catch (Exception) { }
 
-                        MessageBox.Show("Nuevo usuario creado.", "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Nueva cuenta creada.", "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         //this.ExpOrContr = Estados.mov2;
                         //this.tmr_exp_contr.Start();
                         this.sesionTableAdapter1.NewSessInsertQuery(newUserId, 0);
@@ -157,7 +157,7 @@ namespace CajaDeAhorro
             this.ExpOrContr = Estados.mov2;
             this.txt_nombre_nuevo_usuario.Clear();
             this.txt_pass_nuevo_usuario.Clear();
-            MessageBox.Show("Alta de nuevo usuario cancelada.",
+            MessageBox.Show("Alta de nueva cuenta cancelada.",
                         "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             this.txt_usuario.Focus();
             //this.tmr_exp_contr.Start();

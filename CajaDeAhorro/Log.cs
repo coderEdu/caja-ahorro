@@ -52,7 +52,7 @@ namespace CajaDeAhorro
         {
             this.dgv.Columns[0].Width = 100;
 
-            if (this.c_AHORRO_NEW_DS1.movi.Rows.Count > 10)
+            if (this.c_AHORRO_NEW_DS1.movi.Rows.Count >= 10)
             {
                 this.dgv.Columns[1].Width = 307;      // 3 -    282
                 this.dgv.Columns[2].Width = 195;     // 6 4 1  99-5

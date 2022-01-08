@@ -387,7 +387,7 @@ namespace CajaDeAhorro
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "CAJA DE AHORRO - LOGIN";
+            this.Text = "SAFE - LOGIN";
             this.Activated += new System.EventHandler(this.Login_Activated);
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).EndInit();

@@ -29,7 +29,7 @@ namespace CajaDeAhorro
 
         private void Login_Load(object sender, EventArgs e)
         {
-            // ...            
+            // ...
         }
 
         public void LoadingModules()

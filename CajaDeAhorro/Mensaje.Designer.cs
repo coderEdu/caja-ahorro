@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btn_guardar = new System.Windows.Forms.Button();
-            this.rtxt_msg = new System.Windows.Forms.RichTextBox();
+            this.rich_txt_msg = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // btn_guardar
@@ -41,33 +41,34 @@
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = true;
             // 
-            // rtxt_msg
+            // rich_txt_msg
             // 
-            this.rtxt_msg.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rtxt_msg.Font = new System.Drawing.Font("Cascadia Code", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxt_msg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.rtxt_msg.Location = new System.Drawing.Point(0, 0);
-            this.rtxt_msg.Name = "rtxt_msg";
-            this.rtxt_msg.Size = new System.Drawing.Size(440, 192);
-            this.rtxt_msg.TabIndex = 2;
-            this.rtxt_msg.Text = "";
+            this.rich_txt_msg.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rich_txt_msg.Font = new System.Drawing.Font("Cascadia Code", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rich_txt_msg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.rich_txt_msg.Location = new System.Drawing.Point(0, 0);
+            this.rich_txt_msg.Name = "rich_txt_msg";
+            this.rich_txt_msg.Size = new System.Drawing.Size(440, 192);
+            this.rich_txt_msg.TabIndex = 2;
+            this.rich_txt_msg.Text = "";
             // 
             // Mensaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 231);
-            this.Controls.Add(this.rtxt_msg);
+            this.Controls.Add(this.rich_txt_msg);
             this.Controls.Add(this.btn_guardar);
             this.Name = "Mensaje";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mensaje";
+            this.Load += new System.EventHandler(this.Mensaje_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Button btn_guardar;
-        private System.Windows.Forms.RichTextBox rtxt_msg;
+        private System.Windows.Forms.RichTextBox rich_txt_msg;
     }
 }

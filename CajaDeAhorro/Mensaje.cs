@@ -16,5 +16,11 @@ namespace CajaDeAhorro
         {
             InitializeComponent();
         }
+
+        private void Mensaje_Load(object sender, EventArgs e)
+        {
+            this.rich_txt_msg.Enabled = false;
+            this.btn_guardar.Enabled = false;
+        }
     }
 }

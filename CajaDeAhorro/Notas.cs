@@ -95,5 +95,40 @@ namespace CajaDeAhorro
                 this.btn_guardar.Enabled=false;
             }
         }
+
+        private void btn_buscar_id_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(this.txt_id.Text);
+            Auxiliar.id_note_to_delete = id;    
+
+            if (this.txt_id.TextLength > 0)
+            {
+                if (Convert.ToInt32(notasTableAdapter1.NotasScalarQuery(Auxiliar.id_note_to_delete, Auxiliar.id_logged)) == 1)
+                {
+                    try { this.notasTableAdapter1.FillByTextoNota(c_AHORRO_NEW_DS_Notas.notas, Auxiliar.id_note_to_delete); }
+                    catch (Exception) { }
+                    lbl_texto_nota.ForeColor = Color.Black;
+                    lbl_texto_nota.Text = this.c_AHORRO_NEW_DS_Notas.Tables["notas"].Rows[0].Field<string>("nota");
+                } 
+                else
+                {
+                    lbl_texto_nota.ForeColor = Color.Gray;
+                    lbl_texto_nota.Text = "-- Nota Inexistente --";
+                }
+            }
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult r = new DialogResult();
+            r = MessageBox.Show("Está seguro?", "SAFE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (r == DialogResult.OK)
+            {
+                try { this.notasTableAdapter1.NotasDeleteQuery(Auxiliar.id_note_to_delete); MessageBox.Show("Nota eliminada!.", "SAFE", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                catch (Exception) { MessageBox.Show("Nota no eliminada!. ", "SAFE", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                this.notasTableAdapter1.NotasDeleteQuery(Auxiliar.id_note_to_delete);
+            }
+        }
     }
 }

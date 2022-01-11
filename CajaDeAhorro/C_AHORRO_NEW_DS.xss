@@ -11,8 +11,8 @@
     <Shape ID="DesignTable:mensaje" ZOrder="6" X="747" Y="67" Height="153" Width="270" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:sesion" ZOrder="7" X="407" Y="-26" Height="191" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:prestamo" ZOrder="11" X="750" Y="258" Height="115" Width="199" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
-    <Shape ID="DesignTable:notas" ZOrder="5" X="1055" Y="-27" Height="267" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
-    <Shape ID="DesignTable:creado" ZOrder="4" X="110" Y="332" Height="154" Width="252" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
+    <Shape ID="DesignTable:notas" ZOrder="1" X="1055" Y="-27" Height="267" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
+    <Shape ID="DesignTable:creado" ZOrder="5" X="110" Y="332" Height="154" Width="252" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK_movi_login" ZOrder="12" LineWidth="11">
@@ -24,6 +24,18 @@
         <Point>
           <X>409</X>
           <Y>236</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_mensaje_movi" ZOrder="2" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>709</X>
+          <Y>203</Y>
+        </Point>
+        <Point>
+          <X>747</X>
+          <Y>203</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -39,7 +51,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_creado_login" ZOrder="3" LineWidth="11">
+    <Connector ID="DesignRelation:FK_creado_login" ZOrder="4" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>239</X>
@@ -63,7 +75,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_sesion_login" ZOrder="2" LineWidth="11">
+    <Connector ID="DesignRelation:FK_sesion_login" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>350</X>
@@ -76,18 +88,6 @@
         <Point>
           <X>407</X>
           <Y>7</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
-    <Connector ID="DesignRelation:FK_mensaje_movi" ZOrder="1" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>709</X>
-          <Y>203</Y>
-        </Point>
-        <Point>
-          <X>747</X>
-          <Y>203</Y>
         </Point>
       </RoutePoints>
     </Connector>

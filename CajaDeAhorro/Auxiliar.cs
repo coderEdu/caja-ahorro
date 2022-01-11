@@ -17,6 +17,7 @@ namespace CajaDeAhorro
         public static int dineroEnCaja;
         public static int id_logged;
         public static int id_note;
+        public static int id_note_to_delete;
         public static string LoggUserName;
         public static Form form1;
         public static Form login;

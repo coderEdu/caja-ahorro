@@ -62,11 +62,18 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.tabP_eliminar = new System.Windows.Forms.TabPage();
+            this.lbl_texto_nota = new System.Windows.Forms.Label();
+            this.btn_eliminar = new System.Windows.Forms.Button();
+            this.btn_buscar_id = new System.Windows.Forms.Button();
+            this.lbl_id_elim = new System.Windows.Forms.Label();
+            this.txt_id = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_guardar = new System.Windows.Forms.Button();
-            this.notasTableAdapter = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.notasTableAdapter();
             this.dtp_notas = new System.Windows.Forms.DateTimePicker();
+            this.notasTableAdapter = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.notasTableAdapter();
             this.notasTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.notasTableAdapter();
             this.tableAdapterManager = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.TableAdapterManager();
+            this.c_AHORRO_NEW_DS_Notas = new CajaDeAhorro.C_AHORRO_NEW_DS();
             idLabel = new System.Windows.Forms.Label();
             tituloLabel = new System.Windows.Forms.Label();
             notaLabel = new System.Windows.Forms.Label();
@@ -82,6 +89,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS)).BeginInit();
+            this.tabP_eliminar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS_Notas)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
@@ -169,11 +179,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(328, 94);
+            this.label2.Location = new System.Drawing.Point(328, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 15);
+            this.label2.Size = new System.Drawing.Size(40, 15);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Texto de la nota:";
+            this.label2.Text = "Texto:";
             // 
             // txt_texto_nota
             // 
@@ -188,26 +198,26 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(330, 26);
+            this.label1.Location = new System.Drawing.Point(330, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 15);
+            this.label1.Size = new System.Drawing.Size(40, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Título de la nota:";
+            this.label1.Text = "Título:";
             // 
             // txt_titulo_nota
             // 
             this.txt_titulo_nota.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_titulo_nota.Location = new System.Drawing.Point(331, 49);
+            this.txt_titulo_nota.Location = new System.Drawing.Point(329, 48);
             this.txt_titulo_nota.Name = "txt_titulo_nota";
-            this.txt_titulo_nota.Size = new System.Drawing.Size(294, 21);
+            this.txt_titulo_nota.Size = new System.Drawing.Size(296, 21);
             this.txt_titulo_nota.TabIndex = 1;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CajaDeAhorro.Properties.Resources._2620509_employee_job_note_seeker_unemployee_icon__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(61, 76);
+            this.pictureBox1.Image = global::CajaDeAhorro.Properties.Resources._314233_note_list_icon_512;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(199, 190);
+            this.pictureBox1.Size = new System.Drawing.Size(157, 172);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -394,6 +404,12 @@
             // 
             // tabP_eliminar
             // 
+            this.tabP_eliminar.Controls.Add(this.lbl_texto_nota);
+            this.tabP_eliminar.Controls.Add(this.btn_eliminar);
+            this.tabP_eliminar.Controls.Add(this.btn_buscar_id);
+            this.tabP_eliminar.Controls.Add(this.lbl_id_elim);
+            this.tabP_eliminar.Controls.Add(this.txt_id);
+            this.tabP_eliminar.Controls.Add(this.pictureBox2);
             this.tabP_eliminar.Location = new System.Drawing.Point(4, 22);
             this.tabP_eliminar.Name = "tabP_eliminar";
             this.tabP_eliminar.Padding = new System.Windows.Forms.Padding(3);
@@ -401,6 +417,62 @@
             this.tabP_eliminar.TabIndex = 2;
             this.tabP_eliminar.Text = "Eliminar";
             this.tabP_eliminar.UseVisualStyleBackColor = true;
+            // 
+            // lbl_texto_nota
+            // 
+            this.lbl_texto_nota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(235)))));
+            this.lbl_texto_nota.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbl_texto_nota.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_texto_nota.Location = new System.Drawing.Point(328, 63);
+            this.lbl_texto_nota.Name = "lbl_texto_nota";
+            this.lbl_texto_nota.Size = new System.Drawing.Size(316, 237);
+            this.lbl_texto_nota.TabIndex = 7;
+            // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.Location = new System.Drawing.Point(555, 303);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(89, 31);
+            this.btn_eliminar.TabIndex = 6;
+            this.btn_eliminar.Text = "eliminar";
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
+            // 
+            // btn_buscar_id
+            // 
+            this.btn_buscar_id.Location = new System.Drawing.Point(569, 29);
+            this.btn_buscar_id.Name = "btn_buscar_id";
+            this.btn_buscar_id.Size = new System.Drawing.Size(75, 23);
+            this.btn_buscar_id.TabIndex = 4;
+            this.btn_buscar_id.Text = "buscar";
+            this.btn_buscar_id.UseVisualStyleBackColor = true;
+            this.btn_buscar_id.Click += new System.EventHandler(this.btn_buscar_id_Click);
+            // 
+            // lbl_id_elim
+            // 
+            this.lbl_id_elim.AutoSize = true;
+            this.lbl_id_elim.Location = new System.Drawing.Point(464, 34);
+            this.lbl_id_elim.Name = "lbl_id_elim";
+            this.lbl_id_elim.Size = new System.Drawing.Size(19, 13);
+            this.lbl_id_elim.TabIndex = 3;
+            this.lbl_id_elim.Text = "Id:";
+            // 
+            // txt_id
+            // 
+            this.txt_id.Location = new System.Drawing.Point(489, 31);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(74, 20);
+            this.txt_id.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CajaDeAhorro.Properties.Resources._314282_trash_can_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(167, 172);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // btn_guardar
             // 
@@ -412,16 +484,16 @@
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
-            // notasTableAdapter
-            // 
-            this.notasTableAdapter.ClearBeforeFill = true;
-            // 
             // dtp_notas
             // 
             this.dtp_notas.Location = new System.Drawing.Point(475, 2);
             this.dtp_notas.Name = "dtp_notas";
             this.dtp_notas.Size = new System.Drawing.Size(200, 20);
             this.dtp_notas.TabIndex = 4;
+            // 
+            // notasTableAdapter
+            // 
+            this.notasTableAdapter.ClearBeforeFill = true;
             // 
             // notasTableAdapter1
             // 
@@ -430,6 +502,7 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.creadoTableAdapter = null;
             this.tableAdapterManager.loginTableAdapter = null;
             this.tableAdapterManager.mensajeTableAdapter = null;
             this.tableAdapterManager.moviTableAdapter = null;
@@ -437,6 +510,11 @@
             this.tableAdapterManager.prestamoTableAdapter = null;
             this.tableAdapterManager.sesionTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // c_AHORRO_NEW_DS_Notas
+            // 
+            this.c_AHORRO_NEW_DS_Notas.DataSetName = "C_AHORRO_NEW_DS";
+            this.c_AHORRO_NEW_DS_Notas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Notas
             // 
@@ -462,6 +540,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS)).EndInit();
+            this.tabP_eliminar.ResumeLayout(false);
+            this.tabP_eliminar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS_Notas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -498,5 +580,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TabControl tab_notas;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btn_eliminar;
+        private System.Windows.Forms.Button btn_buscar_id;
+        private System.Windows.Forms.Label lbl_id_elim;
+        private System.Windows.Forms.TextBox txt_id;
+        private C_AHORRO_NEW_DS c_AHORRO_NEW_DS_Notas;
+        private System.Windows.Forms.Label lbl_texto_nota;
     }
 }

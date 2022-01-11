@@ -16,7 +16,7 @@ namespace CajaDeAhorro
             return new Button
             {
                 FlatStyle = FlatStyle.Flat,
-                Image = global::CajaDeAhorro.Properties.Resources._314233_note_list_icon,
+                Image = global::CajaDeAhorro.Properties.Resources._17367_file_icon,
                 Name = "Note" + ++c,
                 Size = new Size(82, 96),
                 Text = note_title,

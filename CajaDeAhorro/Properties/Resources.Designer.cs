@@ -73,6 +73,26 @@ namespace CajaDeAhorro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _17367_file_icon {
+            get {
+                object obj = ResourceManager.GetObject("_17367_file_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _17367_file_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("_17367_file_icon__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _17368_add_file_icon {
             get {
                 object obj = ResourceManager.GetObject("_17368_add_file_icon", resourceCulture);

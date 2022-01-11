@@ -172,6 +172,12 @@
   <data name="_17332_binoculars_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\17332_binoculars_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_17367_file_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\17367_file_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_17367_file_icon__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\17367_file_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_17368_add_file_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\17368_add_file_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

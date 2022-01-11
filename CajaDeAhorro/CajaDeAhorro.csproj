@@ -365,5 +365,8 @@
   <ItemGroup>
     <None Include="Resources\314282_trash_can_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17371_file_remove_icon %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

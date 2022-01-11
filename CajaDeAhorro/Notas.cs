@@ -19,6 +19,7 @@ namespace CajaDeAhorro
     public partial class Notas : Form
     {
         public bool EditarTab { get; set; }
+        public bool EliminTab { get; set; }
         MyTabs myTab;
         public Notas()
         {
@@ -40,6 +41,11 @@ namespace CajaDeAhorro
             if (EditarTab)
             {
                 this.tab_notas.SelectedTab = tabP_editar;
+            }
+
+            if (EliminTab)
+            {
+                this.tab_notas.SelectedTab = tabP_eliminar;
             }
         }
 

@@ -256,5 +256,13 @@ namespace CajaDeAhorro
         {
             Close();
         }
+
+        private void btn_remove_note_Click(object sender, EventArgs e)
+        {
+            this.WinOpacity = this.opacity;
+            Notas notas = new Notas();
+            notas.EliminTab = true;
+            notas.Show(this);
+        }
     }
 }

@@ -178,6 +178,9 @@
   <data name="_17369_edit_file_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\17369_edit_file_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_17371_file_remove_icon__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\17371_file_remove_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_17378_forms_pencil_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\17378_forms_pencil_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

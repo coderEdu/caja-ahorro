@@ -52,7 +52,7 @@ namespace CajaDeAhorro
             this.btn_ver_notas = new System.Windows.Forms.Button();
             this.btn_crear_nota = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_edit_msg = new System.Windows.Forms.Button();
+            this.btn_remove_note = new System.Windows.Forms.Button();
             this.lbl_name_logged = new System.Windows.Forms.Label();
             this.pbx_act_sess = new System.Windows.Forms.PictureBox();
             this.sesionTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.sesionTableAdapter();
@@ -117,7 +117,7 @@ namespace CajaDeAhorro
             this.btn_deposito.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_deposito.Location = new System.Drawing.Point(3, 3);
             this.btn_deposito.Name = "btn_deposito";
-            this.btn_deposito.Size = new System.Drawing.Size(189, 46);
+            this.btn_deposito.Size = new System.Drawing.Size(189, 38);
             this.btn_deposito.TabIndex = 8;
             this.btn_deposito.Text = "Depósito $";
             this.btn_deposito.UseVisualStyleBackColor = false;
@@ -133,9 +133,9 @@ namespace CajaDeAhorro
             this.btn_extraccion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_extraccion.Image = global::CajaDeAhorro.Properties.Resources._1889199_coins_hand_loan_loan_money_money_icon__2_;
             this.btn_extraccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_extraccion.Location = new System.Drawing.Point(3, 51);
+            this.btn_extraccion.Location = new System.Drawing.Point(3, 43);
             this.btn_extraccion.Name = "btn_extraccion";
-            this.btn_extraccion.Size = new System.Drawing.Size(189, 46);
+            this.btn_extraccion.Size = new System.Drawing.Size(189, 38);
             this.btn_extraccion.TabIndex = 9;
             this.btn_extraccion.Text = "Extracción $";
             this.btn_extraccion.UseVisualStyleBackColor = false;
@@ -151,9 +151,9 @@ namespace CajaDeAhorro
             this.btn_registro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_registro.Image = global::CajaDeAhorro.Properties.Resources.Database_Active_icon;
             this.btn_registro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_registro.Location = new System.Drawing.Point(3, 99);
+            this.btn_registro.Location = new System.Drawing.Point(3, 83);
             this.btn_registro.Name = "btn_registro";
-            this.btn_registro.Size = new System.Drawing.Size(189, 46);
+            this.btn_registro.Size = new System.Drawing.Size(189, 38);
             this.btn_registro.TabIndex = 11;
             this.btn_registro.Text = "Reg Trans";
             this.btn_registro.UseVisualStyleBackColor = false;
@@ -198,9 +198,9 @@ namespace CajaDeAhorro
             this.btn_sesion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_sesion.Image = global::CajaDeAhorro.Properties.Resources.Lock_PadLock_icon;
             this.btn_sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sesion.Location = new System.Drawing.Point(3, 394);
+            this.btn_sesion.Location = new System.Drawing.Point(3, 362);
             this.btn_sesion.Name = "btn_sesion";
-            this.btn_sesion.Size = new System.Drawing.Size(189, 46);
+            this.btn_sesion.Size = new System.Drawing.Size(189, 38);
             this.btn_sesion.TabIndex = 14;
             this.btn_sesion.Text = "Cerrar Sesión";
             this.btn_sesion.UseVisualStyleBackColor = false;
@@ -214,7 +214,7 @@ namespace CajaDeAhorro
             this.panel1.Controls.Add(this.btn_ver_notas);
             this.panel1.Controls.Add(this.btn_crear_nota);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btn_edit_msg);
+            this.panel1.Controls.Add(this.btn_remove_note);
             this.panel1.Controls.Add(this.btn_sesion);
             this.panel1.Controls.Add(this.btn_registro);
             this.panel1.Controls.Add(this.btn_deposito);
@@ -237,9 +237,9 @@ namespace CajaDeAhorro
             this.btn_exit_sess.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_exit_sess.Image = global::CajaDeAhorro.Properties.Resources._28363_door_exit_logout_mail_out_icon;
             this.btn_exit_sess.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_exit_sess.Location = new System.Drawing.Point(3, 346);
+            this.btn_exit_sess.Location = new System.Drawing.Point(3, 322);
             this.btn_exit_sess.Name = "btn_exit_sess";
-            this.btn_exit_sess.Size = new System.Drawing.Size(189, 46);
+            this.btn_exit_sess.Size = new System.Drawing.Size(189, 38);
             this.btn_exit_sess.TabIndex = 23;
             this.btn_exit_sess.Text = "Cambiar sesión";
             this.btn_exit_sess.UseVisualStyleBackColor = false;
@@ -255,9 +255,9 @@ namespace CajaDeAhorro
             this.btn_editar_nota.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_editar_nota.Image = global::CajaDeAhorro.Properties.Resources._17369_edit_file_icon;
             this.btn_editar_nota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_editar_nota.Location = new System.Drawing.Point(3, 243);
+            this.btn_editar_nota.Location = new System.Drawing.Point(3, 183);
             this.btn_editar_nota.Name = "btn_editar_nota";
-            this.btn_editar_nota.Size = new System.Drawing.Size(189, 46);
+            this.btn_editar_nota.Size = new System.Drawing.Size(189, 38);
             this.btn_editar_nota.TabIndex = 22;
             this.btn_editar_nota.Text = "Editar Nota";
             this.btn_editar_nota.UseVisualStyleBackColor = false;
@@ -273,11 +273,11 @@ namespace CajaDeAhorro
             this.btn_ver_notas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_ver_notas.Image = global::CajaDeAhorro.Properties.Resources._17332_binoculars_icon;
             this.btn_ver_notas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ver_notas.Location = new System.Drawing.Point(3, 291);
+            this.btn_ver_notas.Location = new System.Drawing.Point(3, 263);
             this.btn_ver_notas.Name = "btn_ver_notas";
-            this.btn_ver_notas.Size = new System.Drawing.Size(189, 46);
+            this.btn_ver_notas.Size = new System.Drawing.Size(189, 38);
             this.btn_ver_notas.TabIndex = 21;
-            this.btn_ver_notas.Text = "Ver Notas";
+            this.btn_ver_notas.Text = "Ir a Notas";
             this.btn_ver_notas.UseVisualStyleBackColor = false;
             // 
             // btn_crear_nota
@@ -290,9 +290,9 @@ namespace CajaDeAhorro
             this.btn_crear_nota.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_crear_nota.Image = global::CajaDeAhorro.Properties.Resources._17368_add_file_icon;
             this.btn_crear_nota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_crear_nota.Location = new System.Drawing.Point(3, 195);
+            this.btn_crear_nota.Location = new System.Drawing.Point(3, 143);
             this.btn_crear_nota.Name = "btn_crear_nota";
-            this.btn_crear_nota.Size = new System.Drawing.Size(189, 46);
+            this.btn_crear_nota.Size = new System.Drawing.Size(189, 38);
             this.btn_crear_nota.TabIndex = 20;
             this.btn_crear_nota.Text = "Crear Nota";
             this.btn_crear_nota.UseVisualStyleBackColor = false;
@@ -309,22 +309,23 @@ namespace CajaDeAhorro
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_edit_msg
+            // btn_remove_note
             // 
-            this.btn_edit_msg.BackColor = System.Drawing.Color.White;
-            this.btn_edit_msg.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btn_edit_msg.FlatAppearance.BorderSize = 2;
-            this.btn_edit_msg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_edit_msg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit_msg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_edit_msg.Image = global::CajaDeAhorro.Properties.Resources._17399_blog_edit_message_pencil_sms_icon__2_;
-            this.btn_edit_msg.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btn_edit_msg.Location = new System.Drawing.Point(3, 147);
-            this.btn_edit_msg.Name = "btn_edit_msg";
-            this.btn_edit_msg.Size = new System.Drawing.Size(189, 46);
-            this.btn_edit_msg.TabIndex = 15;
-            this.btn_edit_msg.Text = "Editar Concepto";
-            this.btn_edit_msg.UseVisualStyleBackColor = false;
+            this.btn_remove_note.BackColor = System.Drawing.Color.White;
+            this.btn_remove_note.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btn_remove_note.FlatAppearance.BorderSize = 2;
+            this.btn_remove_note.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_remove_note.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_remove_note.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_remove_note.Image = global::CajaDeAhorro.Properties.Resources._17371_file_remove_icon__1_;
+            this.btn_remove_note.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btn_remove_note.Location = new System.Drawing.Point(3, 223);
+            this.btn_remove_note.Name = "btn_remove_note";
+            this.btn_remove_note.Size = new System.Drawing.Size(189, 38);
+            this.btn_remove_note.TabIndex = 15;
+            this.btn_remove_note.Text = "Eliminar Nota";
+            this.btn_remove_note.UseVisualStyleBackColor = false;
+            this.btn_remove_note.Click += new System.EventHandler(this.btn_remove_note_Click);
             // 
             // lbl_name_logged
             // 
@@ -366,14 +367,14 @@ namespace CajaDeAhorro
             // lbl_fecha_portada
             // 
             this.lbl_fecha_portada.AutoSize = true;
-            this.lbl_fecha_portada.BackColor = System.Drawing.SystemColors.Menu;
+            this.lbl_fecha_portada.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_fecha_portada.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha_portada.ForeColor = System.Drawing.Color.DimGray;
-            this.lbl_fecha_portada.Location = new System.Drawing.Point(393, 52);
+            this.lbl_fecha_portada.Location = new System.Drawing.Point(340, 52);
             this.lbl_fecha_portada.Name = "lbl_fecha_portada";
-            this.lbl_fecha_portada.Size = new System.Drawing.Size(87, 17);
+            this.lbl_fecha_portada.Size = new System.Drawing.Size(199, 17);
             this.lbl_fecha_portada.TabIndex = 20;
-            this.lbl_fecha_portada.Text = "Fecha actual";
+            this.lbl_fecha_portada.Text = "Fecha de creación de la cuenta";
             // 
             // label1
             // 
@@ -583,7 +584,7 @@ namespace CajaDeAhorro
         private System.Windows.Forms.BindingSource moviBindingSource;
         private C_AHORRO_NEW_DSTableAdapters.moviTableAdapter moviTableAdapter;
         private C_AHORRO_NEW_DSTableAdapters.notasTableAdapter notasTableAdapter;
-        private System.Windows.Forms.Button btn_edit_msg;
+        private System.Windows.Forms.Button btn_remove_note;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.BindingSource fKmensajemoviBindingSource;
         private C_AHORRO_NEW_DSTableAdapters.mensajeTableAdapter mensajeTableAdapter;

@@ -15,7 +15,7 @@ namespace CajaDeAhorro
     public partial class Form1 : Form
     {
         static int increase;
-        public double opacity = 0.6;
+        public double opacity = 0.3;
         public double WinOpacity { get; set; }
         public Form1()
         {

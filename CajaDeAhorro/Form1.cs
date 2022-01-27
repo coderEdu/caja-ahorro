@@ -25,19 +25,12 @@ namespace CajaDeAhorro
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'c_AHORRO_NEW_DS1.mensaje' table. You can move, or remove it, as needed.
-            try
-            {
-                this.mensajeTableAdapter.Fill(this.c_AHORRO_NEW_DS1.mensaje);
-            }
+            try { this.mensajeTableAdapter.Fill(this.c_AHORRO_NEW_DS1.mensaje); }
             catch (Exception) { }
 
             // TODO: This line of code loads data into the 'c_AHORRO_NEW_DS1.movi' table. You can move, or remove it, as needed.
-            try
-            {
-                this.moviTableAdapter.Fill(this.c_AHORRO_NEW_DS1.movi);
-            }
-            catch (Exception)
-            { }
+            try { this.moviTableAdapter.Fill(this.c_AHORRO_NEW_DS1.movi); }
+            catch (Exception) { }
 
             this.Text = Auxiliar.getAppName() + " Sesión Activa";      
             this.lbl_dios_desmolde.Visible = true;
@@ -264,5 +257,6 @@ namespace CajaDeAhorro
             notas.EliminTab = true;
             notas.Show(this);
         }
+
     }
 }

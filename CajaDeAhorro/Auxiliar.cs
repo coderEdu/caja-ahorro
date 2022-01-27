@@ -23,7 +23,7 @@ namespace CajaDeAhorro
         public static Form login;
         public static Form admin;
         public static Dictionary<int, string> dic = new Dictionary<int, string>();
-
+        
         public static int getDineroEnCaja()
         {
             return dineroEnCaja;
@@ -34,5 +34,9 @@ namespace CajaDeAhorro
             return "CAJA DE AHORRO -";
         }
 
+        public static string getTextCorrective()
+        {
+            return "*/ Este texto se crea automáticamente cada vez que usted realiza un depósito o una extracción en modo correctivo mediante el código < $correctivo > /*";
+        }
     }
 }

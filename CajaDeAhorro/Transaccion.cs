@@ -113,7 +113,10 @@ namespace CajaDeAhorro
             // ************************************************************************************************   working here   *************************
             if (this.txt_concepto.TextLength > 0)
             {
-                this.mensajeTableAdapter1.MessageInsertQuery(id, this.txt_concepto.Text); 
+                if (this.txt_concepto.Text == "$correctivo")
+                    this.mensajeTableAdapter1.MessageInsertQuery(id, Auxiliar.getTextCorrective());
+                else
+                    this.mensajeTableAdapter1.MessageInsertQuery(id, this.txt_concepto.Text);
             }
             this.Close();
             // ************************************************************************************************   working here   *************************

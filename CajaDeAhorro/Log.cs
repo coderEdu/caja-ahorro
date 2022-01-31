@@ -35,6 +35,7 @@ namespace CajaDeAhorro
             this.lbl_hasta.Enabled = false;
             this.lbl_total.Visible = false;
             this.lbl_concepto.Visible = false;
+            this.btn_edit_msg.Enabled = false;
             DisOrEnablingPickers(false);
             this.grp_busqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245))))); // 217, 230, 255 // 241, 246, 255 // 245, 245, 245
             try
@@ -418,6 +419,7 @@ namespace CajaDeAhorro
             {
                 this.lbl_concepto.Visible = true;
                 this.lbl_concepto.Text = this.c_AHORRO_NEW_DS1.mensaje.Rows[0].Field<string>("mensaje").ToString();
+                Auxiliar.messageId = movi_id;
             }
             else
             {
@@ -432,9 +434,15 @@ namespace CajaDeAhorro
             notas.Show(this);
         }
 
-        private void btn_edit_msg_Click(object sender, EventArgs e)
+        private void btn_edit_msg_Click(object sender, EventArgs e) // working here
         {
             Mensaje mensaje = new Mensaje();
+            if (this.lbl_concepto.Visible)
+            {
+                mensaje.MessageId = Auxiliar.messageId;
+                mensaje.Message = this.lbl_concepto.Text;
+            }
+            //MessageBox.Show(this.lbl_concepto.Text);
             mensaje.Show(this);
         }
 
@@ -457,5 +465,12 @@ namespace CajaDeAhorro
             }
         }
 
+        private void lbl_concepto_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.lbl_concepto.Visible)
+                this.btn_edit_msg.Enabled = true;
+            else
+                this.btn_edit_msg.Enabled = false;
+        }
     }
 }

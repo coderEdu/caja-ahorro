@@ -418,8 +418,8 @@ namespace CajaDeAhorro
             this.lbl_concepto.Name = "lbl_concepto";
             this.lbl_concepto.Size = new System.Drawing.Size(552, 137);
             this.lbl_concepto.TabIndex = 14;
-            this.lbl_concepto.Text = "Concepto:";
             this.lbl_concepto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_concepto.VisibleChanged += new System.EventHandler(this.lbl_concepto_VisibleChanged);
             // 
             // grp_monto
             // 

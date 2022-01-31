@@ -12,6 +12,9 @@ namespace CajaDeAhorro
 {
     public partial class Mensaje : Form
     {
+        public string Message { get; set; }
+        public int MessageId { get; set; }
+
         public Mensaje()
         {
             InitializeComponent();
@@ -19,8 +22,14 @@ namespace CajaDeAhorro
 
         private void Mensaje_Load(object sender, EventArgs e)
         {
-            this.rich_txt_msg.Enabled = false;
-            this.btn_guardar.Enabled = false;
+            this.rich_txt_msg.Text = this.Message;
+            this.rich_txt_msg.Enabled = true;
+            this.btn_guardar.Enabled = true;            
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            this.mensajeTableAdapter1.MessageUpdateQuery(this.rich_txt_msg.Text, this.MessageId);
         }
     }
 }

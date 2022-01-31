@@ -384,7 +384,8 @@ namespace CajaDeAhorro
             this.Controls.Add(this.flp_sess);
             this.Controls.Add(this.btn_crea_usuario);
             this.Controls.Add(this.btn_login);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "SAFE - LOGIN";

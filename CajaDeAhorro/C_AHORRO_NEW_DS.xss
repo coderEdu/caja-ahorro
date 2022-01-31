@@ -8,7 +8,7 @@
   <Shapes>
     <Shape ID="DesignTable:login" ZOrder="13" X="67" Y="60" Height="229" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="102" />
     <Shape ID="DesignTable:movi" ZOrder="9" X="409" Y="195" Height="248" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:mensaje" ZOrder="6" X="747" Y="67" Height="153" Width="270" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="64" />
+    <Shape ID="DesignTable:mensaje" ZOrder="6" X="747" Y="67" Height="172" Width="287" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:sesion" ZOrder="7" X="407" Y="-26" Height="191" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:prestamo" ZOrder="11" X="750" Y="258" Height="115" Width="199" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:notas" ZOrder="1" X="1055" Y="-27" Height="267" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />

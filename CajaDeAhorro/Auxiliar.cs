@@ -23,7 +23,8 @@ namespace CajaDeAhorro
         public static Form login;
         public static Form admin;
         public static Dictionary<int, string> dic = new Dictionary<int, string>();
-        
+        internal static int messageId;
+
         public static int getDineroEnCaja()
         {
             return dineroEnCaja;

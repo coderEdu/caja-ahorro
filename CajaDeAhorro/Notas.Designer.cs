@@ -157,7 +157,7 @@
             this.tab_notas.Name = "tab_notas";
             this.tab_notas.SelectedIndex = 0;
             this.tab_notas.Size = new System.Drawing.Size(663, 413);
-            this.tab_notas.TabIndex = 1;
+            this.tab_notas.TabIndex = 0;
             this.tab_notas.Selected += new System.Windows.Forms.TabControlEventHandler(this.tab_notas_Selected);
             // 
             // tabP_nuevo

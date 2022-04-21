@@ -51,7 +51,7 @@
             // 
             fec_creaLabel.AutoSize = true;
             fec_creaLabel.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fec_creaLabel.Location = new System.Drawing.Point(24, 200);
+            fec_creaLabel.Location = new System.Drawing.Point(24, 535);
             fec_creaLabel.Name = "fec_creaLabel";
             fec_creaLabel.Size = new System.Drawing.Size(48, 17);
             fec_creaLabel.TabIndex = 25;
@@ -61,7 +61,7 @@
             // 
             fec_modifLabel.AutoSize = true;
             fec_modifLabel.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fec_modifLabel.Location = new System.Drawing.Point(20, 226);
+            fec_modifLabel.Location = new System.Drawing.Point(20, 561);
             fec_modifLabel.Name = "fec_modifLabel";
             fec_modifLabel.Size = new System.Drawing.Size(52, 17);
             fec_modifLabel.TabIndex = 26;
@@ -70,7 +70,7 @@
             // label4
             // 
             this.label4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasBindingSource, "fec_modif", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "F"));
-            this.label4.Location = new System.Drawing.Point(80, 228);
+            this.label4.Location = new System.Drawing.Point(80, 563);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(222, 13);
             this.label4.TabIndex = 28;
@@ -89,7 +89,7 @@
             // lbl_crea
             // 
             this.lbl_crea.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasBindingSource, "fec_crea", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "F"));
-            this.lbl_crea.Location = new System.Drawing.Point(80, 202);
+            this.lbl_crea.Location = new System.Drawing.Point(80, 537);
             this.lbl_crea.Name = "lbl_crea";
             this.lbl_crea.Size = new System.Drawing.Size(222, 13);
             this.lbl_crea.TabIndex = 27;
@@ -97,7 +97,7 @@
             // 
             // btn_aceptar
             // 
-            this.btn_aceptar.Location = new System.Drawing.Point(240, 268);
+            this.btn_aceptar.Location = new System.Drawing.Point(240, 603);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(75, 23);
             this.btn_aceptar.TabIndex = 29;
@@ -121,13 +121,13 @@
             this.notaTextBox.Font = new System.Drawing.Font("Cascadia Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.notaTextBox.Location = new System.Drawing.Point(0, 0);
             this.notaTextBox.Name = "notaTextBox";
-            this.notaTextBox.Size = new System.Drawing.Size(327, 179);
+            this.notaTextBox.Size = new System.Drawing.Size(327, 521);
             this.notaTextBox.TabIndex = 30;
             // 
             // lbl_name
             // 
             this.lbl_name.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasBindingSource, "titulo", true));
-            this.lbl_name.Location = new System.Drawing.Point(12, 279);
+            this.lbl_name.Location = new System.Drawing.Point(12, 614);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(132, 13);
             this.lbl_name.TabIndex = 31;
@@ -137,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 301);
+            this.ClientSize = new System.Drawing.Size(327, 636);
             this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.notaTextBox);
             this.Controls.Add(this.btn_aceptar);

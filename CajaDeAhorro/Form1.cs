@@ -218,7 +218,13 @@ namespace CajaDeAhorro
             Button button = (Button)sender;
             Auxiliar.id_note = Convert.ToInt32(button.Name);
 
-            Point location = new Point(this.Location.X + this.Width - 10, this.Location.Y);
+            Point location;
+
+            if (this.Location.X >= System.Windows.SystemParameters.PrimaryScreenWidth / 3)
+                location = new Point(this.Location.X - 333, this.Location.Y);
+            else
+                location = new Point(this.Location.X + this.Width - 10, this.Location.Y);
+
             DetNota detNota = new DetNota();
             detNota.WinLocation = location;
             detNota.Show(this);

@@ -155,7 +155,7 @@ namespace CajaDeAhorro
             this.btn_registro.Name = "btn_registro";
             this.btn_registro.Size = new System.Drawing.Size(189, 38);
             this.btn_registro.TabIndex = 11;
-            this.btn_registro.Text = "Reg Trans";
+            this.btn_registro.Text = "Registro";
             this.btn_registro.UseVisualStyleBackColor = false;
             this.btn_registro.Click += new System.EventHandler(this.btn_registro_Click);
             // 

@@ -30,12 +30,12 @@ namespace CajaDeAhorro
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_caja_titulo = new System.Windows.Forms.Label();
             this.lbl_caja_valor = new System.Windows.Forms.Label();
             this.btn_deposito = new System.Windows.Forms.Button();
@@ -155,7 +155,7 @@ namespace CajaDeAhorro
             this.btn_registro.Name = "btn_registro";
             this.btn_registro.Size = new System.Drawing.Size(189, 38);
             this.btn_registro.TabIndex = 11;
-            this.btn_registro.Text = "Registro";
+            this.btn_registro.Text = "Ver Registro";
             this.btn_registro.UseVisualStyleBackColor = false;
             this.btn_registro.Click += new System.EventHandler(this.btn_registro_Click);
             // 
@@ -170,7 +170,7 @@ namespace CajaDeAhorro
             // 
             this.lbl_dios_desmolde.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_dios_desmolde.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_dios_desmolde.Font = new System.Drawing.Font("Berlin Sans FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dios_desmolde.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_dios_desmolde.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lbl_dios_desmolde.Location = new System.Drawing.Point(0, 0);
             this.lbl_dios_desmolde.Name = "lbl_dios_desmolde";
@@ -277,8 +277,9 @@ namespace CajaDeAhorro
             this.btn_ver_notas.Name = "btn_ver_notas";
             this.btn_ver_notas.Size = new System.Drawing.Size(189, 38);
             this.btn_ver_notas.TabIndex = 21;
-            this.btn_ver_notas.Text = "Ir a Notas";
+            this.btn_ver_notas.Text = "Ver Notas";
             this.btn_ver_notas.UseVisualStyleBackColor = false;
+            this.btn_ver_notas.Click += new System.EventHandler(this.btn_ver_notas_Click);
             // 
             // btn_crear_nota
             // 
@@ -329,7 +330,7 @@ namespace CajaDeAhorro
             // 
             // lbl_name_logged
             // 
-            this.lbl_name_logged.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_name_logged.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_name_logged.Location = new System.Drawing.Point(24, 511);
             this.lbl_name_logged.Name = "lbl_name_logged";
             this.lbl_name_logged.Size = new System.Drawing.Size(146, 19);
@@ -355,11 +356,11 @@ namespace CajaDeAhorro
             // 
             this.lbl_saldo_disponible.AutoSize = true;
             this.lbl_saldo_disponible.BackColor = System.Drawing.Color.White;
-            this.lbl_saldo_disponible.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_saldo_disponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_saldo_disponible.ForeColor = System.Drawing.Color.SteelBlue;
             this.lbl_saldo_disponible.Location = new System.Drawing.Point(711, 444);
             this.lbl_saldo_disponible.Name = "lbl_saldo_disponible";
-            this.lbl_saldo_disponible.Size = new System.Drawing.Size(147, 21);
+            this.lbl_saldo_disponible.Size = new System.Drawing.Size(180, 25);
             this.lbl_saldo_disponible.TabIndex = 16;
             this.lbl_saldo_disponible.Text = "Saldo Disponible:";
             this.lbl_saldo_disponible.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -368,11 +369,11 @@ namespace CajaDeAhorro
             // 
             this.lbl_fecha_portada.AutoSize = true;
             this.lbl_fecha_portada.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl_fecha_portada.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha_portada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha_portada.ForeColor = System.Drawing.Color.DimGray;
             this.lbl_fecha_portada.Location = new System.Drawing.Point(340, 52);
             this.lbl_fecha_portada.Name = "lbl_fecha_portada";
-            this.lbl_fecha_portada.Size = new System.Drawing.Size(199, 17);
+            this.lbl_fecha_portada.Size = new System.Drawing.Size(243, 20);
             this.lbl_fecha_portada.TabIndex = 20;
             this.lbl_fecha_portada.Text = "Fecha de creación de la cuenta";
             // 
@@ -380,11 +381,11 @@ namespace CajaDeAhorro
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
             this.label1.Location = new System.Drawing.Point(237, 126);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 18);
+            this.label1.Size = new System.Drawing.Size(173, 22);
             this.label1.TabIndex = 21;
             this.label1.Text = "Últimos Movimientos";
             // 
@@ -393,14 +394,14 @@ namespace CajaDeAhorro
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.ColumnHeadersHeight = 25;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -408,27 +409,28 @@ namespace CajaDeAhorro
             this.tipoDataGridViewTextBoxColumn,
             this.montoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.moviBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(253, 169);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 45;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(304, 207);
             this.dataGridView1.TabIndex = 22;
@@ -437,11 +439,12 @@ namespace CajaDeAhorro
             // fechaDataGridViewTextBoxColumn
             // 
             this.fechaDataGridViewTextBoxColumn.DataPropertyName = "fecha";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "G";
-            dataGridViewCellStyle2.NullValue = null;
-            this.fechaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Format = "G";
+            dataGridViewCellStyle8.NullValue = null;
+            this.fechaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.fechaDataGridViewTextBoxColumn.HeaderText = "fecha";
+            this.fechaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
             this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
             this.fechaDataGridViewTextBoxColumn.Width = 130;
@@ -449,9 +452,10 @@ namespace CajaDeAhorro
             // tipoDataGridViewTextBoxColumn
             // 
             this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.tipoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.tipoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.tipoDataGridViewTextBoxColumn.HeaderText = "tipo";
+            this.tipoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
             this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
             this.tipoDataGridViewTextBoxColumn.Width = 80;
@@ -459,11 +463,12 @@ namespace CajaDeAhorro
             // montoDataGridViewTextBoxColumn
             // 
             this.montoDataGridViewTextBoxColumn.DataPropertyName = "monto";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.montoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "C2";
+            dataGridViewCellStyle10.NullValue = null;
+            this.montoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.montoDataGridViewTextBoxColumn.HeaderText = "monto";
+            this.montoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.montoDataGridViewTextBoxColumn.Name = "montoDataGridViewTextBoxColumn";
             this.montoDataGridViewTextBoxColumn.ReadOnly = true;
             this.montoDataGridViewTextBoxColumn.Width = 90;
@@ -503,11 +508,11 @@ namespace CajaDeAhorro
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SteelBlue;
             this.label2.Location = new System.Drawing.Point(606, 126);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 18);
+            this.label2.Size = new System.Drawing.Size(121, 22);
             this.label2.TabIndex = 24;
             this.label2.Text = "Últimas Notas";
             // 

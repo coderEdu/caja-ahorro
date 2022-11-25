@@ -264,5 +264,9 @@ namespace CajaDeAhorro
             notas.Show(this);
         }
 
+        private void btn_ver_notas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

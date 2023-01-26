@@ -99,7 +99,7 @@ namespace CajaDeAhorro
             this.dtp_desde.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_desde.Location = new System.Drawing.Point(26, 45);
             this.dtp_desde.Name = "dtp_desde";
-            this.dtp_desde.Size = new System.Drawing.Size(200, 20);
+            this.dtp_desde.Size = new System.Drawing.Size(200, 21);
             this.dtp_desde.TabIndex = 0;
             // 
             // lbl_desde
@@ -150,7 +150,7 @@ namespace CajaDeAhorro
             "EXTRACCIONES"});
             this.cbx_tipo.Location = new System.Drawing.Point(68, 21);
             this.cbx_tipo.Name = "cbx_tipo";
-            this.cbx_tipo.Size = new System.Drawing.Size(115, 23);
+            this.cbx_tipo.Size = new System.Drawing.Size(115, 25);
             this.cbx_tipo.TabIndex = 5;
             this.cbx_tipo.TabStop = false;
             this.cbx_tipo.Text = "AMBOS";
@@ -180,7 +180,7 @@ namespace CajaDeAhorro
             this.dtp_exacta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_exacta.Location = new System.Drawing.Point(26, 46);
             this.dtp_exacta.Name = "dtp_exacta";
-            this.dtp_exacta.Size = new System.Drawing.Size(200, 20);
+            this.dtp_exacta.Size = new System.Drawing.Size(200, 21);
             this.dtp_exacta.TabIndex = 7;
             // 
             // lbl_exacta
@@ -218,7 +218,7 @@ namespace CajaDeAhorro
             this.dgv.DataSource = this.moviBindingSource;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(245)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Trebuchet MS", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Navy;
@@ -238,6 +238,7 @@ namespace CajaDeAhorro
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv.RowHeadersVisible = false;
+            this.dgv.RowHeadersWidth = 45;
             this.dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(861, 222);
@@ -251,8 +252,10 @@ namespace CajaDeAhorro
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.id.DefaultCellStyle = dataGridViewCellStyle3;
             this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
             this.id.Name = "id";
             this.id.ReadOnly = true;
+            this.id.Width = 110;
             // 
             // fechaDataGridViewTextBoxColumn
             // 
@@ -262,6 +265,7 @@ namespace CajaDeAhorro
             dataGridViewCellStyle4.NullValue = null;
             this.fechaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.fechaDataGridViewTextBoxColumn.HeaderText = "fecha";
+            this.fechaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
             this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
             this.fechaDataGridViewTextBoxColumn.Width = 310;
@@ -272,6 +276,7 @@ namespace CajaDeAhorro
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.tipoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.tipoDataGridViewTextBoxColumn.HeaderText = "tipo";
+            this.tipoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
             this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
             this.tipoDataGridViewTextBoxColumn.Width = 200;
@@ -284,6 +289,7 @@ namespace CajaDeAhorro
             dataGridViewCellStyle6.NullValue = null;
             this.montoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.montoDataGridViewTextBoxColumn.HeaderText = "monto";
+            this.montoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.montoDataGridViewTextBoxColumn.Name = "montoDataGridViewTextBoxColumn";
             this.montoDataGridViewTextBoxColumn.ReadOnly = true;
             this.montoDataGridViewTextBoxColumn.Width = 250;

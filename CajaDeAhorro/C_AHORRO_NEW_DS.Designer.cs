@@ -7180,8 +7180,8 @@ SELECT id, titulo, nota, id_log, fec_crea, fec_modif FROM notas WHERE (id = @id)
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT id, titulo, nota, id_log, fec_crea, fec_modif FROM notas WHERE (id_log = @" +
-                "id_log)";
+            this._commandCollection[1].CommandText = "SELECT   id, titulo, nota, id_log, fec_crea, fec_modif\r\nFROM      notas\r\nWHERE   " +
+                "(id_log = @id_log)\r\nORDER BY fec_crea DESC";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_log", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_log", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();

@@ -302,7 +302,7 @@ namespace CajaDeAhorro
             }
         }
 
-        public void FiltrarResultadosBusqueda()
+        public void FiltrarResultadosBusqueda() // este es el que comanda las queries
         {
             DateTime dtDesde = this.dtp_desde.Value;
             DateTime dtHasta = this.dtp_hasta.Value;

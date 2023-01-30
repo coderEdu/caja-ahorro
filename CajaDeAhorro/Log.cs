@@ -69,11 +69,7 @@ namespace CajaDeAhorro
 
         public string TransEncontr(int exp)
         {
-            string mensaje="";
-            if (exp==1)
-                mensaje= "[" + exp + "]  transacción encontrada.";
-            else
-                mensaje = "[" + exp + "]  transacciones encontradas.";
+            string mensaje = "(" + exp + ") " + ((exp == 1) ? "transacción encontrada." : "transacciones encontradas.");
             return mensaje;
         }
 

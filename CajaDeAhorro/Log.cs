@@ -51,30 +51,24 @@ namespace CajaDeAhorro
 
         public void AjustarCamposDGV()
         {
-            this.dgv.Columns[0].Width = 100;
+            this.dgv.Columns[0].Width = 60;     // id
 
             if (this.c_AHORRO_NEW_DS1.movi.Rows.Count >= 10)
             {
-                this.dgv.Columns[1].Width = 307;      // 3 -    282
-                this.dgv.Columns[2].Width = 195;     // 6 4 1  99-5
-                this.dgv.Columns[3].Width = 240;    // 6 8 2  97-10
+                this.dgv.Columns[1].Width = 450;      // fecha
+                this.dgv.Columns[2].Width = 135;     // tipo
+                this.dgv.Columns[3].Width = 195;    // monto
             }
             else
             {
-                this.dgv.Columns[1].Width = 310;    //282
-                this.dgv.Columns[2].Width = 200;     //99
-                this.dgv.Columns[3].Width = 250;     //97
+                this.dgv.Columns[1].Width = 460;    
+                this.dgv.Columns[2].Width = 140;     
+                this.dgv.Columns[3].Width = 200;     
             }
         }
 
         public string TransEncontr(int exp)
         {
-            //string mensaje="";   ** código reemplazado por el de abajo **
-            //if (exp==1)
-            //    mensaje= "[" + exp + "]  transacción encontrada.";
-            //else
-            //    mensaje = "[" + exp + "]  transacciones encontradas.";
-
             string message = "[" + exp + "]"; 
             message += (exp == 1) ? "transacción encontrada." : "transacciones encontradas.";
             

@@ -447,17 +447,20 @@ namespace CajaDeAhorro
         private void dgv_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             int correctivo = 0;
+
             try { correctivo = this.moviTableAdapter1.FillByCorrectivo(c_AHORRO_NEW_DS2.movi, Auxiliar.id_logged); }
             catch (Exception) { }
 
             if (correctivo > 0)
             {
-                int idValue = c_AHORRO_NEW_DS2.movi.Rows[0].Field<int>("id");
                 for (int i = 0; i < dgv.RowCount; i++)
-                {                    
-                    if (Convert.ToInt32(dgv.Rows[i].Cells[0].Value) == idValue)
+                {
+                    for (int j = 0; j < correctivo; j++)
                     {
-                        dgv.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(218, 247, 166);
+                        if (Convert.ToInt32(dgv.Rows[i].Cells[0].Value) == c_AHORRO_NEW_DS2.movi.Rows[j].Field<int>("id"))
+                        {
+                            dgv.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(218, 247, 166);
+                        }
                     }
                 }
             }

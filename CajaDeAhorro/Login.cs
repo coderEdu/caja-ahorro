@@ -167,7 +167,7 @@ namespace CajaDeAhorro
         {
             if (this.progress.Value<100)
             {
-                this.progress.Value += 2;
+                this.progress.Value += 10;
             }
             
             if (this.progress.Value == 100)

@@ -84,6 +84,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>C_AHORRO_NEW_DS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DbTransferingManager.cs" />
     <Compile Include="DetNota.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +115,11 @@
     </Compile>
     <Compile Include="Notas.Designer.cs">
       <DependentUpon>Notas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Session.cs" />
     <Compile Include="Transaccion.cs">
@@ -175,20 +181,15 @@
     <None Include="C_AHORRO_NEW_DS.xss">
       <DependentUpon>C_AHORRO_NEW_DS.xsd</DependentUpon>
     </None>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\money.png" />
   </ItemGroup>
   <ItemGroup>

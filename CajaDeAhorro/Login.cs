@@ -30,6 +30,7 @@ namespace CajaDeAhorro
         private void Login_Load(object sender, EventArgs e)
         {
             // ...
+            DbTransferingManager.ImportingDBFromCloud();
         }
 
         public void LoadingModules()
@@ -223,6 +224,11 @@ namespace CajaDeAhorro
         private void Login_Activated(object sender, EventArgs e)
         {
             LoadingModules();
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //DbTransferingManager.ExportingDBToCloud();
         }
     }
 }

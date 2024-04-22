@@ -390,7 +390,7 @@ namespace CajaDeAhorro
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "SAFE - LOGIN";
             this.Activated += new System.EventHandler(this.Login_Activated);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_login)).EndInit();

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Interop;
 
 namespace CajaDeAhorro
 {
@@ -226,9 +227,9 @@ namespace CajaDeAhorro
             LoadingModules();
         }
 
-        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //DbTransferingManager.ExportingDBToCloud();
+            MessageBox.Show("No olvide exportar la base de datos.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

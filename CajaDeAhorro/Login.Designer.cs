@@ -36,6 +36,7 @@ namespace CajaDeAhorro
             this.btn_login = new System.Windows.Forms.Button();
             this.c_AHORRO_NEW_DS1 = new CajaDeAhorro.C_AHORRO_NEW_DS();
             this.loginTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.loginTableAdapter();
+            this.estadoTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.estadoTableAdapter();
             this.btn_crea_usuario = new System.Windows.Forms.Button();
             this.txt_nombre_nuevo_usuario = new System.Windows.Forms.TextBox();
             this.lbl_nuevo_usuario = new System.Windows.Forms.Label();
@@ -368,6 +369,10 @@ namespace CajaDeAhorro
             // 
             this.creadoTableAdapter1.ClearBeforeFill = true;
             // 
+            // estadoTableAdapter1
+            // 
+            this.estadoTableAdapter1.ClearBeforeFill = true;
+            // 
             // Login
             // 
             this.AcceptButton = this.btn_login;
@@ -433,5 +438,6 @@ namespace CajaDeAhorro
         private C_AHORRO_NEW_DSTableAdapters.sesionTableAdapter sesionTableAdapter1;
         private System.Windows.Forms.ProgressBar progress;
         private C_AHORRO_NEW_DSTableAdapters.creadoTableAdapter creadoTableAdapter1;
+        private C_AHORRO_NEW_DSTableAdapters.estadoTableAdapter estadoTableAdapter1;
     }
 }

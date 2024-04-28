@@ -30,8 +30,21 @@ namespace CajaDeAhorro
 
         private void Login_Load(object sender, EventArgs e)
         {
-            // ...
-            DbTransferingManager.ImportingDBFromCloud();
+            try
+            {
+                this.estadoTableAdapter1.Fill(this.c_AHORRO_NEW_DS1.estado);
+                if (this.c_AHORRO_NEW_DS1.Tables["estado"].Rows[0].Field<int>(2) == 0)
+                {
+                    MessageBox.Show("BD no exportada. Importe de datos no iniciado.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Text += " ( Temp Database )";
+                }
+                else
+                {
+                    DbTransferingManager.ImportingDBFromCloud();
+                }
+            }
+            catch (Exception) {}
+
         }
 
         public void LoadingModules()

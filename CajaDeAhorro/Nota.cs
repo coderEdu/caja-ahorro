@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace CajaDeAhorro
 {
-    internal class Nota
+    internal class Nota     // creates note buttos
     {
-        static int c = 0;   // increse in 1 note-name
+        static int c = 0;   // increase by 1 to note-name
         public Button CreateNewNoteWithAttrib(string note_title)
         {
             return new Button

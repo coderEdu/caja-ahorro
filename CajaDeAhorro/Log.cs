@@ -444,7 +444,7 @@ namespace CajaDeAhorro
             mensaje.Show(this);
         }
 
-        private void dgv_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        private void dgv_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e) // paint correctivo
         {
             int correctivo = 0;
 

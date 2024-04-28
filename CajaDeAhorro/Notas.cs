@@ -57,18 +57,28 @@ namespace CajaDeAhorro
 
                 if (this.txt_titulo_nota.TextLength > 0 && this.txt_texto_nota.TextLength > 0)
                 {
-                    this.notasTableAdapter.NoteInsertQuery(id, this.txt_titulo_nota.Text, this.txt_texto_nota.Text, this.dtp_notas.Value, this.dtp_notas.Value, Auxiliar.id_logged);
-                    MessageBox.Show("Nota guardada con éxito!.", "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    btn_guardar.Enabled = false;
+                    try
+                    {
+                        this.notasTableAdapter.NoteInsertQuery(id, this.txt_titulo_nota.Text, this.txt_texto_nota.Text, this.dtp_notas.Value, this.dtp_notas.Value, Auxiliar.id_logged);
+                        MessageBox.Show("Nota guardada con éxito!.", "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        btn_guardar.Enabled = false;
+                        Auxiliar.DataBaseUpdated = true;
+                    }
+                    catch (Exception) {}
                 }
             }
             
             if (myTab == MyTabs.EDITAR)
             {
-                DateTime fModif = this.dtp_notas.Value;
-                int id = Convert.ToInt32(idTextBox.Text);
-                this.notasTableAdapter.NotaUpdateQuery(tituloTextBox.Text, notaTextBox.Text, fModif, id, id);
-                MessageBox.Show("Nota actualizada con éxito!.", "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    DateTime fModif = this.dtp_notas.Value;
+                    int id = Convert.ToInt32(idTextBox.Text);
+                    this.notasTableAdapter.NotaUpdateQuery(tituloTextBox.Text, notaTextBox.Text, fModif, id, id);
+                    MessageBox.Show("Nota actualizada con éxito!.", "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Auxiliar.DataBaseUpdated = true;
+                }
+                catch (Exception) {}
             }
 
         }
@@ -131,9 +141,13 @@ namespace CajaDeAhorro
 
             if (r == DialogResult.OK)
             {
-                try { this.notasTableAdapter1.NotasDeleteQuery(Auxiliar.id_note_to_delete); MessageBox.Show("Nota eliminada!.", "SAFE", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                try 
+                { 
+                    this.notasTableAdapter1.NotasDeleteQuery(Auxiliar.id_note_to_delete); 
+                    MessageBox.Show("Nota eliminada!.", "SAFE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Auxiliar.DataBaseUpdated = true;
+                }
                 catch (Exception) { MessageBox.Show("Nota no eliminada!. ", "SAFE", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-                this.notasTableAdapter1.NotasDeleteQuery(Auxiliar.id_note_to_delete);
             }
         }
     }

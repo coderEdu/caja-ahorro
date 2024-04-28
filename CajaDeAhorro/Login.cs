@@ -148,6 +148,7 @@ namespace CajaDeAhorro
                         //this.ExpOrContr = Estados.mov2;
                         //this.tmr_exp_contr.Start();
                         this.sesionTableAdapter1.NewSessInsertQuery(newUserId, 0);
+                        Auxiliar.DataBaseUpdated = true;
                     }
                     catch (Exception) { }
                 }
@@ -229,7 +230,10 @@ namespace CajaDeAhorro
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MessageBox.Show("No olvide exportar la base de datos.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (Auxiliar.DataBaseUpdated)
+            {
+                MessageBox.Show("Nueva actividad registrada. ¡¡No olvide exportar la Base de Datos!!.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

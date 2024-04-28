@@ -29,7 +29,12 @@ namespace CajaDeAhorro
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            this.mensajeTableAdapter1.MessageUpdateQuery(this.rich_txt_msg.Text, this.MessageId);
+            try
+            {
+                this.mensajeTableAdapter1.MessageUpdateQuery(this.rich_txt_msg.Text, this.MessageId);
+                Auxiliar.DataBaseUpdated = true;
+            }
+            catch (Exception) {}
         }
     }
 }

@@ -25,6 +25,7 @@ namespace CajaDeAhorro
         public static Form main;
         public static Dictionary<int, string> dic = new Dictionary<int, string>();
         internal static int messageId;
+        public static bool DataBaseUpdated { get; set; }
 
         public static int getDineroEnCaja()
         {

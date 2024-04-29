@@ -2660,6 +2660,8 @@ namespace CajaDeAhorro {
             
             private global::System.Data.DataColumn columnexportada;
             
+            private global::System.Data.DataColumn columnimportada;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public estadoDataTable() {
@@ -2719,6 +2721,14 @@ namespace CajaDeAhorro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn importadaColumn {
+                get {
+                    return this.columnimportada;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2754,12 +2764,13 @@ namespace CajaDeAhorro {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public estadoRow AddestadoRow(int id, int actualizada, int exportada) {
+            public estadoRow AddestadoRow(int id, int actualizada, int exportada, int importada) {
                 estadoRow rowestadoRow = ((estadoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
                         actualizada,
-                        exportada};
+                        exportada,
+                        importada};
                 rowestadoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowestadoRow);
                 return rowestadoRow;
@@ -2792,6 +2803,7 @@ namespace CajaDeAhorro {
                 this.columnid = base.Columns["id"];
                 this.columnactualizada = base.Columns["actualizada"];
                 this.columnexportada = base.Columns["exportada"];
+                this.columnimportada = base.Columns["importada"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2803,12 +2815,15 @@ namespace CajaDeAhorro {
                 base.Columns.Add(this.columnactualizada);
                 this.columnexportada = new global::System.Data.DataColumn("exportada", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnexportada);
+                this.columnimportada = new global::System.Data.DataColumn("importada", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnimportada);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
                 this.columnactualizada.AllowDBNull = false;
                 this.columnexportada.AllowDBNull = false;
+                this.columnimportada.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3656,6 +3671,17 @@ namespace CajaDeAhorro {
                 }
                 set {
                     this[this.tableestado.exportadaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int importada {
+                get {
+                    return ((int)(this[this.tableestado.importadaColumn]));
+                }
+                set {
+                    this[this.tableestado.importadaColumn] = value;
                 }
             }
         }
@@ -8652,35 +8678,41 @@ SELECT id, titulo, nota, id_log, fec_crea, fec_modif FROM notas WHERE (id = @id)
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("actualizada", "actualizada");
             tableMapping.ColumnMappings.Add("exportada", "exportada");
+            tableMapping.ColumnMappings.Add("importada", "importada");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[estado] WHERE (([id] = @Original_id) AND ([actualizada] = @Ori" +
-                "ginal_actualizada) AND ([exportada] = @Original_exportada))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [estado] WHERE (([id] = @Original_id) AND ([actualizada] = @Original_" +
+                "actualizada) AND ([exportada] = @Original_exportada) AND ([importada] = @Origina" +
+                "l_importada))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_actualizada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "actualizada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_exportada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exportada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_importada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "importada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[estado] ([id], [actualizada], [exportada]) VALUES (@id, @actua" +
-                "lizada, @exportada);\r\nSELECT id, actualizada, exportada FROM estado WHERE (id = " +
-                "@id)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [estado] ([id], [actualizada], [exportada], [importada]) VALUES (@id," +
+                " @actualizada, @exportada, @importada);\r\nSELECT id, actualizada, exportada, impo" +
+                "rtada FROM estado WHERE (id = @id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@actualizada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "actualizada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@exportada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exportada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@importada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "importada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[estado] SET [id] = @id, [actualizada] = @actualizada, [exportada] = @exportada WHERE (([id] = @Original_id) AND ([actualizada] = @Original_actualizada) AND ([exportada] = @Original_exportada));
-SELECT id, actualizada, exportada FROM estado WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [estado] SET [id] = @id, [actualizada] = @actualizada, [exportada] = @exportada, [importada] = @importada WHERE (([id] = @Original_id) AND ([actualizada] = @Original_actualizada) AND ([exportada] = @Original_exportada) AND ([importada] = @Original_importada));
+SELECT id, actualizada, exportada, importada FROM estado WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@actualizada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "actualizada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@exportada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exportada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@importada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "importada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_actualizada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "actualizada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_exportada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exportada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_importada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "importada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8696,17 +8728,18 @@ SELECT id, actualizada, exportada FROM estado WHERE (id = @id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, actualizada, exportada FROM dbo.estado";
+            this._commandCollection[0].CommandText = "SELECT id, actualizada, exportada, importada FROM estado";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "UPDATE       estado\r\nSET                id = @id, actualizada = @actualizada, exp" +
-                "ortada = @exportada; \r\nSELECT id, actualizada, exportada FROM estado WHERE (id =" +
-                " @id)";
+            this._commandCollection[1].CommandText = "UPDATE   estado\r\nSET          id = @id, actualizada = @actualizada, exportada = @" +
+                "exportada, importada = @importada;  \r\nSELECT id, actualizada, exportada FROM est" +
+                "ado WHERE (id = @id)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@actualizada", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "actualizada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@exportada", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "exportada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@importada", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "importada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8766,10 +8799,11 @@ SELECT id, actualizada, exportada FROM estado WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, int Original_actualizada, int Original_exportada) {
+        public virtual int Delete(int Original_id, int Original_actualizada, int Original_exportada, int Original_importada) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_actualizada));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_exportada));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_importada));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8790,10 +8824,11 @@ SELECT id, actualizada, exportada FROM estado WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id, int actualizada, int exportada) {
+        public virtual int Insert(int id, int actualizada, int exportada, int importada) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(actualizada));
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(exportada));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(importada));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8814,13 +8849,15 @@ SELECT id, actualizada, exportada FROM estado WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int id, int actualizada, int exportada, int Original_id, int Original_actualizada, int Original_exportada) {
+        public virtual int Update(int id, int actualizada, int exportada, int importada, int Original_id, int Original_actualizada, int Original_exportada, int Original_importada) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(actualizada));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(exportada));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_actualizada));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_exportada));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(importada));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_id));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_actualizada));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_exportada));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_importada));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8841,19 +8878,20 @@ SELECT id, actualizada, exportada FROM estado WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int actualizada, int exportada, int Original_id, int Original_actualizada, int Original_exportada) {
-            return this.Update(Original_id, actualizada, exportada, Original_id, Original_actualizada, Original_exportada);
+        public virtual int Update(int actualizada, int exportada, int importada, int Original_id, int Original_actualizada, int Original_exportada, int Original_importada) {
+            return this.Update(Original_id, actualizada, exportada, importada, Original_id, Original_actualizada, Original_exportada, Original_importada);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateQuery(int id, int actualizada, int exportada) {
+        public virtual int UpdateQuery(int id, int actualizada, int exportada, int importada) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             command.Parameters[0].Value = ((int)(id));
             command.Parameters[1].Value = ((int)(actualizada));
             command.Parameters[2].Value = ((int)(exportada));
+            command.Parameters[3].Value = ((int)(importada));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

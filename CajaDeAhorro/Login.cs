@@ -33,16 +33,19 @@ namespace CajaDeAhorro
             try
             {
                 this.estadoTableAdapter1.Fill(this.c_AHORRO_NEW_DS1.estado);
-                if (this.c_AHORRO_NEW_DS1.Tables["estado"].Rows[0].Field<int>(2) == 0)
+                if (this.c_AHORRO_NEW_DS1.Tables["estado"].Rows[0].Field<int>(2) == 1)  // exportada field
                 {
-                    MessageBox.Show("BD no exportada. Importe de datos no iniciado.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    this.Text += " ( Temp Database )";
+                    DbTransferingManager.ImportingDBFromCloud();
+                    try { this.estadoTableAdapter1.UpdateQuery(1, 0, 0, 1); }
+                    catch (Exception) { }
                 }
                 else
                 {
-                    DbTransferingManager.ImportingDBFromCloud();
-                    try { this.estadoTableAdapter1.UpdateQuery(1, 0, 0); }
-                    catch (Exception) { }
+                    MessageBox.Show("BD no exportada!. Importe de datos no iniciado. \"Tenga en cuenta que se abrirá el programa con una base de datos temporal " +
+                        "y que, todos los cambios que realice, se perderan si no exporta los datos mediante el programa <Exporting Wallet-DB>. " +
+                        "Ejecute dicho programa, la BD se exportará y podrá (abriri el programa en modo normal y salvar sus datos)\".", 
+                        "Atención - BD actualizada sin exportar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Text += " ( Temp Database )";
                 }
             }
             catch (Exception) {}
@@ -247,7 +250,7 @@ namespace CajaDeAhorro
         {
             if (Auxiliar.DataBaseUpdated)
             {
-                try { this.estadoTableAdapter1.UpdateQuery(1, 1, 0); }
+                try { this.estadoTableAdapter1.UpdateQuery(1, 1, 0, 1); }
                 catch (Exception) { }
                 MessageBox.Show("Nueva actividad registrada. ¡¡No olvide exportar la Base de Datos!!.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

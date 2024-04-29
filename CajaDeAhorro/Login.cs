@@ -41,6 +41,8 @@ namespace CajaDeAhorro
                 else
                 {
                     DbTransferingManager.ImportingDBFromCloud();
+                    try { this.estadoTableAdapter1.UpdateQuery(1, 0, 0); }
+                    catch (Exception) { }
                 }
             }
             catch (Exception) {}
@@ -245,6 +247,8 @@ namespace CajaDeAhorro
         {
             if (Auxiliar.DataBaseUpdated)
             {
+                try { this.estadoTableAdapter1.UpdateQuery(1, 1, 0); }
+                catch (Exception) { }
                 MessageBox.Show("Nueva actividad registrada. ¡¡No olvide exportar la Base de Datos!!.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }

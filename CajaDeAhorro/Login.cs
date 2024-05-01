@@ -30,8 +30,35 @@ namespace CajaDeAhorro
 
         private void Login_Load(object sender, EventArgs e)
         {
-            // ...
-            DbTransferingManager.ImportingDBFromCloud();
+            //string fileName = "Exported.txt";
+            //FileManager.WriteFile(fileName, "1");
+            //MessageBox.Show(FileManager.ReadFile(fileName));
+            //if (FileManager.ReadFile(fileName).Equals("0")) { MessageBox.Show("Es cero"); }
+
+            // working here
+            bool exported = FileManager.ReadFile("Exported.txt").Equals("1");
+            if (exported)  // exportada field
+            {
+                DbTransferingManager.ImportingDBFromCloud();
+                //this.pbx_db_state.Image = global::CajaDeAhorro.Properties.Resources.Custom_Icon_Design_Pretty_Office_3_Accept_database_32;
+                
+                FileManager.WriteFile("Exported.txt", "0");
+                FileManager.WriteFile("Imported.txt", "1");
+                FileManager.WriteFile("Updated.txt", "0");
+            }
+            else
+            {
+                //this.pbx_db_state.Image = global::CajaDeAhorro.Properties.Resources.Custom_Icon_Design_Pretty_Office_3_Remove_from_database_32;
+                MessageBox.Show("BD no exportada!. Importe de datos no iniciado. \"Tenga en cuenta que se abrirá el programa con una base de datos temporal " +
+                    "y que, todos los cambios que realice, se perderan si no exporta los datos mediante el programa <Exporting Wallet-DB>. " +
+                    "Ejecute dicho programa, la BD se exportará y podrá (abriri el programa en modo normal y salvar sus datos)\".",
+                    "Atención - BD actualizada sin exportar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Text += " ( Temp Database )";
+               
+                try { FileManager.WriteFile("Imported.txt", "0"); }
+                catch (Exception) { Console.WriteLine(e); }
+            }
+            //DbTransferingManager.ImportingDBFromCloud();
         }
 
         public void LoadingModules()
@@ -229,7 +256,7 @@ namespace CajaDeAhorro
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MessageBox.Show("No olvide exportar la base de datos.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //MessageBox.Show("No olvide exportar la base de datos.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

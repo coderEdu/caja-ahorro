@@ -346,9 +346,9 @@ namespace CajaDeAhorro
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label5.Location = new System.Drawing.Point(399, 28);
+            this.label5.Location = new System.Drawing.Point(404, 28);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(448, 41);
+            this.label5.Size = new System.Drawing.Size(443, 41);
             this.label5.TabIndex = 21;
             this.label5.Text = "CUENTAS CON SESIONES ACTIVAS";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;

@@ -168,6 +168,7 @@ namespace CajaDeAhorro
                         try
                         {
                             this.creadoTableAdapter1.FecCreaInsertQuery(newUserId, DateTime.Now);
+                            FileManager.WriteFile("Updated.txt", "1");
                         }
                         catch (Exception) { }
 
@@ -175,6 +176,7 @@ namespace CajaDeAhorro
                         //this.ExpOrContr = Estados.mov2;
                         //this.tmr_exp_contr.Start();
                         this.sesionTableAdapter1.NewSessInsertQuery(newUserId, 0);
+                        FileManager.WriteFile("Updated.txt", "1");
                     }
                     catch (Exception) { }
                 }
@@ -256,7 +258,10 @@ namespace CajaDeAhorro
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //MessageBox.Show("No olvide exportar la base de datos.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (FileManager.ReadFile("Updated.txt").Equals("1"))
+            {
+                MessageBox.Show("No olvide exportar la base de datos.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

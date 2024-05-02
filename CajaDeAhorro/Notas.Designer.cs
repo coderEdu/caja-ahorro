@@ -115,7 +115,7 @@
             // notaLabel
             // 
             notaLabel.AutoSize = true;
-            notaLabel.Location = new System.Drawing.Point(339, 165);
+            notaLabel.Location = new System.Drawing.Point(339, 168);
             notaLabel.Name = "notaLabel";
             notaLabel.Size = new System.Drawing.Size(31, 13);
             notaLabel.TabIndex = 8;
@@ -187,7 +187,7 @@
             // 
             // txt_texto_nota
             // 
-            this.txt_texto_nota.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_texto_nota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_texto_nota.Location = new System.Drawing.Point(329, 117);
             this.txt_texto_nota.Multiline = true;
             this.txt_texto_nota.Name = "txt_texto_nota";
@@ -198,7 +198,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(330, 30);
+            this.label1.Location = new System.Drawing.Point(330, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 15);
             this.label1.TabIndex = 2;
@@ -206,10 +206,10 @@
             // 
             // txt_titulo_nota
             // 
-            this.txt_titulo_nota.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_titulo_nota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_titulo_nota.Location = new System.Drawing.Point(329, 48);
             this.txt_titulo_nota.Name = "txt_titulo_nota";
-            this.txt_titulo_nota.Size = new System.Drawing.Size(296, 21);
+            this.txt_titulo_nota.Size = new System.Drawing.Size(296, 26);
             this.txt_titulo_nota.TabIndex = 1;
             // 
             // pictureBox1
@@ -300,18 +300,20 @@
             // tituloTextBox
             // 
             this.tituloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasBindingSource1, "titulo", true));
+            this.tituloTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tituloTextBox.Location = new System.Drawing.Point(395, 136);
             this.tituloTextBox.Name = "tituloTextBox";
-            this.tituloTextBox.Size = new System.Drawing.Size(222, 20);
+            this.tituloTextBox.Size = new System.Drawing.Size(222, 26);
             this.tituloTextBox.TabIndex = 7;
             // 
             // notaTextBox
             // 
             this.notaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasBindingSource1, "nota", true));
-            this.notaTextBox.Location = new System.Drawing.Point(395, 162);
+            this.notaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.notaTextBox.Location = new System.Drawing.Point(395, 168);
             this.notaTextBox.Multiline = true;
             this.notaTextBox.Name = "notaTextBox";
-            this.notaTextBox.Size = new System.Drawing.Size(222, 118);
+            this.notaTextBox.Size = new System.Drawing.Size(222, 112);
             this.notaTextBox.TabIndex = 9;
             // 
             // id_logTextBox
@@ -503,6 +505,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.creadoTableAdapter = null;
+            this.tableAdapterManager.estadoTableAdapter = null;
             this.tableAdapterManager.loginTableAdapter = null;
             this.tableAdapterManager.mensajeTableAdapter = null;
             this.tableAdapterManager.moviTableAdapter = null;

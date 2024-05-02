@@ -26,7 +26,7 @@ namespace CajaDeAhorro.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-HMCD5Q6\\SQLEDU;Initial Catalog=CAJA_AHORRO;Integrated Securit" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-ORD4BP5\\SQLEDU;Initial Catalog=CAJA_AHORRO;Integrated Securit" +
             "y=True;")]
         public string CAJA_AHORROConnectionString {
             get {

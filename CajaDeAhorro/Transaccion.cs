@@ -77,6 +77,7 @@ namespace CajaDeAhorro
                 {
                     // nuevo registro de transacción de depósito
                     this.moviTableAdapter2.InsertQuery(id, dateTime, "deposito", montoFromTextbox, Auxiliar.id_logged);
+                    FileManager.WriteFile("Updated.txt", "1");
                 }
                 catch (SqlException ex)
                 {
@@ -102,6 +103,7 @@ namespace CajaDeAhorro
                     {
                         // nuevo registro de transacción de extracción
                         this.moviTableAdapter2.InsertQuery(id, dateTime, "extracción", montoFromTextbox, Auxiliar.id_logged);
+                        FileManager.WriteFile("Updated.txt", "1");
                     }
                     catch (SqlException ex)
                     {
@@ -109,14 +111,26 @@ namespace CajaDeAhorro
                     }
                 }
             }
-            this.loginTableAdapter1.UpdateQuery(dineroEnCaja, Auxiliar.id_logged, Auxiliar.id_logged);
+
+            try
+            {
+                this.loginTableAdapter1.UpdateQuery(dineroEnCaja, Auxiliar.id_logged, Auxiliar.id_logged);
+                FileManager.WriteFile("Updated.txt", "1");
+            }
+            catch (Exception) { }
+
             // ************************************************************************************************   working here   *************************
             if (this.txt_concepto.TextLength > 0)
             {
                 if (this.txt_concepto.Text == "$correctivo")
+                {
                     this.mensajeTableAdapter1.MessageInsertQuery(id, Auxiliar.getTextCorrective());
+                }
                 else
+                {
                     this.mensajeTableAdapter1.MessageInsertQuery(id, this.txt_concepto.Text);
+                }
+                FileManager.WriteFile("Updated.txt", "1");
             }
             this.Close();
             // ************************************************************************************************   working here   *************************

@@ -60,6 +60,7 @@ namespace CajaDeAhorro
                     this.notasTableAdapter.NoteInsertQuery(id, this.txt_titulo_nota.Text, this.txt_texto_nota.Text, this.dtp_notas.Value, this.dtp_notas.Value, Auxiliar.id_logged);
                     MessageBox.Show("Nota guardada con éxito!.", "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     btn_guardar.Enabled = false;
+                    FileManager.WriteFile("Updated.txt", "1");
                 }
             }
             
@@ -69,6 +70,7 @@ namespace CajaDeAhorro
                 int id = Convert.ToInt32(idTextBox.Text);
                 this.notasTableAdapter.NotaUpdateQuery(tituloTextBox.Text, notaTextBox.Text, fModif, id, id);
                 MessageBox.Show("Nota actualizada con éxito!.", "Caja de ahorro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FileManager.WriteFile("Updated.txt", "1");
             }
 
         }
@@ -134,6 +136,7 @@ namespace CajaDeAhorro
                 try { this.notasTableAdapter1.NotasDeleteQuery(Auxiliar.id_note_to_delete); MessageBox.Show("Nota eliminada!.", "SAFE", MessageBoxButtons.OK, MessageBoxIcon.Information); }
                 catch (Exception) { MessageBox.Show("Nota no eliminada!. ", "SAFE", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 this.notasTableAdapter1.NotasDeleteQuery(Auxiliar.id_note_to_delete);
+                FileManager.WriteFile("Updated.txt", "1");
             }
         }
     }

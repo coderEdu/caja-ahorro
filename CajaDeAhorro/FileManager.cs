@@ -15,7 +15,8 @@ namespace CajaDeAhorro
         {
             string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             string shortName = userName.Substring(userName.IndexOf('\\') + 1);
-            string filePath = "c:\\Users\\" + shortName + "\\WalletDbState\\" + filename;
+            //string filePath = "c:\\Users\\" + shortName + "\\WalletDbState\\" + filename;
+            string filePath = "c:\\Users\\" + shortName + "\\OneDrive\\WalletDbState\\" + filename;
             string fileContent = "";
             StreamReader file;
 
@@ -44,7 +45,8 @@ namespace CajaDeAhorro
         {
             string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             string shortName = userName.Substring(userName.IndexOf('\\') + 1);
-            string filePath = "c:\\Users\\" + shortName + "\\WalletDbState\\" + filename;
+            //string filePath = "c:\\Users\\" + shortName + "\\WalletDbState\\" + filename;
+            string filePath = "c:\\Users\\" + shortName + "\\OneDrive\\WalletDbState\\" + filename;
 
             try
             {

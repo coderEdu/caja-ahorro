@@ -48,12 +48,7 @@ namespace CajaDeAhorro
             }
             else
             {
-                //this.pbx_db_state.Image = global::CajaDeAhorro.Properties.Resources.Custom_Icon_Design_Pretty_Office_3_Remove_from_database_32;
-                MessageBox.Show("BD no exportada!. Importe de datos no iniciado. \"Tenga en cuenta que se abrirá el programa con una base de datos temporal " +
-                    "y que, todos los cambios que realice, se perderan si no exporta los datos mediante el programa <Exporting Wallet-DB>. " +
-                    "Ejecute dicho programa, la BD se exportará y podrá (abriri el programa en modo normal y salvar sus datos)\".",
-                    "Atención - BD actualizada sin exportar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                this.Text += " ( Temp Database )";
+                this.Text += " ( Non-imported Database )";
                
                 try { FileManager.WriteFile("Imported.txt", "0"); }
                 catch (Exception) { Console.WriteLine(e); }

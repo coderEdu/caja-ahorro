@@ -10,7 +10,7 @@ namespace CajaDeAhorro
 {
     class Session   // creates session buttons
     {
-        static int c = 0; // increase name in one
+        static int c = 0; // increase name by one
 
         public Button CreateNewSessionWithAttribs(string userName)
         {

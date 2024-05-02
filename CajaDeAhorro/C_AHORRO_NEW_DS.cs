@@ -4,6 +4,9 @@
 
     partial class C_AHORRO_NEW_DS
     {
+        partial class estadoDataTable
+        {
+        }
     }
 }
 

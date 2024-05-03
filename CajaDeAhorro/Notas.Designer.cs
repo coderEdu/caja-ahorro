@@ -32,7 +32,6 @@
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label tituloLabel;
             System.Windows.Forms.Label notaLabel;
-            System.Windows.Forms.Label id_logLabel;
             System.Windows.Forms.Label fec_creaLabel;
             System.Windows.Forms.Label fec_modifLabel;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -52,7 +51,6 @@
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.tituloTextBox = new System.Windows.Forms.TextBox();
             this.notaTextBox = new System.Windows.Forms.TextBox();
-            this.id_logTextBox = new System.Windows.Forms.TextBox();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,10 +72,13 @@
             this.notasTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.notasTableAdapter();
             this.tableAdapterManager = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.TableAdapterManager();
             this.c_AHORRO_NEW_DS_Notas = new CajaDeAhorro.C_AHORRO_NEW_DS();
+            this.lbl_max_length = new System.Windows.Forms.Label();
+            this.lbl_note_length = new System.Windows.Forms.Label();
+            this.lbl_edit_note_length = new System.Windows.Forms.Label();
+            this.lbl_edit_max_length = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             tituloLabel = new System.Windows.Forms.Label();
             notaLabel = new System.Windows.Forms.Label();
-            id_logLabel = new System.Windows.Forms.Label();
             fec_creaLabel = new System.Windows.Forms.Label();
             fec_modifLabel = new System.Windows.Forms.Label();
             this.tab_notas.SuspendLayout();
@@ -121,15 +122,6 @@
             notaLabel.TabIndex = 8;
             notaLabel.Text = "nota:";
             // 
-            // id_logLabel
-            // 
-            id_logLabel.AutoSize = true;
-            id_logLabel.Location = new System.Drawing.Point(339, 289);
-            id_logLabel.Name = "id_logLabel";
-            id_logLabel.Size = new System.Drawing.Size(35, 13);
-            id_logLabel.TabIndex = 10;
-            id_logLabel.Text = "id log:";
-            // 
             // fec_creaLabel
             // 
             fec_creaLabel.AutoSize = true;
@@ -162,6 +154,8 @@
             // 
             // tabP_nuevo
             // 
+            this.tabP_nuevo.Controls.Add(this.lbl_note_length);
+            this.tabP_nuevo.Controls.Add(this.lbl_max_length);
             this.tabP_nuevo.Controls.Add(this.label2);
             this.tabP_nuevo.Controls.Add(this.txt_texto_nota);
             this.tabP_nuevo.Controls.Add(this.label1);
@@ -189,10 +183,12 @@
             // 
             this.txt_texto_nota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_texto_nota.Location = new System.Drawing.Point(329, 117);
+            this.txt_texto_nota.MaxLength = 500;
             this.txt_texto_nota.Multiline = true;
             this.txt_texto_nota.Name = "txt_texto_nota";
             this.txt_texto_nota.Size = new System.Drawing.Size(296, 234);
             this.txt_texto_nota.TabIndex = 3;
+            this.txt_texto_nota.TextChanged += new System.EventHandler(this.txt_texto_nota_TextChanged);
             // 
             // label1
             // 
@@ -225,6 +221,8 @@
             // tabP_editar
             // 
             this.tabP_editar.AutoScroll = true;
+            this.tabP_editar.Controls.Add(this.lbl_edit_note_length);
+            this.tabP_editar.Controls.Add(this.lbl_edit_max_length);
             this.tabP_editar.Controls.Add(this.label5);
             this.tabP_editar.Controls.Add(this.label4);
             this.tabP_editar.Controls.Add(this.lbl_crea);
@@ -234,8 +232,6 @@
             this.tabP_editar.Controls.Add(this.tituloTextBox);
             this.tabP_editar.Controls.Add(notaLabel);
             this.tabP_editar.Controls.Add(this.notaTextBox);
-            this.tabP_editar.Controls.Add(id_logLabel);
-            this.tabP_editar.Controls.Add(this.id_logTextBox);
             this.tabP_editar.Controls.Add(fec_creaLabel);
             this.tabP_editar.Controls.Add(fec_modifLabel);
             this.tabP_editar.Controls.Add(this.dgv);
@@ -311,20 +307,12 @@
             this.notaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasBindingSource1, "nota", true));
             this.notaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.notaTextBox.Location = new System.Drawing.Point(395, 168);
+            this.notaTextBox.MaxLength = 500;
             this.notaTextBox.Multiline = true;
             this.notaTextBox.Name = "notaTextBox";
             this.notaTextBox.Size = new System.Drawing.Size(222, 112);
             this.notaTextBox.TabIndex = 9;
-            // 
-            // id_logTextBox
-            // 
-            this.id_logTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasBindingSource1, "id_log", true));
-            this.id_logTextBox.Location = new System.Drawing.Point(395, 286);
-            this.id_logTextBox.Name = "id_logTextBox";
-            this.id_logTextBox.ReadOnly = true;
-            this.id_logTextBox.Size = new System.Drawing.Size(222, 20);
-            this.id_logTextBox.TabIndex = 11;
-            this.id_logTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.notaTextBox.TextChanged += new System.EventHandler(this.txt_texto_nota_TextChanged);
             // 
             // dgv
             // 
@@ -519,6 +507,46 @@
             this.c_AHORRO_NEW_DS_Notas.DataSetName = "C_AHORRO_NEW_DS";
             this.c_AHORRO_NEW_DS_Notas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // lbl_max_length
+            // 
+            this.lbl_max_length.AutoSize = true;
+            this.lbl_max_length.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_max_length.Location = new System.Drawing.Point(589, 354);
+            this.lbl_max_length.Name = "lbl_max_length";
+            this.lbl_max_length.Size = new System.Drawing.Size(10, 15);
+            this.lbl_max_length.TabIndex = 5;
+            this.lbl_max_length.Text = "/";
+            // 
+            // lbl_note_length
+            // 
+            this.lbl_note_length.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_note_length.Location = new System.Drawing.Point(549, 354);
+            this.lbl_note_length.Name = "lbl_note_length";
+            this.lbl_note_length.Size = new System.Drawing.Size(43, 15);
+            this.lbl_note_length.TabIndex = 6;
+            this.lbl_note_length.Text = "0";
+            this.lbl_note_length.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lbl_edit_note_length
+            // 
+            this.lbl_edit_note_length.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_edit_note_length.Location = new System.Drawing.Point(542, 286);
+            this.lbl_edit_note_length.Name = "lbl_edit_note_length";
+            this.lbl_edit_note_length.Size = new System.Drawing.Size(43, 15);
+            this.lbl_edit_note_length.TabIndex = 19;
+            this.lbl_edit_note_length.Text = "0";
+            this.lbl_edit_note_length.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lbl_edit_max_length
+            // 
+            this.lbl_edit_max_length.AutoSize = true;
+            this.lbl_edit_max_length.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_edit_max_length.Location = new System.Drawing.Point(582, 286);
+            this.lbl_edit_max_length.Name = "lbl_edit_max_length";
+            this.lbl_edit_max_length.Size = new System.Drawing.Size(10, 15);
+            this.lbl_edit_max_length.TabIndex = 18;
+            this.lbl_edit_max_length.Text = "/";
+            // 
             // Notas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -576,7 +604,6 @@
         private System.Windows.Forms.BindingSource notasBindingSource1;
         private System.Windows.Forms.TextBox tituloTextBox;
         private System.Windows.Forms.TextBox notaTextBox;
-        private System.Windows.Forms.TextBox id_logTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tituloDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label lbl_crea;
@@ -590,5 +617,9 @@
         private System.Windows.Forms.TextBox txt_id;
         private C_AHORRO_NEW_DS c_AHORRO_NEW_DS_Notas;
         private System.Windows.Forms.Label lbl_texto_nota;
+        private System.Windows.Forms.Label lbl_note_length;
+        private System.Windows.Forms.Label lbl_max_length;
+        private System.Windows.Forms.Label lbl_edit_note_length;
+        private System.Windows.Forms.Label lbl_edit_max_length;
     }
 }

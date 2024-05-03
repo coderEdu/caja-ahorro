@@ -30,6 +30,8 @@ namespace CajaDeAhorro
         {
             this.dtp_notas.Visible = false;
             this.btn_guardar.Enabled = true;
+            this.lbl_max_length.Text += " " + txt_texto_nota.MaxLength.ToString();
+            this.lbl_edit_max_length.Text += " " + notaTextBox.MaxLength.ToString();
             // TODO: This line of code loads data into the 'c_AHORRO_NEW_DS.notas' table. You can move, or remove it, as needed.
             try
             {
@@ -138,6 +140,19 @@ namespace CajaDeAhorro
                 this.notasTableAdapter1.NotasDeleteQuery(Auxiliar.id_note_to_delete);
                 FileManager.WriteFile("Updated.txt", "1");
             }
+        }
+
+        private void txt_texto_nota_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox) sender;
+            if (textBox.Equals(txt_texto_nota))
+            {
+                lbl_note_length.Text = txt_texto_nota.TextLength.ToString();
+            }
+            else
+            {
+                lbl_edit_note_length.Text = notaTextBox.TextLength.ToString();
+            }    
         }
     }
 }

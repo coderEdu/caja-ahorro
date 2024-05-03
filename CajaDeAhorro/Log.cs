@@ -410,10 +410,12 @@ namespace CajaDeAhorro
             this.dtp_exacta.Enabled = state;
         }
 
-        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void ShowMoviMessage()
         {
-            int movi_id = Convert.ToInt32(this.dgv.CurrentRow.Cells["id"].Value);
-            if (this.mensajeTableAdapter1.FillByMessage(this.c_AHORRO_NEW_DS1.mensaje, movi_id)==1)
+            int movi_id = 1;
+            movi_id = Convert.ToInt32(this.dgv.CurrentRow.Cells["id"].Value);
+
+            if (this.mensajeTableAdapter1.FillByMessage(this.c_AHORRO_NEW_DS1.mensaje, movi_id) == 1)
             {
                 this.lbl_concepto.Visible = true;
                 this.lbl_concepto.Text = this.c_AHORRO_NEW_DS1.mensaje.Rows[0].Field<string>("mensaje").ToString();
@@ -423,6 +425,11 @@ namespace CajaDeAhorro
             {
                 this.lbl_concepto.Visible = false;
             }
+        }
+
+        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ShowMoviMessage();
         }
 
         private void btn_crea_nota_Click(object sender, EventArgs e)
@@ -472,6 +479,18 @@ namespace CajaDeAhorro
                 this.btn_edit_msg.Enabled = true;
             else
                 this.btn_edit_msg.Enabled = false;
+        }
+
+        private void dgv_Enter(object sender, EventArgs e)
+        {
+            ShowMoviMessage();
+        }
+
+        private void dgv_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.dgv.CurrentRow != null)
+                ShowMoviMessage();
+            this.lbl_row_index.Text = "RowIndex = " + (e.RowIndex + 1).ToString();
         }
     }
 }

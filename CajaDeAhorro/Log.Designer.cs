@@ -101,7 +101,7 @@ namespace CajaDeAhorro
             this.dtp_desde.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_desde.Location = new System.Drawing.Point(26, 45);
             this.dtp_desde.Name = "dtp_desde";
-            this.dtp_desde.Size = new System.Drawing.Size(200, 22);
+            this.dtp_desde.Size = new System.Drawing.Size(200, 20);
             this.dtp_desde.TabIndex = 0;
             // 
             // lbl_desde
@@ -153,7 +153,7 @@ namespace CajaDeAhorro
             "EXTRACCIONES"});
             this.cbx_tipo.Location = new System.Drawing.Point(26, 21);
             this.cbx_tipo.Name = "cbx_tipo";
-            this.cbx_tipo.Size = new System.Drawing.Size(200, 26);
+            this.cbx_tipo.Size = new System.Drawing.Size(200, 23);
             this.cbx_tipo.TabIndex = 5;
             this.cbx_tipo.TabStop = false;
             this.cbx_tipo.Text = "AMBOS";
@@ -183,7 +183,7 @@ namespace CajaDeAhorro
             this.dtp_exacta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_exacta.Location = new System.Drawing.Point(26, 46);
             this.dtp_exacta.Name = "dtp_exacta";
-            this.dtp_exacta.Size = new System.Drawing.Size(200, 22);
+            this.dtp_exacta.Size = new System.Drawing.Size(200, 20);
             this.dtp_exacta.TabIndex = 7;
             // 
             // lbl_exacta
@@ -493,7 +493,7 @@ namespace CajaDeAhorro
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(245)))));
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Turquoise;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv.DefaultCellStyle = dataGridViewCellStyle7;
@@ -575,7 +575,7 @@ namespace CajaDeAhorro
             this.lbl_row_index.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_row_index.Location = new System.Drawing.Point(12, 631);
             this.lbl_row_index.Name = "lbl_row_index";
-            this.lbl_row_index.Size = new System.Drawing.Size(75, 15);
+            this.lbl_row_index.Size = new System.Drawing.Size(67, 13);
             this.lbl_row_index.TabIndex = 17;
             this.lbl_row_index.Text = "RowIndex = ";
             // 

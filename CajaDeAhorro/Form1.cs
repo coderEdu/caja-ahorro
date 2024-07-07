@@ -221,8 +221,10 @@ namespace CajaDeAhorro
 
             Point location = new Point(0, 0);
             int sysScreenWidth = Convert.ToInt32(System.Windows.SystemParameters.PrimaryScreenWidth);
+            //int sysScreenHeight = Convert.ToInt32(System.Windows.SystemParameters.PrimaryScreenHeight);
+            //MessageBox.Show(sysScreenWidth.ToString()+","+sysScreenHeight.ToString());
 
-            if (sysScreenWidth < 1920)
+            if (sysScreenWidth < 1600)
             {
                 location = new Point(this.Location.X + this.Width - 343, this.Location.Y);
             }

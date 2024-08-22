@@ -63,7 +63,7 @@ namespace CajaDeAhorro
             dR = MessageBox.Show("Confirma la transacción?", "Caja de ahorro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dR == DialogResult.No)
             {
-                this.txt_trans_monto.Clear();
+                this.txt_trans_monto.Text = "";
                 return;
             }
 
@@ -142,5 +142,28 @@ namespace CajaDeAhorro
                 this.btn_trans.PerformClick();
         }
 
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            Button button = (Button) sender;
+            if (button.Text == "0")
+            {
+                if (this.txt_trans_monto.Text.Length > 0)
+                {
+                    this.txt_trans_monto.Text += button.Text;
+                }
+            } 
+            else
+            {
+                this.txt_trans_monto.Text += button.Text;
+            }    
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            if (this.txt_trans_monto.Text.Length > 0)
+            {
+                this.txt_trans_monto.Text = this.txt_trans_monto.Text.Remove(this.txt_trans_monto.Text.Length - 1);
+            }
+        }
     }
 }

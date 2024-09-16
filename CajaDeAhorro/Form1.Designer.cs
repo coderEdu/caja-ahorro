@@ -303,9 +303,9 @@ namespace CajaDeAhorro
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::CajaDeAhorro.Properties.Resources.Trafficlight_green_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(105, 487);
+            this.pictureBox1.Location = new System.Drawing.Point(104, 488);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(17, 17);
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;

@@ -466,7 +466,7 @@ namespace CajaDeAhorro
                     {
                         if (Convert.ToInt32(dgv.Rows[i].Cells[0].Value) == c_AHORRO_NEW_DS2.movi.Rows[j].Field<int>("id"))
                         {
-                            dgv.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(218, 247, 166);
+                            dgv.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(255, 192, 203);
                         }
                     }
                 }

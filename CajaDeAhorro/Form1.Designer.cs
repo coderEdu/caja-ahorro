@@ -360,7 +360,7 @@ namespace CajaDeAhorro
             this.lbl_saldo_disponible.ForeColor = System.Drawing.Color.SteelBlue;
             this.lbl_saldo_disponible.Location = new System.Drawing.Point(673, 446);
             this.lbl_saldo_disponible.Name = "lbl_saldo_disponible";
-            this.lbl_saldo_disponible.Size = new System.Drawing.Size(182, 26);
+            this.lbl_saldo_disponible.Size = new System.Drawing.Size(157, 24);
             this.lbl_saldo_disponible.TabIndex = 16;
             this.lbl_saldo_disponible.Text = "Saldo Disponible:";
             this.lbl_saldo_disponible.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -373,7 +373,7 @@ namespace CajaDeAhorro
             this.lbl_fecha_portada.ForeColor = System.Drawing.Color.DimGray;
             this.lbl_fecha_portada.Location = new System.Drawing.Point(340, 52);
             this.lbl_fecha_portada.Name = "lbl_fecha_portada";
-            this.lbl_fecha_portada.Size = new System.Drawing.Size(261, 22);
+            this.lbl_fecha_portada.Size = new System.Drawing.Size(213, 18);
             this.lbl_fecha_portada.TabIndex = 20;
             this.lbl_fecha_portada.Text = "Fecha de creación de la cuenta";
             // 
@@ -385,7 +385,7 @@ namespace CajaDeAhorro
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
             this.label1.Location = new System.Drawing.Point(237, 126);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 24);
+            this.label1.Size = new System.Drawing.Size(154, 20);
             this.label1.TabIndex = 21;
             this.label1.Text = "Últimos Movimientos";
             // 
@@ -395,11 +395,11 @@ namespace CajaDeAhorro
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Menu;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 25;
@@ -512,7 +512,7 @@ namespace CajaDeAhorro
             this.label2.ForeColor = System.Drawing.Color.SteelBlue;
             this.label2.Location = new System.Drawing.Point(606, 126);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 24);
+            this.label2.Size = new System.Drawing.Size(108, 20);
             this.label2.TabIndex = 24;
             this.label2.Text = "Últimas Notas";
             // 

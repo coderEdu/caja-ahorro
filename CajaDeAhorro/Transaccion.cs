@@ -165,5 +165,11 @@ namespace CajaDeAhorro
                 this.txt_trans_monto.Text = this.txt_trans_monto.Text.Remove(this.txt_trans_monto.Text.Length - 1);
             }
         }
+
+        private void btn_correctivo_Click(object sender, EventArgs e)
+        {
+            this.txt_concepto.Text = "$correctivo";
+        }
+
     }
 }

@@ -39,18 +39,19 @@ namespace CajaDeAhorro
             this.loginTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.loginTableAdapter();
             this.mensajeTableAdapter1 = new CajaDeAhorro.C_AHORRO_NEW_DSTableAdapters.mensajeTableAdapter();
             this.pnl_container = new System.Windows.Forms.Panel();
-            this.txt_trans_monto = new System.Windows.Forms.Label();
-            this.btn7 = new System.Windows.Forms.Button();
-            this.btn8 = new System.Windows.Forms.Button();
-            this.btn9 = new System.Windows.Forms.Button();
-            this.btn6 = new System.Windows.Forms.Button();
-            this.btn5 = new System.Windows.Forms.Button();
-            this.btn4 = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btn0 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.btn0 = new System.Windows.Forms.Button();
+            this.btn6 = new System.Windows.Forms.Button();
+            this.btn5 = new System.Windows.Forms.Button();
+            this.btn4 = new System.Windows.Forms.Button();
+            this.btn9 = new System.Windows.Forms.Button();
+            this.btn8 = new System.Windows.Forms.Button();
+            this.btn7 = new System.Windows.Forms.Button();
+            this.txt_trans_monto = new System.Windows.Forms.Label();
+            this.btn_correctivo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.c_AHORRO_NEW_DS1)).BeginInit();
             this.pnl_container.SuspendLayout();
             this.SuspendLayout();
@@ -114,7 +115,7 @@ namespace CajaDeAhorro
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(15, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 18);
+            this.label1.Size = new System.Drawing.Size(119, 18);
             this.label1.TabIndex = 2;
             this.label1.Text = "Concepto:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -130,6 +131,7 @@ namespace CajaDeAhorro
             // pnl_container
             // 
             this.pnl_container.BackColor = System.Drawing.Color.White;
+            this.pnl_container.Controls.Add(this.btn_correctivo);
             this.pnl_container.Controls.Add(this.btnDel);
             this.pnl_container.Controls.Add(this.btn0);
             this.pnl_container.Controls.Add(this.btn3);
@@ -150,81 +152,27 @@ namespace CajaDeAhorro
             this.pnl_container.Size = new System.Drawing.Size(342, 199);
             this.pnl_container.TabIndex = 0;
             // 
-            // txt_trans_monto
+            // btnDel
             // 
-            this.txt_trans_monto.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_trans_monto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_trans_monto.Location = new System.Drawing.Point(15, 35);
-            this.txt_trans_monto.Name = "txt_trans_monto";
-            this.txt_trans_monto.Size = new System.Drawing.Size(184, 31);
-            this.txt_trans_monto.TabIndex = 7;
-            this.txt_trans_monto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.Location = new System.Drawing.Point(293, 148);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(32, 32);
+            this.btnDel.TabIndex = 19;
+            this.btnDel.Text = "←";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
-            // btn7
+            // btn0
             // 
-            this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn7.Location = new System.Drawing.Point(215, 33);
-            this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(32, 32);
-            this.btn7.TabIndex = 8;
-            this.btn7.Text = "7";
-            this.btn7.UseVisualStyleBackColor = true;
-            this.btn7.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btn8
-            // 
-            this.btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn8.Location = new System.Drawing.Point(253, 34);
-            this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(32, 32);
-            this.btn8.TabIndex = 9;
-            this.btn8.Text = "8";
-            this.btn8.UseVisualStyleBackColor = true;
-            this.btn8.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btn9
-            // 
-            this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn9.Location = new System.Drawing.Point(293, 34);
-            this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(32, 32);
-            this.btn9.TabIndex = 10;
-            this.btn9.Text = "9";
-            this.btn9.UseVisualStyleBackColor = true;
-            this.btn9.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btn6
-            // 
-            this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn6.Location = new System.Drawing.Point(293, 72);
-            this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(32, 32);
-            this.btn6.TabIndex = 13;
-            this.btn6.Text = "6";
-            this.btn6.UseVisualStyleBackColor = true;
-            this.btn6.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btn5
-            // 
-            this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5.Location = new System.Drawing.Point(253, 72);
-            this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(32, 32);
-            this.btn5.TabIndex = 12;
-            this.btn5.Text = "5";
-            this.btn5.UseVisualStyleBackColor = true;
-            this.btn5.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btn4
-            // 
-            this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4.Location = new System.Drawing.Point(215, 71);
-            this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(32, 32);
-            this.btn4.TabIndex = 11;
-            this.btn4.Text = "4";
-            this.btn4.UseVisualStyleBackColor = true;
-            this.btn4.Click += new System.EventHandler(this.btn0_Click);
+            this.btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn0.Location = new System.Drawing.Point(215, 147);
+            this.btn0.Name = "btn0";
+            this.btn0.Size = new System.Drawing.Size(70, 32);
+            this.btn0.TabIndex = 17;
+            this.btn0.Text = "0";
+            this.btn0.UseVisualStyleBackColor = true;
+            this.btn0.Click += new System.EventHandler(this.btn0_Click);
             // 
             // btn3
             // 
@@ -259,27 +207,94 @@ namespace CajaDeAhorro
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.btn0_Click);
             // 
-            // btnDel
+            // btn6
             // 
-            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(293, 148);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(32, 32);
-            this.btnDel.TabIndex = 19;
-            this.btnDel.Text = "←";
-            this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn6.Location = new System.Drawing.Point(293, 72);
+            this.btn6.Name = "btn6";
+            this.btn6.Size = new System.Drawing.Size(32, 32);
+            this.btn6.TabIndex = 13;
+            this.btn6.Text = "6";
+            this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.Click += new System.EventHandler(this.btn0_Click);
             // 
-            // btn0
+            // btn5
             // 
-            this.btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn0.Location = new System.Drawing.Point(215, 147);
-            this.btn0.Name = "btn0";
-            this.btn0.Size = new System.Drawing.Size(70, 32);
-            this.btn0.TabIndex = 17;
-            this.btn0.Text = "0";
-            this.btn0.UseVisualStyleBackColor = true;
-            this.btn0.Click += new System.EventHandler(this.btn0_Click);
+            this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn5.Location = new System.Drawing.Point(253, 72);
+            this.btn5.Name = "btn5";
+            this.btn5.Size = new System.Drawing.Size(32, 32);
+            this.btn5.TabIndex = 12;
+            this.btn5.Text = "5";
+            this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.Click += new System.EventHandler(this.btn0_Click);
+            // 
+            // btn4
+            // 
+            this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn4.Location = new System.Drawing.Point(215, 71);
+            this.btn4.Name = "btn4";
+            this.btn4.Size = new System.Drawing.Size(32, 32);
+            this.btn4.TabIndex = 11;
+            this.btn4.Text = "4";
+            this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.Click += new System.EventHandler(this.btn0_Click);
+            // 
+            // btn9
+            // 
+            this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn9.Location = new System.Drawing.Point(293, 34);
+            this.btn9.Name = "btn9";
+            this.btn9.Size = new System.Drawing.Size(32, 32);
+            this.btn9.TabIndex = 10;
+            this.btn9.Text = "9";
+            this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.Click += new System.EventHandler(this.btn0_Click);
+            // 
+            // btn8
+            // 
+            this.btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn8.Location = new System.Drawing.Point(253, 34);
+            this.btn8.Name = "btn8";
+            this.btn8.Size = new System.Drawing.Size(32, 32);
+            this.btn8.TabIndex = 9;
+            this.btn8.Text = "8";
+            this.btn8.UseVisualStyleBackColor = true;
+            this.btn8.Click += new System.EventHandler(this.btn0_Click);
+            // 
+            // btn7
+            // 
+            this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn7.Location = new System.Drawing.Point(215, 33);
+            this.btn7.Name = "btn7";
+            this.btn7.Size = new System.Drawing.Size(32, 32);
+            this.btn7.TabIndex = 8;
+            this.btn7.Text = "7";
+            this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.Click += new System.EventHandler(this.btn0_Click);
+            // 
+            // txt_trans_monto
+            // 
+            this.txt_trans_monto.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_trans_monto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_trans_monto.Location = new System.Drawing.Point(15, 35);
+            this.txt_trans_monto.Name = "txt_trans_monto";
+            this.txt_trans_monto.Size = new System.Drawing.Size(184, 31);
+            this.txt_trans_monto.TabIndex = 7;
+            this.txt_trans_monto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_correctivo
+            // 
+            this.btn_correctivo.BackColor = System.Drawing.Color.Crimson;
+            this.btn_correctivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_correctivo.ForeColor = System.Drawing.Color.White;
+            this.btn_correctivo.Location = new System.Drawing.Point(174, 76);
+            this.btn_correctivo.Name = "btn_correctivo";
+            this.btn_correctivo.Size = new System.Drawing.Size(25, 25);
+            this.btn_correctivo.TabIndex = 20;
+            this.btn_correctivo.Text = "C";
+            this.btn_correctivo.UseVisualStyleBackColor = false;
+            this.btn_correctivo.Click += new System.EventHandler(this.btn_correctivo_Click);
             // 
             // Transaccion
             // 
@@ -328,5 +343,6 @@ namespace CajaDeAhorro
         private System.Windows.Forms.Button btn4;
         private System.Windows.Forms.Button btn9;
         private System.Windows.Forms.Button btn8;
+        private System.Windows.Forms.Button btn_correctivo;
     }
 }
